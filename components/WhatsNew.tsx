@@ -14,7 +14,7 @@ export default function WhatsNew() {
     {
       number: '02',
       title: 'Add Your Knowledge',
-      description: 'Import and integrate your firm's internal knowledge base, templates, and expertise directly into VIDUR for personalized AI assistance.',
+      description: 'Import and integrate your firm\'s internal knowledge base, templates, and expertise directly into VIDUR for personalized AI assistance.',
       image: '📖',
       link: 'Learn More'
     }

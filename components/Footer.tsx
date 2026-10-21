@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/60">
-            © {new Date().getFullYear()} VIDUR AI. All rights reserved.
+            © 2026 VIDUR AI. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-6 text-sm">
             <a href="#" className="text-white/60 hover:text-highlight-green transition-colors">

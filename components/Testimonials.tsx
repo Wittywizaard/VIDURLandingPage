@@ -14,7 +14,7 @@ export default function Testimonials() {
       story: 'Read story'
     },
     {
-      quote: 'The AI understands Indian legal context better than any tool I've used. It's like having an experienced colleague available 24/7.',
+      quote: 'The AI understands Indian legal context better than any tool I\'ve used. It\'s like having an experienced colleague available 24/7.',
       author: 'Priya Sharma',
       designation: 'Company Secretary, Delhi',
       story: 'Read story'

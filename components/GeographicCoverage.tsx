@@ -1,12 +1,24 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 
 export default function GeographicCoverage() {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+
+  // Pre-defined positions to avoid Math.random() during SSR
+  const dotPositions = useMemo(() => [
+    { top: '25%', left: '30%' },
+    { top: '35%', left: '55%' },
+    { top: '45%', left: '40%' },
+    { top: '55%', left: '65%' },
+    { top: '30%', left: '70%' },
+    { top: '60%', left: '35%' },
+    { top: '40%', left: '80%' },
+    { top: '70%', left: '50%' },
+  ], []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -87,7 +99,7 @@ export default function GeographicCoverage() {
               </div>
               
               {/* Animated dots representing coverage */}
-              {[...Array(8)].map((_, i) => (
+              {dotPositions.map((position, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0 }}
@@ -95,8 +107,8 @@ export default function GeographicCoverage() {
                   transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
                   className="absolute w-3 h-3 bg-highlight-green rounded-full shadow-lg"
                   style={{
-                    top: `${20 + Math.random() * 60}%`,
-                    left: `${20 + Math.random() * 60}%`,
+                    top: position.top,
+                    left: position.left,
                   }}
                 />
               ))}

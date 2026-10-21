@@ -1,12 +1,14 @@
 {
-  "name": "tmp-scaffold",
-  "version": "0.1.0",
+  "name": "vidur-ai-landing",
+  "version": "1.0.0",
   "private": true,
+  "description": "Premium enterprise legal-tech landing page for VIDUR AI",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "framer-motion": "^14.5.0",
