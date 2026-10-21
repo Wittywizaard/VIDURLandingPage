@@ -16,7 +16,7 @@ const config: Config = {
         'soft-neutral': '#F4F7F6',
       },
       fontFamily: {
-        sans: ['Montserrat', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero': ['60px', { lineHeight: '1.1', fontWeight: '800' }],
