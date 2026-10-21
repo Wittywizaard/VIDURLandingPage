@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["500", "700", "800"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "VIDUR AI - AI Built For Tax Work",
@@ -23,11 +15,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${montserrat.variable} scroll-smooth`}
-    >
-      <body className="antialiased">{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet" />
+      </head>
+      <body className="antialiased" style={{fontFamily: 'Montserrat, system-ui, sans-serif'}}>{children}</body>
     </html>
   );
 }
