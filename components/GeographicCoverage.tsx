@@ -47,9 +47,12 @@ export default function GeographicCoverage() {
   // Try to play video when component mounts
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play().catch(err => {
-        console.log('Video autoplay prevented:', err);
-      });
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          // Auto-play was prevented, which is expected on some browsers
+        });
+      }
     }
   }, []);
 
