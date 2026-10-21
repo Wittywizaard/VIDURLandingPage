@@ -2,9 +2,10 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -28,6 +29,17 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    'text-white',
+    'text-deep-green',
+    'text-dark-accent',
+    'text-highlight-green',
+    'bg-white',
+    'bg-deep-green',
+    'bg-dark-accent',
+    'bg-highlight-green',
+    'bg-soft-neutral',
+  ],
   plugins: [],
 };
 
