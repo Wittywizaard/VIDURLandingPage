@@ -80,9 +80,9 @@ export default function GeographicCoverage() {
           >
             <div className="relative w-full aspect-square max-w-lg mx-auto bg-white">
               <iframe
-                src="https://drive.google.com/file/d/1O8oLdMOQG7I39dvZWI9CZpIDIrtoHhc7/preview"
+                src="https://drive.google.com/file/d/1O8oLdMOQG7I39dvZWI9CZpIDIrtoHhc7/preview?autoplay=1&mute=1&loop=1"
                 className="w-full h-full rounded-2xl"
-                allow="autoplay"
+                allow="autoplay; encrypted-media"
                 style={{ border: 'none', background: 'transparent' }}
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
