@@ -116,7 +116,7 @@ body {
   }
   
   .btn-gradient-secondary {
-    @apply relative px-8 py-4 text-base font-bold rounded-xl overflow-hidden border-2 transition-all duration-400;
+    @apply relative px-8 py-4 text-base font-bold rounded-xl overflow-hidden border-2 transition-all duration-300;
     border-color: #0D5649;
     color: #0D5649;
     background: white;
