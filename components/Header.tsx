@@ -20,28 +20,42 @@ export default function Header() {
     {
       name: 'Platform',
       hasDropdown: true,
-      items: ['Overview', 'Features', 'Integrations']
+      href: '#platform',
+      items: [
+        { name: 'Overview', href: '#' },
+        { name: 'Features', href: '#features' },
+        { name: 'Integrations', href: '#' }
+      ]
     },
     {
       name: 'Resources',
       hasDropdown: true,
-      items: ['Documentation', 'Webinars', 'Knowledge Base']
+      href: '#resources',
+      items: [
+        { name: 'Documentation', href: '#' },
+        { name: 'Webinars', href: '#webinars' },
+        { name: 'Knowledge Base', href: '#knowledge' }
+      ]
     },
     {
       name: 'Why VIDUR',
-      hasDropdown: false
+      hasDropdown: false,
+      href: '#why-vidur'
     },
     {
       name: 'Pricing',
-      hasDropdown: false
+      hasDropdown: false,
+      href: '#pricing'
     },
     {
       name: 'Enterprise',
-      hasDropdown: false
+      hasDropdown: false,
+      href: '#enterprise'
     },
     {
       name: 'API',
-      hasDropdown: false
+      hasDropdown: false,
+      href: '#api'
     }
   ];
 
@@ -71,7 +85,8 @@ export default function Header() {
                 onMouseEnter={() => item.hasDropdown && setOpenDropdown(item.name)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button
+                <a
+                  href={item.href || '#'}
                   className={`text-sm font-medium transition-colors ${
                     isScrolled ? 'text-deep-green hover:text-highlight-green' : 'text-white hover:text-highlight-green'
                   }`}
@@ -80,7 +95,7 @@ export default function Header() {
                   {item.hasDropdown && (
                     <span className="ml-1 inline-block text-xs">▼</span>
                   )}
-                </button>
+                </a>
                 
                 {item.hasDropdown && openDropdown === item.name && (
                   <motion.div
@@ -92,11 +107,11 @@ export default function Header() {
                   >
                     {item.items?.map((subItem) => (
                       <a
-                        key={subItem}
-                        href="#"
+                        key={subItem.name}
+                        href={subItem.href}
                         className="block px-4 py-2 text-sm text-deep-green hover:bg-soft-neutral transition-colors"
                       >
-                        {subItem}
+                        {subItem.name}
                       </a>
                     ))}
                   </motion.div>
@@ -147,8 +162,9 @@ export default function Header() {
               {navItems.map((item) => (
                 <div key={item.name}>
                   <a
-                    href="#"
+                    href={item.href || '#'}
                     className="block text-deep-green font-medium text-sm py-2 hover:text-highlight-green transition-colors"
+                    onClick={() => !item.hasDropdown && setIsMobileMenuOpen(false)}
                   >
                     {item.name}
                   </a>
@@ -156,11 +172,12 @@ export default function Header() {
                     <div className="ml-4 mt-2 space-y-2">
                       {item.items.map((subItem) => (
                         <a
-                          key={subItem}
-                          href="#"
+                          key={subItem.name}
+                          href={subItem.href}
                           className="block text-sm text-deep-green/80 py-1 hover:text-highlight-green"
+                          onClick={() => setIsMobileMenuOpen(false)}
                         >
-                          {subItem}
+                          {subItem.name}
                         </a>
                       ))}
                     </div>

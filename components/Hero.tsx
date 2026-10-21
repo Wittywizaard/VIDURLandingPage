@@ -8,8 +8,13 @@ export default function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-dark-accent/60 via-deep-green/40 to-dark-accent/80 z-10"></div>
-        {/* Video placeholder - would be replaced with actual video */}
-        <div className="w-full h-full bg-deep-green/20"></div>
+        {/* Animated background pattern */}
+        <div className="w-full h-full bg-deep-green/20 relative">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-highlight-green rounded-full filter blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+        </div>
       </div>
 
       {/* Content */}

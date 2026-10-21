@@ -12,6 +12,7 @@ import LearningResources from '@/components/LearningResources';
 import Pricing from '@/components/Pricing';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function LearningResources() {
   ];
 
   return (
-    <section className="py-24 bg-soft-neutral">
+    <section id="webinars" className="py-24 bg-soft-neutral">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

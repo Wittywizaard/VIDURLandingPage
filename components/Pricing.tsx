@@ -34,7 +34,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section id="pricing" className="py-24 bg-white">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
