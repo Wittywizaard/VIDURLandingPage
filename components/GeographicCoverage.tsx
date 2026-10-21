@@ -83,9 +83,11 @@ export default function GeographicCoverage() {
                 src="https://drive.google.com/file/d/1O8oLdMOQG7I39dvZWI9CZpIDIrtoHhc7/preview?autoplay=1&mute=1&loop=1"
                 className="w-full h-full rounded-2xl"
                 allow="autoplay; encrypted-media"
-                style={{ border: 'none', background: 'transparent' }}
+                style={{ border: 'none', background: 'transparent', pointerEvents: 'none' }}
               />
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+              {/* Transparent overlay to prevent clicking */}
+              <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}></div>
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center" style={{ zIndex: 20 }}>
                 <p className="text-sm text-deep-green/60">
                   <span className="font-medium">From</span> <span className="font-semibold">Kashmir</span> <span className="font-medium">To</span> <span className="font-semibold">Kanyakumari</span>
                 </p>
