@@ -89,20 +89,20 @@ export default function TrustedByProfessionals() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 bg-soft-neutral">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-soft-neutral">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-section-lg font-bold text-deep-green mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-3 md:mb-4">
             Trusted by tax & corporate professionals
           </h2>
-          <p className="text-lg text-deep-green/80 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-deep-green/80 max-w-2xl mx-auto">
             Built for the way you work.
           </p>
         </motion.div>
@@ -113,30 +113,30 @@ export default function TrustedByProfessionals() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16 overflow-hidden"
+          className="mb-12 md:mb-16 overflow-hidden"
         >
           <div className="relative">
             {/* Infinite scrolling logos */}
-            <div className="flex items-center gap-12 animate-scroll">
+            <div className="flex items-center gap-6 md:gap-12 animate-scroll">
               {/* First set of logos */}
               {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI', 'ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-40 h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
+                  className="flex-shrink-0 w-32 h-16 md:w-40 md:h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
                 >
-                  <span className="text-sm font-bold text-deep-green/70">{logo}</span>
+                  <span className="text-xs md:text-sm font-bold text-deep-green/70">{logo}</span>
                 </motion.div>
               ))}
             </div>
             
             {/* Gradient overlays for smooth edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
             
-            <p className="text-center text-sm text-deep-green/60 mt-6">
+            <p className="text-center text-xs md:text-sm text-deep-green/60 mt-4 md:mt-6">
               <a href="#" className="hover:text-highlight-green transition-colors inline-flex items-center gap-1">
                 Explore solutions
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
@@ -166,7 +166,7 @@ export default function TrustedByProfessionals() {
         `}</style>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-20">
           {[
             { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
             { value: stats.experts, label: 'Experts and publishers', suffix: '+' },
@@ -179,20 +179,20 @@ export default function TrustedByProfessionals() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-soft-neutral rounded-xl p-6 text-center"
+              className="bg-soft-neutral rounded-xl p-4 md:p-6 text-center"
             >
-              <div className="text-4xl md:text-5xl font-extrabold text-deep-green mb-2">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-deep-green mb-1 md:mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
-              <div className="text-sm font-medium text-deep-green/70">
+              <div className="text-xs md:text-sm font-medium text-deep-green/70">
                 {stat.label}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Professional Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Professional Categories - Interactive with Animations */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {professionals.map((prof, index) => (
             <motion.div
               key={index}
@@ -200,17 +200,73 @@ export default function TrustedByProfessionals() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-highlight-green/30"
+              whileHover={{ 
+                scale: 1.05,
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
+              className="relative bg-white rounded-2xl p-4 md:p-6 hover:shadow-2xl transition-all duration-300 group cursor-pointer border-2 border-transparent hover:border-highlight-green/40 overflow-hidden"
             >
-              <div className="text-deep-green mb-4 group-hover:text-highlight-green transition-colors">
-                {prof.icon}
+              {/* Animated gradient background on hover */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(135, 206, 80, 0.05) 0%, rgba(13, 86, 73, 0.05) 100%)'
+                }}
+              />
+              
+              {/* Animated pulse effect */}
+              <motion.div
+                className="absolute -inset-1 bg-gradient-to-r from-highlight-green/20 to-deep-green/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl"
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+
+              <div className="relative z-10">
+                {/* Icon with rotation animation */}
+                <motion.div 
+                  className="text-deep-green mb-3 md:mb-4 group-hover:text-highlight-green transition-colors"
+                  whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {prof.icon}
+                </motion.div>
+                
+                {/* Title */}
+                <h3 className="text-base md:text-lg lg:text-xl font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors">
+                  {prof.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-xs md:text-sm text-deep-green/70 leading-relaxed">
+                  {prof.description}
+                </p>
+
+                {/* Animated arrow */}
+                <motion.div
+                  className="mt-3 md:mt-4 flex items-center gap-2 text-xs md:text-sm font-medium text-deep-green group-hover:text-highlight-green"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 4 }}
+                >
+                  <span>Learn more</span>
+                  <motion.svg 
+                    className="w-4 h-4" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </motion.svg>
+                </motion.div>
               </div>
-              <h3 className="text-xl font-bold text-deep-green mb-2">
-                {prof.title}
-              </h3>
-              <p className="text-sm text-deep-green/70">
-                {prof.description}
-              </p>
             </motion.div>
           ))}
         </div>
