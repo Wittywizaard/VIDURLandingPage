@@ -38,25 +38,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <div className="mb-6 flex items-center gap-2">
-              {/* VIDUR Logo Icon */}
-              <div className="relative w-12 h-12">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  {/* Dark green V shape - left side */}
-                  <path d="M8 8L18 8L24 28L16 28L8 8Z" fill="#0D5649"/>
-                  {/* Teal/Medium green - middle part */}
-                  <path d="M18 8L24 28L30 8L22 8L24 16L18 8Z" fill="#0D5649" opacity="0.8"/>
-                  {/* Light green triangle - top right accent */}
-                  <path d="M28 8L32 8L30 14L28 8Z" fill="#87CE50"/>
-                  {/* Right side V continuation */}
-                  <path d="M24 28L30 8L38 8L32 28L24 28Z" fill="#0D5649"/>
-                </svg>
-              </div>
-              {/* VIDUR Text */}
-              <div className="text-3xl font-extrabold tracking-tight leading-none">
-                <span className="text-white">VID</span>
-                <span className="text-highlight-green">UR</span>
-              </div>
+            <div className="mb-6">
+              <img 
+                src="/vidur-logo.png" 
+                alt="VIDUR" 
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Sophisticated AI workspace for tax, legal, corporate, and regulatory work across India.
