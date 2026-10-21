@@ -12,16 +12,16 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 py-32 text-center w-full">
+      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 py-40 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto mt-16"
         >
-          {/* Hero Headline - 2 Lines */}
+          {/* Hero Headline - 2 Lines - Smaller */}
           <motion.h1 
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-deep-green mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-deep-green mb-5 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -30,14 +30,14 @@ export default function Hero() {
             <span className="block">Tax Work</span>
           </motion.h1>
 
-          {/* Supporting Description */}
+          {/* Supporting Description - Smaller */}
           <motion.div 
-            className="space-y-6 mb-10"
+            className="space-y-4 mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <p className="text-lg md:text-xl text-deep-green/90 font-medium max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-deep-green/90 font-medium max-w-2xl mx-auto">
               For CAs, CSs and tax professionals: research, analyse, draft and advise.
             </p>
           </motion.div>
