@@ -48,8 +48,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="gradient-text block">AI Built</span>
-            <span className="block">For Tax Work</span>
+            <span className="gradient-text block">AI Built For</span>
+            <span className="block">Tax Work</span>
           </motion.h1>
 
           {/* Supporting Description */}
