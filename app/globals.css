@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-deep-green: #0D5649;
+  --color-dark-accent: #064E44;
+  --color-highlight-green: #87CE50;
+  --color-soft-neutral: #F4F7F6;
+}
+
 * {
   margin: 0;
   padding: 0;
