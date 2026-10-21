@@ -107,7 +107,7 @@ export default function TrustedByProfessionals() {
           </p>
         </motion.div>
 
-        {/* Logo Carousel */}
+        {/* Logo Carousel - Infinite Scroll */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,22 +116,24 @@ export default function TrustedByProfessionals() {
           className="mb-16 overflow-hidden"
         >
           <div className="relative">
-            <div className="flex items-center justify-center gap-12 py-8">
-              {/* Logo placeholders - will be styled as grayscale with hover color */}
-              {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
+            {/* Infinite scrolling logos */}
+            <div className="flex items-center gap-12 animate-scroll">
+              {/* First set of logos */}
+              {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI', 'ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex-shrink-0 w-32 h-16 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg"
+                  className="flex-shrink-0 w-40 h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
                 >
                   <span className="text-sm font-bold text-deep-green/70">{logo}</span>
                 </motion.div>
               ))}
             </div>
-            <p className="text-center text-sm text-deep-green/60 mt-2">
+            
+            {/* Gradient overlays for smooth edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
+            
+            <p className="text-center text-sm text-deep-green/60 mt-6">
               <a href="#" className="hover:text-highlight-green transition-colors inline-flex items-center gap-1">
                 Explore solutions
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,6 +143,27 @@ export default function TrustedByProfessionals() {
             </p>
           </div>
         </motion.div>
+
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-100% / 2));
+            }
+          }
+          
+          .animate-scroll {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            width: fit-content;
+          }
+          
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">

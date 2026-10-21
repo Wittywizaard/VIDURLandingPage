@@ -28,7 +28,7 @@ export default function BookDemo() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-highlight-green text-dark-accent text-lg font-bold rounded-xl hover:bg-[#78bd41] transition-all duration-200 shadow-2xl inline-flex items-center gap-3"
+            className="btn-gradient-primary !px-10 !py-5 !text-lg inline-flex items-center gap-3"
           >
             Book My Demo
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

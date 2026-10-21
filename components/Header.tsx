@@ -69,10 +69,29 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-extrabold text-deep-green tracking-tight">
-                VIDUR
-              </span>
+            <a href="/" className="flex items-center gap-3 group">
+              {/* Logo Icon */}
+              <div className="relative w-10 h-10">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  {/* V shape with gradient */}
+                  <path d="M20 5L8 35H14L20 20L26 35H32L20 5Z" fill="url(#logo-gradient)" />
+                  <defs>
+                    <linearGradient id="logo-gradient" x1="8" y1="5" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#87CE50" />
+                      <stop offset="100%" stopColor="#0D5649" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              {/* Logo Text */}
+              <div className="flex flex-col">
+                <span className="text-2xl font-extrabold text-deep-green tracking-tight leading-none">
+                  VIDUR
+                </span>
+                <span className="text-[10px] font-medium text-deep-green/60 tracking-wider leading-none">
+                  AI FOR TAX WORK
+                </span>
+              </div>
             </a>
           </div>
 
@@ -123,8 +142,11 @@ export default function Header() {
             <button className="text-sm font-medium transition-colors text-deep-green hover:text-highlight-green">
               Log in
             </button>
-            <button className="px-5 py-2.5 bg-highlight-green text-white text-sm font-bold rounded-lg hover:bg-[#78bd41] transition-all duration-200 transform hover:translate-y-[-1px]">
+            <button className="btn-gradient-primary !px-5 !py-2.5 !text-sm inline-flex items-center gap-2">
               Try VIDUR
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </button>
           </div>
 
@@ -182,7 +204,7 @@ export default function Header() {
                 <button className="block w-full text-left text-deep-green font-medium text-sm py-2">
                   Log in
                 </button>
-                <button className="block w-full px-5 py-2.5 bg-highlight-green text-white text-sm font-bold rounded-lg">
+                <button className="btn-gradient-primary !w-full !text-sm">
                   Try VIDUR
                 </button>
               </div>

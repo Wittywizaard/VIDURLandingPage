@@ -38,10 +38,27 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <div className="mb-6">
-              <span className="text-3xl font-extrabold text-white tracking-tight">
-                VIDUR
-              </span>
+            <div className="mb-6 flex items-center gap-3">
+              {/* Logo Icon */}
+              <div className="relative w-10 h-10">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path d="M20 5L8 35H14L20 20L26 35H32L20 5Z" fill="url(#footer-logo-gradient)" />
+                  <defs>
+                    <linearGradient id="footer-logo-gradient" x1="8" y1="5" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#87CE50" />
+                      <stop offset="100%" stopColor="#FFFFFF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-3xl font-extrabold text-white tracking-tight leading-none">
+                  VIDUR
+                </span>
+                <span className="text-[10px] font-medium text-white/60 tracking-wider leading-none">
+                  AI FOR TAX WORK
+                </span>
+              </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Sophisticated AI workspace for tax, legal, corporate, and regulatory work across India.
