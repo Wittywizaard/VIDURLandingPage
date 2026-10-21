@@ -1,23 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="VIDUR Hero Background"
-          fill
-          className="object-cover"
-          priority
-          quality={100}
-        />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-white/40"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      {/* Subtle background pattern for depth */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-soft-neutral rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-soft-neutral rounded-full filter blur-3xl"></div>
       </div>
 
       {/* Content */}
@@ -51,20 +42,20 @@ export default function Hero() {
             </p>
           </motion.div>
 
-          {/* CTAs with Gradient Buttons - Centered */}
+          {/* CTAs with Gradient Buttons - Centered and Same Size */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="btn-gradient-primary group inline-flex items-center justify-center gap-2">
+            <button className="btn-gradient-primary group inline-flex items-center justify-center gap-2 w-full sm:w-64">
               Try VIDUR
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
-            <button className="btn-gradient-secondary group inline-flex items-center justify-center gap-2">
+            <button className="btn-gradient-secondary group inline-flex items-center justify-center gap-2 w-full sm:w-64">
               Book a free demo
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
