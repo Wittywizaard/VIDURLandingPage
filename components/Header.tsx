@@ -62,7 +62,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
@@ -87,9 +87,7 @@ export default function Header() {
               >
                 <a
                   href={item.href || '#'}
-                  className={`text-sm font-medium transition-colors ${
-                    isScrolled ? 'text-deep-green hover:text-highlight-green' : 'text-white hover:text-highlight-green'
-                  }`}
+                  className="text-sm font-medium transition-colors text-deep-green hover:text-highlight-green"
                 >
                   {item.name}
                   {item.hasDropdown && (
@@ -122,14 +120,10 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button
-              className={`text-sm font-medium transition-colors ${
-                isScrolled ? 'text-deep-green hover:text-highlight-green' : 'text-white hover:text-highlight-green'
-              }`}
-            >
+            <button className="text-sm font-medium transition-colors text-deep-green hover:text-highlight-green">
               Log in
             </button>
-            <button className="px-5 py-2.5 bg-highlight-green text-dark-accent text-sm font-bold rounded-lg hover:bg-[#78bd41] transition-all duration-200 transform hover:translate-y-[-1px]">
+            <button className="px-5 py-2.5 bg-highlight-green text-white text-sm font-bold rounded-lg hover:bg-[#78bd41] transition-all duration-200 transform hover:translate-y-[-1px]">
               Try VIDUR
             </button>
           </div>
@@ -141,9 +135,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`block h-0.5 w-full transition-all ${isScrolled ? 'bg-deep-green' : 'bg-white'}`}></span>
-              <span className={`block h-0.5 w-full transition-all ${isScrolled ? 'bg-deep-green' : 'bg-white'}`}></span>
-              <span className={`block h-0.5 w-full transition-all ${isScrolled ? 'bg-deep-green' : 'bg-white'}`}></span>
+              <span className="block h-0.5 w-full transition-all bg-deep-green"></span>
+              <span className="block h-0.5 w-full transition-all bg-deep-green"></span>
+              <span className="block h-0.5 w-full transition-all bg-deep-green"></span>
             </div>
           </button>
         </div>
@@ -188,7 +182,7 @@ export default function Header() {
                 <button className="block w-full text-left text-deep-green font-medium text-sm py-2">
                   Log in
                 </button>
-                <button className="block w-full px-5 py-2.5 bg-highlight-green text-dark-accent text-sm font-bold rounded-lg">
+                <button className="block w-full px-5 py-2.5 bg-highlight-green text-white text-sm font-bold rounded-lg">
                   Try VIDUR
                 </button>
               </div>
