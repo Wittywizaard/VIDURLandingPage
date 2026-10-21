@@ -67,30 +67,26 @@ export default function Header() {
     >
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* VIDUR Brand Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center gap-3 group">
-              {/* Logo Icon */}
-              <div className="relative w-10 h-10">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                  {/* V shape with gradient */}
-                  <path d="M20 5L8 35H14L20 20L26 35H32L20 5Z" fill="url(#logo-gradient)" />
-                  <defs>
-                    <linearGradient id="logo-gradient" x1="8" y1="5" x2="32" y2="35" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#87CE50" />
-                      <stop offset="100%" stopColor="#0D5649" />
-                    </linearGradient>
-                  </defs>
+            <a href="/" className="flex items-center gap-2 group">
+              {/* Logo Icon - V shape with geometric design */}
+              <div className="relative w-12 h-12">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  {/* Dark green V shape - left side */}
+                  <path d="M8 8L18 8L24 28L16 28L8 8Z" fill="#0D5649"/>
+                  {/* Teal/Medium green - middle part */}
+                  <path d="M18 8L24 28L30 8L22 8L24 16L18 8Z" fill="#0D5649" opacity="0.8"/>
+                  {/* Light green triangle - top right accent */}
+                  <path d="M28 8L32 8L30 14L28 8Z" fill="#87CE50"/>
+                  {/* Right side V continuation */}
+                  <path d="M24 28L30 8L38 8L32 28L24 28Z" fill="#0D5649"/>
                 </svg>
               </div>
-              {/* Logo Text */}
-              <div className="flex flex-col">
-                <span className="text-2xl font-extrabold text-deep-green tracking-tight leading-none">
-                  VIDUR
-                </span>
-                <span className="text-[10px] font-medium text-deep-green/60 tracking-wider leading-none">
-                  AI FOR TAX WORK
-                </span>
+              {/* VIDUR Text with brand colors */}
+              <div className="text-3xl font-extrabold tracking-tight leading-none">
+                <span className="text-deep-green">VID</span>
+                <span className="text-highlight-green">UR</span>
               </div>
             </a>
           </div>
