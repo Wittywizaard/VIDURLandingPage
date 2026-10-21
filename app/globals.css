@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-deep-green: 13, 86, 73;
+  --color-dark-accent: 6, 78, 68;
+  --color-highlight-green: 135, 206, 80;
+  --color-soft-neutral: 244, 247, 246;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +23,47 @@ body {
   font-family: 'Montserrat', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Override Tailwind utilities with !important to ensure they work */
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-deep-green {
+  color: #0D5649 !important;
+}
+
+.text-dark-accent {
+  color: #064E44 !important;
+}
+
+.text-highlight-green {
+  color: #87CE50 !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-deep-green {
+  background-color: #0D5649 !important;
+}
+
+.bg-dark-accent {
+  background-color: #064E44 !important;
+}
+
+.bg-highlight-green {
+  background-color: #87CE50 !important;
+}
+
+.bg-soft-neutral {
+  background-color: #F4F7F6 !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
