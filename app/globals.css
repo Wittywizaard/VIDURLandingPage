@@ -79,33 +79,55 @@ body {
 /* VIDUR Brand Gradient Buttons */
 @layer components {
   .btn-gradient-primary {
-    @apply relative px-8 py-4 text-base font-bold text-white rounded-lg overflow-hidden;
+    @apply relative px-8 py-4 text-base font-bold text-white rounded-xl overflow-hidden;
     background: linear-gradient(135deg, #87CE50 0%, #0D5649 100%);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(13, 86, 73, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(13, 86, 73, 0.35), 0 2px 8px rgba(13, 86, 73, 0.2);
+  }
+  
+  .btn-gradient-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #87CE50 0%, #064E44 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .btn-gradient-primary:hover::before {
+    opacity: 1;
   }
   
   .btn-gradient-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(13, 86, 73, 0.4);
-    background: linear-gradient(135deg, #87CE50 0%, #064E44 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(13, 86, 73, 0.45), 0 4px 12px rgba(13, 86, 73, 0.25);
   }
   
   .btn-gradient-primary:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
+  }
+  
+  .btn-gradient-primary > * {
+    position: relative;
+    z-index: 1;
   }
   
   .btn-gradient-secondary {
-    @apply relative px-8 py-4 text-base font-bold rounded-lg overflow-hidden border-2 transition-all duration-300;
+    @apply relative px-8 py-4 text-base font-bold rounded-xl overflow-hidden border-2 transition-all duration-400;
     border-color: #0D5649;
     color: #0D5649;
     background: white;
+    box-shadow: 0 4px 12px rgba(13, 86, 73, 0.15);
   }
   
   .btn-gradient-secondary:hover {
-    background: linear-gradient(135deg, rgba(135, 206, 80, 0.1) 0%, rgba(13, 86, 73, 0.1) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(13, 86, 73, 0.2);
+    background: linear-gradient(135deg, rgba(135, 206, 80, 0.08) 0%, rgba(13, 86, 73, 0.08) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 86, 73, 0.25), 0 2px 8px rgba(13, 86, 73, 0.15);
+    border-color: #87CE50;
   }
 }
 

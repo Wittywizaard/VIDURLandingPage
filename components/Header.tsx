@@ -73,7 +73,7 @@ export default function Header() {
               <img 
                 src="/vidur-logo.png" 
                 alt="VIDUR" 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
             </a>
           </div>
