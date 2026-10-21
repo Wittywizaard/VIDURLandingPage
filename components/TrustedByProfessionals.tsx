@@ -97,23 +97,58 @@ export default function TrustedByProfessionals() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl lg:text-section-lg font-bold text-deep-green mb-4">
-            Trusted by Professionals
+            Trusted by tax & corporate professionals
           </h2>
           <p className="text-lg text-deep-green/80 max-w-2xl mx-auto">
-            Join thousands of tax and legal professionals who rely on VIDUR for their critical work
+            Built for the way you work.
           </p>
+        </motion.div>
+
+        {/* Logo Carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-16 overflow-hidden"
+        >
+          <div className="relative">
+            <div className="flex items-center justify-center gap-12 py-8">
+              {/* Logo placeholders - will be styled as grayscale with hover color */}
+              {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex-shrink-0 w-32 h-16 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg"
+                >
+                  <span className="text-sm font-bold text-deep-green/70">{logo}</span>
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-center text-sm text-deep-green/60 mt-2">
+              <a href="#" className="hover:text-highlight-green transition-colors inline-flex items-center gap-1">
+                Explore solutions
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </p>
+          </div>
         </motion.div>
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {[
-            { value: stats.professionals, label: 'CAs and Lawyers', suffix: '+' },
-            { value: stats.experts, label: 'Experts & Publishers', suffix: '+' },
-            { value: stats.templates, label: 'AI Templates', suffix: '+' },
-            { value: stats.prompts, label: 'Prompts', suffix: '+' }
+            { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
+            { value: stats.experts, label: 'Experts and publishers', suffix: '+' },
+            { value: stats.templates, label: 'AI templates', suffix: '+' },
+            { value: stats.prompts, label: 'Prompts to get you started', suffix: '+' }
           ].map((stat, index) => (
             <motion.div
               key={index}
@@ -121,7 +156,7 @@ export default function TrustedByProfessionals() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl p-8 text-center border border-deep-green/10 hover:border-highlight-green/50 transition-all duration-300 hover:shadow-lg"
+              className="bg-soft-neutral rounded-xl p-6 text-center"
             >
               <div className="text-4xl md:text-5xl font-extrabold text-deep-green mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}

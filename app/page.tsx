@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import VideoSection from '@/components/VideoSection';
 import GeographicCoverage from '@/components/GeographicCoverage';
 import TrustedByProfessionals from '@/components/TrustedByProfessionals';
 import TrustedKnowledge from '@/components/TrustedKnowledge';
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <VideoSection />
         <GeographicCoverage />
         <TrustedByProfessionals />
         <TrustedKnowledge />
