@@ -84,37 +84,42 @@ export default function GeographicCoverage() {
             </p>
           </motion.div>
 
-          {/* Right Side - India Map Video */}
+          {/* Right Side - India Map Video in Square Box */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-white"
+            className="flex justify-center"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto bg-white">
-              <video
-                ref={videoRef}
-                className="w-full h-full object-contain"
-                autoPlay
-                loop
-                muted
-                playsInline
-                controls={false}
-                preload="auto"
-                webkit-playsinline="true"
-                x5-playsinline="true"
-                style={{ 
-                  pointerEvents: 'none',
-                  background: 'transparent',
-                  backgroundColor: 'transparent',
-                  mixBlendMode: 'multiply'
-                }}
-              >
-                <source src="/india-map-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center px-4" style={{ zIndex: 20 }}>
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Square box container with border */}
+              <div className="relative aspect-square bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg p-6 md:p-8">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-contain"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls={false}
+                  preload="auto"
+                  webkit-playsinline="true"
+                  x5-playsinline="true"
+                  style={{ 
+                    pointerEvents: 'none',
+                    background: 'transparent',
+                    backgroundColor: 'transparent',
+                    mixBlendMode: 'multiply'
+                  }}
+                >
+                  <source src="/india-map-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              {/* Text below the box */}
+              <div className="text-center mt-4 px-4">
                 <p className="text-xs md:text-sm text-deep-green/60">
                   <span className="font-medium">From</span> <span className="font-semibold">Kashmir</span> <span className="font-medium">To</span> <span className="font-semibold">Kanyakumari</span>
                 </p>
