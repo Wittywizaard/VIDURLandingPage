@@ -222,9 +222,9 @@ export default function Hero() {
             className="mt-12 md:mt-16 w-full"
           >
             <div className="flex flex-col gap-6">
-              {/* Left-aligned heading */}
-              <h3 className="text-lg md:text-xl font-bold text-deep-green text-left">
-                Trusted by 200+ CA, CS & Tax professionals
+              {/* Centered heading with image styling */}
+              <h3 className="text-sm md:text-base font-light text-gray-400 text-center uppercase tracking-[0.25em]">
+                Trusted by 5K+ Tax Professionals in India
               </h3>
 
               {/* Left-aligned Marquee Clients label with scrolling logos */}
