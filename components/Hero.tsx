@@ -54,6 +54,30 @@ export default function Hero() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl mx-auto mt-16"
         >
+          {/* Announcement Banner */}
+          <motion.a
+            href="#api"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            whileHover={{ scale: 1.02, y: -2 }}
+            className="inline-flex items-center gap-3 bg-white border border-deep-green/20 rounded-full px-6 py-3 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+          >
+            <span className="text-xl">🚀</span>
+            <span className="text-sm md:text-base font-semibold text-deep-green">
+              VIDUR APIs Are Now Live!
+            </span>
+            <span className="text-sm md:text-base text-deep-green/70 hidden sm:inline">
+              Your Platform. VIDUR's Intelligence
+            </span>
+            <span className="text-sm font-bold text-highlight-green group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+              Explore Now
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </motion.a>
+
           {/* Hero Headline - Premium styling */}
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-5 leading-tight"
