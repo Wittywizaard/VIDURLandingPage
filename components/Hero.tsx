@@ -5,11 +5,11 @@ import { useState, useEffect } from 'react';
 
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ['CA', 'CS', 'Tax'];
+  const phrases = ['CA Work', 'CS Work', 'Tax Work'];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+      setCurrentWordIndex((prev) => (prev + 1) % phrases.length);
     }, 2000);
 
     return () => clearInterval(interval);
@@ -101,23 +101,21 @@ export default function Hero() {
               AI Built For
             </span>
             <span className="block text-deep-green">
-              <span className="inline-block align-middle" style={{ minWidth: '7rem' }}>
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={currentWordIndex}
-                    initial={{ y: 40, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -40, opacity: 0 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      ease: [0.22, 1, 0.36, 1]
-                    }}
-                    className="inline-block"
-                  >
-                    {words[currentWordIndex]}
-                  </motion.span>
-                </AnimatePresence>
-              </span> Work
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentWordIndex}
+                  initial={{ y: 40, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -40, opacity: 0 }}
+                  transition={{ 
+                    duration: 0.5, 
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
+                  className="inline-block"
+                >
+                  {phrases[currentWordIndex]}
+                </motion.span>
+              </AnimatePresence>
             </span>
           </motion.h1>
 
