@@ -90,21 +90,25 @@ export default function GeographicCoverage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative bg-white"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
+            <div className="relative w-full aspect-square max-w-lg mx-auto bg-white">
               <video
                 ref={videoRef}
-                className="w-full h-full object-contain rounded-2xl"
+                className="w-full h-full object-contain"
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
                 preload="auto"
+                webkit-playsinline="true"
+                x5-playsinline="true"
                 style={{ 
                   pointerEvents: 'none',
-                  background: 'transparent'
+                  background: 'transparent',
+                  backgroundColor: 'transparent',
+                  mixBlendMode: 'multiply'
                 }}
               >
                 <source src="https://drive.google.com/uc?export=download&id=1O8oLdMOQG7I39dvZWI9CZpIDIrtoHhc7" type="video/mp4" />
