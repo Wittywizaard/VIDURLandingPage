@@ -216,7 +216,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Full-Width Marquee Clients Section */}
+      {/* Full-Width Marquee Clients Section - Under Trust Points */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
