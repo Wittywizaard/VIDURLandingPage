@@ -94,7 +94,7 @@ export default function GeographicCoverage() {
           >
             <div className="relative w-full max-w-lg mx-auto">
               {/* Square box container with border */}
-              <div className="relative aspect-square bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg p-6 md:p-8">
+              <div className="relative aspect-square bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg p-6 md:p-8 overflow-hidden">
                 <video
                   ref={videoRef}
                   className="w-full h-full object-contain"
@@ -108,21 +108,15 @@ export default function GeographicCoverage() {
                   x5-playsinline="true"
                   style={{ 
                     pointerEvents: 'none',
-                    background: 'transparent',
-                    backgroundColor: 'transparent',
-                    mixBlendMode: 'multiply'
+                    background: 'white',
+                    backgroundColor: 'white',
+                    mixBlendMode: 'darken',
+                    filter: 'contrast(1.1) brightness(1.05)'
                   }}
                 >
                   <source src="/india-map-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </div>
-              
-              {/* Text below the box */}
-              <div className="text-center mt-4 px-4">
-                <p className="text-xs md:text-sm text-deep-green/60">
-                  <span className="font-medium">From</span> <span className="font-semibold">Kashmir</span> <span className="font-medium">To</span> <span className="font-semibold">Kanyakumari</span>
-                </p>
               </div>
             </div>
           </motion.div>
