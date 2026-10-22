@@ -219,24 +219,48 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 md:mt-16 overflow-hidden"
+            className="mt-12 md:mt-16"
           >
-            <div className="relative">
-              {/* Infinite scrolling logos */}
-              <div className="flex items-center gap-6 md:gap-12 animate-scroll-hero">
-                {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI', 'ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex-shrink-0 w-32 h-16 md:w-40 md:h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
-                  >
-                    <span className="text-xs md:text-sm font-bold text-deep-green/70">{logo}</span>
-                  </motion.div>
-                ))}
+            <div className="flex items-center gap-8 md:gap-12">
+              {/* Marquee Clients Label */}
+              <div className="flex-shrink-0 hidden md:block">
+                <h3 className="text-lg md:text-xl font-bold text-deep-green whitespace-nowrap">
+                  Marquee Clients
+                </h3>
               </div>
-              
-              {/* Gradient overlays for smooth edges */}
-              <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
+
+              {/* Scrolling Logos */}
+              <div className="flex-1 overflow-hidden">
+                <div className="relative">
+                  {/* Mobile heading */}
+                  <h3 className="text-base font-bold text-deep-green text-center mb-4 md:hidden">
+                    Marquee Clients
+                  </h3>
+                  
+                  {/* Infinite scrolling logos */}
+                  <div className="flex items-center gap-8 md:gap-12 animate-scroll-hero">
+                    {[
+                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI',
+                      'Aditya Birla Group', 'Heineken', 'Moody\'s', 'Mondelez', 'opentext',
+                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI',
+                      'Aditya Birla Group', 'Heineken', 'Moody\'s', 'Mondelez', 'opentext'
+                    ].map((logo, index) => (
+                      <div
+                        key={index}
+                        className="flex-shrink-0 flex items-center justify-center"
+                      >
+                        <span className="text-base md:text-xl font-black text-black whitespace-nowrap tracking-tight hover:scale-110 transition-transform duration-300 cursor-pointer">
+                          {logo}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Gradient overlays for smooth edges */}
+                  <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
+                  <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -252,7 +276,7 @@ export default function Hero() {
             
             .animate-scroll-hero {
               display: flex;
-              animation: scrollHero 30s linear infinite;
+              animation: scrollHero 40s linear infinite;
               width: fit-content;
             }
             
