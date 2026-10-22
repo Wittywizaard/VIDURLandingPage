@@ -214,43 +214,53 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Marquee Clients - Under Trust Points */}
+          {/* Trusted Professionals & Marquee Clients - Under Trust Points */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 md:mt-16"
+            className="mt-12 md:mt-16 w-full"
           >
-            <div className="flex flex-col items-center gap-6">
-              {/* Marquee Clients Label */}
-              <h3 className="text-lg md:text-xl font-bold text-deep-green">
-                Marquee Clients
+            <div className="flex flex-col gap-6">
+              {/* Left-aligned heading */}
+              <h3 className="text-lg md:text-xl font-bold text-deep-green text-left">
+                Trusted by 200+ CA, CS & Tax professionals
               </h3>
 
-              {/* Scrolling Logos */}
-              <div className="w-full overflow-hidden">
-                <div className="relative">
-                  {/* Infinite scrolling logos */}
-                  <div className="flex items-center gap-8 md:gap-12 animate-scroll-hero">
-                    {[
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group'
-                    ].map((logo, index) => (
-                      <div
-                        key={index}
-                        className="flex-shrink-0 flex items-center justify-center"
-                      >
-                        <span className="text-base md:text-xl font-black text-black whitespace-nowrap tracking-tight hover:scale-110 transition-transform duration-300 cursor-pointer">
-                          {logo}
-                        </span>
-                      </div>
-                    ))}
+              {/* Left-aligned Marquee Clients label with scrolling logos */}
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
+                {/* Marquee Clients label on the left */}
+                <div className="flex-shrink-0">
+                  <h4 className="text-base md:text-lg font-bold text-deep-green whitespace-nowrap">
+                    Marquee Clients
+                  </h4>
+                </div>
+
+                {/* Scrolling Logos */}
+                <div className="flex-1 overflow-hidden">
+                  <div className="relative">
+                    {/* Infinite scrolling logos */}
+                    <div className="flex items-center gap-8 md:gap-12 animate-scroll-hero">
+                      {[
+                        'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                        'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                        'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group'
+                      ].map((logo, index) => (
+                        <div
+                          key={index}
+                          className="flex-shrink-0 flex items-center justify-center"
+                        >
+                          <span className="text-base md:text-xl font-black text-black whitespace-nowrap tracking-tight hover:scale-110 transition-transform duration-300 cursor-pointer">
+                            {logo}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Gradient overlays for smooth edges */}
+                    <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
                   </div>
-                  
-                  {/* Gradient overlays for smooth edges */}
-                  <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
-                  <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
                 </div>
               </div>
             </div>
