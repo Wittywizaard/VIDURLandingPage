@@ -111,7 +111,7 @@ export default function GeographicCoverage() {
                   mixBlendMode: 'multiply'
                 }}
               >
-                <source src="https://drive.google.com/uc?export=download&id=1O8oLdMOQG7I39dvZWI9CZpIDIrtoHhc7" type="video/mp4" />
+                <source src="/india-map-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center px-4" style={{ zIndex: 20 }}>
