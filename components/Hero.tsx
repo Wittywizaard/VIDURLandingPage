@@ -100,20 +100,25 @@ export default function Hero() {
             <span className="block bg-gradient-to-r from-deep-green via-deep-green to-highlight-green bg-clip-text text-transparent">
               AI Built For
             </span>
-            <span className="block text-deep-green">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={currentWordIndex}
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -20, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="inline-block"
-                >
-                  {words[currentWordIndex]}
-                </motion.span>
-              </AnimatePresence>
-              {' Work'}
+            <span className="block text-deep-green flex items-center justify-center gap-3">
+              <span className="inline-block w-32 md:w-40 lg:w-48 xl:w-56 text-center">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentWordIndex}
+                    initial={{ y: 40, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -40, opacity: 0 }}
+                    transition={{ 
+                      duration: 0.5, 
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                    className="inline-block"
+                  >
+                    {words[currentWordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <span>Work</span>
             </span>
           </motion.h1>
 
