@@ -240,10 +240,9 @@ export default function Hero() {
                   {/* Infinite scrolling logos */}
                   <div className="flex items-center gap-8 md:gap-12 animate-scroll-hero">
                     {[
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI',
-                      'Aditya Birla Group', 'Heineken', 'Moody\'s', 'Mondelez', 'opentext',
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI',
-                      'Aditya Birla Group', 'Heineken', 'Moody\'s', 'Mondelez', 'opentext'
+                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group'
                     ].map((logo, index) => (
                       <div
                         key={index}
