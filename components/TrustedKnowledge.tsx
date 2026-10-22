@@ -63,12 +63,9 @@ export default function TrustedKnowledge() {
         {/* Continuous Scrolling Carousel */}
         <div className="relative">
           <div className="overflow-hidden">
-            <motion.div 
-              className="flex gap-6 animate-book-scroll"
-              style={{ width: 'fit-content' }}
-            >
+            <div className="flex gap-6 animate-book-scroll">
               {/* Duplicate sources for seamless loop */}
-              {[...sources, ...sources, ...sources].map((source, index) => (
+              {[...sources, ...sources, ...sources, ...sources].map((source, index) => (
                 <motion.div
                   key={index}
                   className={`flex-shrink-0 w-[280px] md:w-[320px] h-[380px] md:h-[400px] ${source.bgColor} rounded-2xl p-8 border-2 ${source.borderColor} flex flex-col justify-between shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer`}
@@ -105,7 +102,7 @@ export default function TrustedKnowledge() {
                   </div>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           {/* Gradient overlays */}
@@ -138,12 +135,14 @@ export default function TrustedKnowledge() {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-33.333%));
+            transform: translateX(calc(-25%));
           }
         }
         
         .animate-book-scroll {
-          animation: bookScroll 40s linear infinite;
+          display: flex;
+          animation: bookScroll 50s linear infinite;
+          width: max-content;
         }
         
         .animate-book-scroll:hover {
