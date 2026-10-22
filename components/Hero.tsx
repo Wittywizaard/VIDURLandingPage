@@ -213,78 +213,80 @@ export default function Hero() {
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Logo Carousel - Under Trust Points */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 md:mt-16"
-          >
-            <div className="flex items-center gap-8 md:gap-12">
-              {/* Marquee Clients Label */}
-              <div className="flex-shrink-0 hidden md:block">
-                <h3 className="text-lg md:text-xl font-bold text-deep-green whitespace-nowrap">
-                  Marquee Clients
-                </h3>
-              </div>
-
-              {/* Scrolling Logos */}
-              <div className="flex-1 overflow-hidden">
-                <div className="relative">
-                  {/* Mobile heading */}
-                  <h3 className="text-base font-bold text-deep-green text-center mb-4 md:hidden">
-                    Marquee Clients
-                  </h3>
-                  
-                  {/* Infinite scrolling logos */}
-                  <div className="flex items-center gap-8 md:gap-12 animate-scroll-hero">
-                    {[
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
-                      'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group'
-                    ].map((logo, index) => (
-                      <div
-                        key={index}
-                        className="flex-shrink-0 flex items-center justify-center"
-                      >
-                        <span className="text-base md:text-xl font-black text-black whitespace-nowrap tracking-tight hover:scale-110 transition-transform duration-300 cursor-pointer">
-                          {logo}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Gradient overlays for smooth edges */}
-                  <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
-                  <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <style jsx>{`
-            @keyframes scrollHero {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(calc(-100% / 2));
-              }
-            }
-            
-            .animate-scroll-hero {
-              display: flex;
-              animation: scrollHero 40s linear infinite;
-              width: fit-content;
-            }
-            
-            .animate-scroll-hero:hover {
-              animation-play-state: paused;
-            }
-          `}</style>
         </motion.div>
       </div>
+
+      {/* Full-Width Marquee Clients Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.1 }}
+        className="relative z-20 w-full py-8 md:py-12"
+      >
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-6 md:gap-12">
+            {/* Marquee Clients Label */}
+            <div className="flex-shrink-0 hidden lg:block">
+              <h3 className="text-xl md:text-2xl font-bold text-deep-green whitespace-nowrap">
+                Marquee Clients
+              </h3>
+            </div>
+
+            {/* Scrolling Logos */}
+            <div className="flex-1 overflow-hidden">
+              <div className="relative">
+                {/* Mobile heading */}
+                <h3 className="text-lg font-bold text-deep-green text-center mb-6 lg:hidden">
+                  Marquee Clients
+                </h3>
+                
+                {/* Infinite scrolling logos */}
+                <div className="flex items-center gap-12 md:gap-16 lg:gap-20 animate-scroll-hero">
+                  {[
+                    'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                    'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group',
+                    'Kotak', 'Bharat', 'Nexedge', 'Wealth ONE 360', 'ICSI', 'Aditya Birla Group'
+                  ].map((logo, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 flex items-center justify-center"
+                    >
+                      <span className="text-lg md:text-2xl lg:text-3xl font-black text-black whitespace-nowrap tracking-tight hover:scale-110 transition-transform duration-300 cursor-pointer">
+                        {logo}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Gradient overlays for smooth edges */}
+                <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 lg:w-48 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
+                <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 lg:w-48 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      <style jsx>{`
+        @keyframes scrollHero {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-100% / 3));
+          }
+        }
+        
+        .animate-scroll-hero {
+          display: flex;
+          animation: scrollHero 40s linear infinite;
+          width: fit-content;
+        }
+        
+        .animate-scroll-hero:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
 
       {/* Premium bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
