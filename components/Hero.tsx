@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* Hero Headline - Premium styling */}
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-5 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -90,18 +90,6 @@ export default function Hero() {
             </span>
             <span className="block text-deep-green">Tax Work</span>
           </motion.h1>
-
-          {/* Supporting Description - Premium */}
-          <motion.div 
-            className="space-y-4 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
-            <p className="text-base md:text-lg text-deep-green/80 font-medium max-w-2xl mx-auto leading-relaxed">
-              For CAs, CSs and tax professionals: research, analyse, draft and advise.
-            </p>
-          </motion.div>
 
           {/* Premium CTAs with enhanced shadows */}
           <motion.div 
