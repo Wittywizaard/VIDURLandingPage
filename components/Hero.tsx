@@ -221,10 +221,10 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.1 }}
-        className="relative z-20 w-full py-8 md:py-12"
+        className="relative z-20 w-full py-8 md:py-12 flex justify-center"
       >
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-6 md:gap-12">
+        <div className="w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-6 md:gap-12">
             {/* Marquee Clients Label */}
             <div className="flex-shrink-0 hidden lg:block">
               <h3 className="text-xl md:text-2xl font-bold text-deep-green whitespace-nowrap">
@@ -233,7 +233,7 @@ export default function Hero() {
             </div>
 
             {/* Scrolling Logos */}
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-hidden max-w-[1200px]">
               <div className="relative">
                 {/* Mobile heading */}
                 <h3 className="text-lg font-bold text-deep-green text-center mb-6 lg:hidden">
