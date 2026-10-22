@@ -1,8 +1,20 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ['CA', 'CS', 'Tax'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white">
       {/* Premium background patterns */}
@@ -78,7 +90,7 @@ export default function Hero() {
             </span>
           </motion.a>
 
-          {/* Hero Headline - Premium styling */}
+          {/* Hero Headline - Premium styling with rotating text */}
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
@@ -88,7 +100,21 @@ export default function Hero() {
             <span className="block bg-gradient-to-r from-deep-green via-deep-green to-highlight-green bg-clip-text text-transparent">
               AI Built For
             </span>
-            <span className="block text-deep-green">Tax Work</span>
+            <span className="block text-deep-green">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={currentWordIndex}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="inline-block"
+                >
+                  {words[currentWordIndex]}
+                </motion.span>
+              </AnimatePresence>
+              {' Work'}
+            </span>
           </motion.h1>
 
           {/* Premium CTAs with enhanced shadows */}
