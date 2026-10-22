@@ -107,64 +107,6 @@ export default function TrustedByProfessionals() {
           </p>
         </motion.div>
 
-        {/* Logo Carousel - Infinite Scroll */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-12 md:mb-16 overflow-hidden"
-        >
-          <div className="relative">
-            {/* Infinite scrolling logos */}
-            <div className="flex items-center gap-6 md:gap-12 animate-scroll">
-              {/* First set of logos */}
-              {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI', 'ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
-                <motion.div
-                  key={index}
-                  className="flex-shrink-0 w-32 h-16 md:w-40 md:h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
-                >
-                  <span className="text-xs md:text-sm font-bold text-deep-green/70">{logo}</span>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* Gradient overlays for smooth edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
-            
-            <p className="text-center text-xs md:text-sm text-deep-green/60 mt-4 md:mt-6">
-              <a href="#" className="hover:text-highlight-green transition-colors inline-flex items-center gap-1">
-                Explore solutions
-                <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </p>
-          </div>
-        </motion.div>
-
-        <style jsx>{`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(calc(-100% / 2));
-            }
-          }
-          
-          .animate-scroll {
-            display: flex;
-            animation: scroll 30s linear infinite;
-            width: fit-content;
-          }
-          
-          .animate-scroll:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
-
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-20">
           {[

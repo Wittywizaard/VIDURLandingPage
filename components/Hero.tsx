@@ -211,6 +211,53 @@ export default function Hero() {
               </motion.div>
             ))}
           </motion.div>
+
+          {/* Logo Carousel - Under Trust Points */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.1 }}
+            className="mt-12 md:mt-16 overflow-hidden"
+          >
+            <div className="relative">
+              {/* Infinite scrolling logos */}
+              <div className="flex items-center gap-6 md:gap-12 animate-scroll-hero">
+                {['ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI', 'ICAI', 'Aditya Birla', 'Kotak', 'Bharat', 'ONE MG', 'ICSI'].map((logo, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex-shrink-0 w-32 h-16 md:w-40 md:h-20 bg-white rounded-lg border border-deep-green/10 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
+                  >
+                    <span className="text-xs md:text-sm font-bold text-deep-green/70">{logo}</span>
+                  </motion.div>
+                ))}
+              </div>
+              
+              {/* Gradient overlays for smooth edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10"></div>
+            </div>
+          </motion.div>
+
+          <style jsx>{`
+            @keyframes scrollHero {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(calc(-100% / 2));
+              }
+            }
+            
+            .animate-scroll-hero {
+              display: flex;
+              animation: scrollHero 30s linear infinite;
+              width: fit-content;
+            }
+            
+            .animate-scroll-hero:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
         </motion.div>
       </div>
 
