@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import NewsTicker from '@/components/NewsTicker';
 import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
 import GeographicCoverage from '@/components/GeographicCoverage';
@@ -19,6 +20,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
+      <NewsTicker />
       <main>
         <Hero />
         <VideoSection />
