@@ -227,30 +227,28 @@ export default function Hero() {
                 Trusted by 200+ CA, CS & Tax Professional
               </h3>
 
-              {/* Investors & Marquee Clients - Label left, names right */}
-              <div className="w-full border-t border-gray-200 pt-8">
-                <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
-                  {/* Label on the left */}
-                  <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
+              {/* Investors & Marquee Clients - Horizontal single line */}
+              <div className="w-full pt-8">
+                <div className="flex items-center justify-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
+                  {/* Label */}
+                  <span className="text-sm md:text-base font-semibold text-deep-green whitespace-nowrap">
                     Investors & Marquee Clients:
                   </span>
                   
-                  {/* Logos/Names in a row on the right */}
-                  <div className="flex flex-wrap items-center gap-6 md:gap-10 lg:gap-12">
-                    {[
-                      'Aditya Birla Group',
-                      'Kotak',
-                      'Bharat',
-                      'Nexedge'
-                    ].map((name, index) => (
-                      <div
-                        key={index}
-                        className="text-lg md:text-xl lg:text-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer tracking-tight"
-                      >
-                        {name}
-                      </div>
-                    ))}
-                  </div>
+                  {/* Client names in single row */}
+                  {[
+                    'Aditya Birla Group',
+                    'Kotak',
+                    'Bharat',
+                    'Nexedge'
+                  ].map((name, index) => (
+                    <div
+                      key={index}
+                      className="text-base md:text-lg lg:text-xl font-semibold text-gray-400 hover:text-gray-700 transition-colors duration-300 cursor-pointer tracking-tight whitespace-nowrap"
+                    >
+                      {name}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
