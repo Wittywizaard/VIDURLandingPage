@@ -229,10 +229,10 @@ export default function Hero() {
 
               {/* Left-aligned Marquee Clients label with scrolling logos */}
               <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8">
-                {/* Marquee Clients label on the left */}
+                {/* Investors & Marquee Clients label on the left */}
                 <div className="flex-shrink-0">
                   <h4 className="text-base md:text-lg font-bold text-deep-green whitespace-nowrap">
-                    Marquee Clients
+                    Investors & Marquee Clients:
                   </h4>
                 </div>
 

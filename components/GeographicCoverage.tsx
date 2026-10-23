@@ -113,15 +113,6 @@ export default function GeographicCoverage() {
                   <source src="/india-map-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                {/* Caption overlay */}
-                <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
-                  <p className="text-sm md:text-base text-gray-500">
-                    One Thing Is <span className="font-semibold text-deep-green">Spreading</span>
-                  </p>
-                  <p className="text-sm md:text-base text-gray-400">
-                    Faster Than Ever
-                  </p>
-                </div>
               </div>
             </div>
           </motion.div>

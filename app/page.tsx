@@ -20,9 +20,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
+      <div className="h-20"></div>
       <NewsTicker />
-      {/* Add spacer for fixed header + ticker */}
-      <div className="h-[140px]"></div>
       <main>
         <Hero />
         <VideoSection />
