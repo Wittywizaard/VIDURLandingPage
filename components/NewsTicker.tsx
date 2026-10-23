@@ -58,17 +58,18 @@ export default function NewsTicker() {
     <div className="w-full bg-gradient-to-r from-soft-neutral via-white to-soft-neutral border-b border-gray-200/50 shadow-sm overflow-hidden">
       <div className="relative">
         {/* Scrolling container */}
-        <div className="flex items-center py-3">
+        <div className="flex items-center py-3 overflow-hidden">
           <motion.div
             className="flex items-center gap-12 whitespace-nowrap"
             animate={{
-              x: [0, -100 / 3 + '%']
+              x: ['0%', '-33.33%']
             }}
             transition={{
               x: {
-                duration: 60,
+                duration: 40,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "linear",
+                repeatType: "loop"
               }
             }}
           >
