@@ -21,6 +21,8 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <NewsTicker />
+      {/* Add spacer for fixed header + ticker */}
+      <div className="h-[140px]"></div>
       <main>
         <Hero />
         <VideoSection />

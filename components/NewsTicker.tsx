@@ -55,7 +55,7 @@ export default function NewsTicker() {
   const duplicatedItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <div className="w-full bg-white border-y-2 border-deep-green/20 shadow-md overflow-hidden py-2">
+    <div className="fixed top-20 left-0 right-0 z-40 w-full bg-white border-y-2 border-deep-green/20 shadow-md overflow-hidden py-2">
       <div className="relative">
         {/* "Breaking News" label */}
         <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-deep-green text-white px-4 py-1.5 rounded-md font-bold text-sm uppercase hidden md:block">
