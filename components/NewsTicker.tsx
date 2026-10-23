@@ -47,10 +47,10 @@ export default function NewsTicker() {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative py-3 overflow-hidden flex items-center">
-          {/* Static Label */}
-          <div className="flex items-center gap-2 pr-6 flex-shrink-0">
+      <div className="w-full overflow-hidden">
+        <div className="relative py-3 flex items-center justify-center">
+          {/* Blinking Dot */}
+          <div className="absolute left-4 md:left-8 flex items-center gap-2">
             <motion.div
               className="w-2 h-2 bg-highlight-green rounded-full"
               animate={{
@@ -63,11 +63,10 @@ export default function NewsTicker() {
                 ease: "easeInOut"
               }}
             />
-            <span className="text-sm font-medium text-deep-green/70 hidden md:block">Latest Updates</span>
           </div>
 
-          {/* Scrolling News */}
-          <div className="flex-1 overflow-hidden">
+          {/* Centered Scrolling News */}
+          <div className="max-w-4xl overflow-hidden">
             <motion.div
               className="flex gap-12"
               animate={{
