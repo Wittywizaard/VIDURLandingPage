@@ -16,7 +16,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white pt-20">
       {/* Premium background patterns */}
       <div className="absolute inset-0 opacity-40">
         <motion.div
@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 pt-24 pb-40 text-center w-full">
+      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 py-20 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -227,32 +227,30 @@ export default function Hero() {
                 Trusted by 200+ CA, CS & Tax Professional
               </h3>
 
-              {/* Investors & Marquee Clients - Left aligned like reference */}
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 w-full">
-                {/* Label on the left */}
-                <div className="flex-shrink-0">
-                  <h4 className="text-lg md:text-xl font-bold text-deep-green whitespace-nowrap">
+              {/* Investors & Marquee Clients - Synthesia style */}
+              <div className="w-full border-t border-gray-200 pt-8">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                  {/* Label */}
+                  <span className="text-sm font-medium text-deep-green/70 whitespace-nowrap">
                     Investors & Marquee Clients:
-                  </h4>
-                </div>
-
-                {/* Logo row - horizontal display */}
-                <div className="flex flex-wrap items-center gap-6 md:gap-10 lg:gap-16">
-                  {[
-                    'Aditya Birla Group',
-                    'Kotak', 
-                    'Bharat', 
-                    'Nexedge'
-                  ].map((logo, index) => (
-                    <div
-                      key={index}
-                      className="flex-shrink-0"
-                    >
-                      <span className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 whitespace-nowrap tracking-tight hover:text-deep-green transition-colors duration-300 cursor-pointer">
-                        {logo}
-                      </span>
-                    </div>
-                  ))}
+                  </span>
+                  
+                  {/* Logos in clean row */}
+                  <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                    {[
+                      'Aditya Birla Group',
+                      'Kotak',
+                      'Bharat',
+                      'Nexedge'
+                    ].map((name, index) => (
+                      <div
+                        key={index}
+                        className="text-xl md:text-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer tracking-tight"
+                      >
+                        {name}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="h-20"></div>
       <NewsTicker />
       <main>
         <Hero />
