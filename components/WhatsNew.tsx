@@ -6,14 +6,15 @@ export default function WhatsNew() {
   const features = [
     {
       number: '01',
-      title: 'GSTAT Appeal Toolkit',
+      title: 'Professional GSTAT Appeal Toolkit',
       description: 'Comprehensive tools for preparing and managing GST appeals with automated form generation, case law research, and precedent analysis.',
       image: '⚖️',
-      link: 'Learn More'
+      link: 'Learn More',
+      url: 'https://drive.google.com/file/d/1CvjE-UMXv3Q01X-G-SHpsi-mNs7atsgo/view?usp=drive_link'
     },
     {
       number: '02',
-      title: 'Add Your Knowledge',
+      title: 'Contribute your knowledge',
       description: 'Import and integrate your firm\'s internal knowledge base, templates, and expertise directly into VIDUR for personalized AI assistance.',
       image: '📖',
       link: 'Learn More'
@@ -68,15 +69,30 @@ export default function WhatsNew() {
                 <p className="text-lg text-deep-green/70 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-                <motion.button
-                  whileHover={{ x: 4 }}
-                  className="inline-flex items-center gap-2 text-highlight-green font-bold hover:text-deep-green transition-colors"
-                >
-                  {feature.link}
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </motion.button>
+                {feature.url ? (
+                  <motion.a
+                    href={feature.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ x: 4 }}
+                    className="inline-flex items-center gap-2 text-highlight-green font-bold hover:text-deep-green transition-colors"
+                  >
+                    {feature.link}
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </motion.a>
+                ) : (
+                  <motion.button
+                    whileHover={{ x: 4 }}
+                    className="inline-flex items-center gap-2 text-highlight-green font-bold hover:text-deep-green transition-colors"
+                  >
+                    {feature.link}
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </motion.button>
+                )}
               </div>
 
               {/* Visual */}

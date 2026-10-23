@@ -93,8 +93,8 @@ export default function GeographicCoverage() {
             className="flex justify-center"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Square box container with border */}
-              <div className="relative aspect-square bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg p-6 md:p-8 overflow-hidden">
+              {/* Square box container with subtle styling like reference */}
+              <div className="relative aspect-square bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-200/50 shadow-xl p-8 md:p-12 overflow-hidden">
                 <video
                   ref={videoRef}
                   className="w-full h-full object-contain"
@@ -108,15 +108,22 @@ export default function GeographicCoverage() {
                   x5-playsinline="true"
                   style={{ 
                     pointerEvents: 'none',
-                    background: 'white',
-                    backgroundColor: 'white',
-                    mixBlendMode: 'darken',
-                    filter: 'contrast(1.1) brightness(1.05)'
+                    background: 'transparent',
+                    mixBlendMode: 'multiply'
                   }}
                 >
                   <source src="/india-map-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                {/* Subtle caption like reference */}
+                <div className="absolute bottom-6 left-0 right-0 text-center">
+                  <p className="text-sm text-gray-400">
+                    One Thing Is <span className="font-semibold text-gray-500">Spreading</span>
+                  </p>
+                  <p className="text-sm text-gray-300">
+                    Faster Than Ever
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

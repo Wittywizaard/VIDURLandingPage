@@ -63,10 +63,12 @@ export default function Pricing() {
               viewport={{ once: true }}
               className={`rounded-2xl p-8 border-2 transition-all duration-300 ${
                 plan.highlight
-                  ? 'bg-gradient-to-br from-deep-green to-dark-accent text-white border-highlight-green shadow-xl scale-105'
+                  ? 'bg-gradient-to-br from-deep-green/95 to-dark-accent/95 backdrop-blur-xl text-white border-highlight-green shadow-2xl scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-white/5 before:backdrop-blur-sm'
                   : 'bg-soft-neutral border-deep-green/20 hover:border-highlight-green/50 hover:shadow-lg'
               }`}
             >
+              {/* Content wrapper for glassmorphism */}
+              <div className={plan.highlight ? 'relative z-10' : ''}>
               {/* Badge for highlighted plan */}
               {plan.highlight && (
                 <div className="inline-block mb-4">
@@ -114,6 +116,7 @@ export default function Pricing() {
               >
                 {plan.action}
               </button>
+              </div>
             </motion.div>
           ))}
         </div>
