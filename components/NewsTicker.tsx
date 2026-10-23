@@ -55,43 +55,67 @@ export default function NewsTicker() {
   const allItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <div className="w-full bg-gradient-to-r from-gray-50 via-white to-gray-50 border-y border-gray-200/50 shadow-sm py-3 overflow-hidden">
-      <div className="relative">
-        <div className="overflow-hidden">
-          <motion.div
-            className="flex gap-4"
-            animate={{
-              x: [0, -100 / 3 + '%']
-            }}
-            transition={{
-              x: {
-                duration: 30,
-                repeat: Infinity,
-                ease: "linear",
-                repeatType: "loop"
-              }
-            }}
-          >
-            {allItems.map((item, index) => (
-              <div
-                key={`${item.id}-${index}`}
-                className="flex-shrink-0 bg-white border border-gray-200/80 rounded-lg px-4 py-2.5 flex items-center gap-3 hover:border-deep-green/30 hover:shadow-md transition-all duration-300 min-w-[300px]"
+    <div className="fixed top-20 left-0 right-0 z-40 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1360px] mx-auto">
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-200/50 overflow-hidden">
+          <div className="relative py-3">
+            {/* Blinking Green Indicator with Label */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 z-20">
+              <motion.div
+                className="w-3 h-3 bg-highlight-green rounded-full"
+                animate={{
+                  opacity: [1, 0.3, 1],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <span className="text-sm font-semibold text-deep-green hidden md:block whitespace-nowrap">
+                Latest Tax & Legal Updates
+              </span>
+            </div>
+
+            <div className="overflow-hidden md:ml-56">
+              <motion.div
+                className="flex gap-4"
+                animate={{
+                  x: [0, -100 / 3 + '%']
+                }}
+                transition={{
+                  x: {
+                    duration: 30,
+                    repeat: Infinity,
+                    ease: "linear",
+                    repeatType: "loop"
+                  }
+                }}
               >
-                {/* Icon with VIDUR green color */}
-                <div className="flex-shrink-0 text-deep-green">
-                  {item.icon}
-                </div>
-                {/* News text - single line */}
-                <span className="text-sm text-gray-700 font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-                  {item.text}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+                {allItems.map((item, index) => (
+                  <div
+                    key={`${item.id}-${index}`}
+                    className="flex-shrink-0 bg-gray-50 rounded-lg px-4 py-2 flex items-center gap-3 hover:bg-gray-100 transition-all duration-300 min-w-[300px]"
+                  >
+                    {/* Icon with VIDUR green color */}
+                    <div className="flex-shrink-0 text-deep-green">
+                      {item.icon}
+                    </div>
+                    {/* News text - single line */}
+                    <span className="text-sm text-gray-700 font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                      {item.text}
+                    </span>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 

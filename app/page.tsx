@@ -23,6 +23,7 @@ export default function Home() {
       <Header />
       <div className="h-20"></div>
       <NewsTicker />
+      <div className="h-20"></div>
       <main>
         <Hero />
         <VideoSection />
