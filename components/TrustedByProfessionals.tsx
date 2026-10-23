@@ -89,7 +89,7 @@ export default function TrustedByProfessionals() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-soft-neutral">
+    <section ref={sectionRef} className="py-12 md:py-16 bg-soft-neutral">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -97,18 +97,15 @@ export default function TrustedByProfessionals() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-8 md:mb-12"
+          className="text-center mb-6 md:mb-8"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-3 md:mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green">
             Trusted by tax & corporate professionals
           </h2>
-          <p className="text-base md:text-lg text-deep-green/80 max-w-2xl mx-auto">
-            Built for the way you work.
-          </p>
         </motion.div>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-12">
           {[
             { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
             { value: stats.experts, label: 'Experts and publishers', suffix: '+' },
