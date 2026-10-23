@@ -55,12 +55,17 @@ export default function NewsTicker() {
   const duplicatedItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <div className="w-full bg-gradient-to-r from-soft-neutral via-white to-soft-neutral border-b border-gray-200/50 shadow-sm overflow-hidden">
+    <div className="w-full bg-white border-y-2 border-deep-green/20 shadow-md overflow-hidden py-2">
       <div className="relative">
+        {/* "Breaking News" label */}
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-deep-green text-white px-4 py-1.5 rounded-md font-bold text-sm uppercase hidden md:block">
+          Latest Updates
+        </div>
+        
         {/* Scrolling container */}
-        <div className="flex items-center py-3 overflow-hidden">
+        <div className="flex items-center overflow-hidden md:ml-40">
           <motion.div
-            className="flex items-center gap-12 whitespace-nowrap"
+            className="flex items-center gap-12 whitespace-nowrap py-2"
             animate={{
               x: ['0%', '-33.33%']
             }}
@@ -76,26 +81,26 @@ export default function NewsTicker() {
             {duplicatedItems.map((item, index) => (
               <div
                 key={`${item.id}-${index}`}
-                className="flex items-center gap-3 px-4"
+                className="flex items-center gap-3 px-6"
               >
                 {/* Icon with brand color */}
                 <div className="flex-shrink-0 text-deep-green">
                   {item.icon}
                 </div>
                 {/* News text */}
-                <span className="text-sm md:text-base text-gray-700 font-medium">
+                <span className="text-sm md:text-base text-gray-800 font-semibold">
                   {item.text}
                 </span>
                 {/* Separator */}
-                <div className="w-1 h-1 bg-highlight-green rounded-full flex-shrink-0 ml-8"></div>
+                <div className="w-2 h-2 bg-highlight-green rounded-full flex-shrink-0 ml-8"></div>
               </div>
             ))}
           </motion.div>
         </div>
 
         {/* Gradient overlays for smooth edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-10 hidden md:block"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
       </div>
     </div>
   );
