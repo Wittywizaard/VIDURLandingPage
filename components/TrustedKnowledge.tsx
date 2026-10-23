@@ -8,33 +8,79 @@ export default function TrustedKnowledge() {
       number: '01',
       label: 'BHARAT',
       title: 'Publisher reference works',
-      description: 'Comprehensive legal and tax reference publications',
-      bgColor: 'bg-red-50',
-      borderColor: 'border-red-200'
+      description: 'Income Tax Act 2025 with comprehensive commentary',
+      bookStyle: 'bg-gradient-to-br from-red-900 to-red-700',
+      bookContent: (
+        <div className="w-full h-full flex flex-col items-center justify-center text-white p-4">
+          <div className="text-center">
+            <div className="text-xs font-bold mb-2">Bharat's</div>
+            <div className="text-2xl font-bold mb-2">INCOME</div>
+            <div className="text-2xl font-bold mb-2">TAX</div>
+            <div className="text-xl font-bold mb-3">ACT, 2025</div>
+            <div className="text-xs mb-2">With Comments & Referencer</div>
+            <div className="text-xs">29 Nos 88 of 2025</div>
+            <div className="text-xs mb-3">and 22 Nos Year F.A 2025</div>
+            <div className="absolute bottom-4 right-4 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+              274th Edition
+            </div>
+          </div>
+        </div>
+      )
     },
     {
       number: '02',
       label: 'VIDUR',
       title: 'Knowledge from our team',
       description: 'Curated expertise from tax and legal professionals',
-      bgColor: 'bg-soft-neutral',
-      borderColor: 'border-deep-green/20'
+      bookStyle: 'bg-white border-2 border-dashed border-deep-green/30',
+      bookContent: (
+        <div className="w-full h-full flex flex-col items-center justify-center text-deep-green p-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold mb-4">KNOWLEDGE</div>
+            <div className="text-2xl font-bold mb-6">TEAM</div>
+            <div className="text-xs text-deep-green/60 mt-auto">Approved cover</div>
+            <div className="text-xs text-deep-green/60">to be supplied</div>
+          </div>
+        </div>
+      )
     },
     {
       number: '03',
       label: 'ICSI',
       title: 'Corporate reference material',
       description: 'Authoritative corporate law and secretarial practice',
-      bgColor: 'bg-soft-neutral',
-      borderColor: 'border-deep-green/20'
+      bookStyle: 'bg-white border-2 border-dashed border-deep-green/30',
+      bookContent: (
+        <div className="w-full h-full flex flex-col items-center justify-center text-deep-green p-4">
+          <div className="text-center">
+            <div className="text-2xl font-bold mb-4">CORPORATE</div>
+            <div className="text-2xl font-bold mb-6">REFERENCE</div>
+            <div className="text-xs text-deep-green/60 mt-auto">Approved cover</div>
+            <div className="text-xs text-deep-green/60">to be supplied</div>
+          </div>
+        </div>
+      )
     },
     {
       number: '04',
       label: 'ICAI',
       title: 'Accounting & audit guidance',
       description: 'Official standards and technical resources',
-      bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
+      bookStyle: 'bg-gradient-to-br from-green-800 to-green-900',
+      bookContent: (
+        <div className="w-full h-full flex flex-col items-center justify-center text-white p-4">
+          <div className="text-center">
+            <div className="bg-yellow-100 text-black px-3 py-1 text-xs font-bold mb-4">Revised & Updated</div>
+            <div className="text-base font-bold mb-4">Guidance Note on</div>
+            <div className="text-lg font-bold mb-4">Audit of Banks (Revised 2024)</div>
+            <div className="w-16 h-16 mx-auto my-4 bg-white rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 border-4 border-red-600 rounded-full"></div>
+            </div>
+            <div className="text-xs mt-auto">The Institute of Chartered Accountants of India</div>
+            <div className="text-xs font-bold">New Delhi</div>
+          </div>
+        </div>
+      )
     }
   ];
 
@@ -68,23 +114,13 @@ export default function TrustedKnowledge() {
               {[...sources, ...sources, ...sources, ...sources].map((source, index) => (
                 <motion.div
                   key={index}
-                  className={`flex-shrink-0 w-[280px] md:w-[320px] h-[380px] md:h-[400px] ${source.bgColor} rounded-2xl p-8 border-2 ${source.borderColor} flex flex-col justify-between shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer`}
+                  className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-6 md:p-8 border border-gray-200 flex flex-col shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                   whileHover={{ scale: 1.02, y: -8 }}
                 >
-                  {/* Label */}
-                  <div className="text-xs font-bold text-deep-green/50 uppercase tracking-wider mb-4">
-                    {source.label}
-                  </div>
-
-                  {/* Book Placeholder */}
+                  {/* Book Cover */}
                   <div className="flex-1 flex items-center justify-center mb-6">
-                    <div className="w-40 h-56 bg-white rounded-lg shadow-md border border-deep-green/10 flex items-center justify-center">
-                      <div className="text-center px-4">
-                        <div className="text-xs text-deep-green/40 mb-2">
-                          {source.label}
-                        </div>
-                        <div className="w-12 h-1 bg-deep-green/20 mx-auto"></div>
-                      </div>
+                    <div className={`w-48 h-64 md:w-52 md:h-72 ${source.bookStyle} rounded-lg shadow-xl relative overflow-hidden`}>
+                      {source.bookContent}
                     </div>
                   </div>
 
