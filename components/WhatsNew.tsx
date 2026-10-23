@@ -98,16 +98,38 @@ export default function WhatsNew() {
               {/* Visual */}
               <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
                 <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-soft-neutral to-white rounded-2xl border-2 border-deep-green/10 flex items-center justify-center shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
-                    <div className="text-center p-8">
-                      <div className="text-7xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                        {feature.image}
-                      </div>
-                      <p className="text-deep-green/60 font-medium">
-                        Professional {feature.title}
-                      </p>
+                  {index === 0 ? (
+                    // Video for GSTAT Toolkit
+                    <div className="aspect-video bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
+                      <video
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        controls={false}
+                        preload="auto"
+                        style={{ 
+                          pointerEvents: 'none'
+                        }}
+                      >
+                        <source src="/gstat-toolkit-video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
                     </div>
-                  </div>
+                  ) : (
+                    // Emoji for other features
+                    <div className="aspect-video bg-gradient-to-br from-soft-neutral to-white rounded-2xl border-2 border-deep-green/10 flex items-center justify-center shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
+                      <div className="text-center p-8">
+                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                          {feature.image}
+                        </div>
+                        <p className="text-deep-green/60 font-medium">
+                          Professional {feature.title}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                   {/* Decorative element */}
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-highlight-green/20 rounded-full filter blur-2xl -z-10"></div>
                 </div>
