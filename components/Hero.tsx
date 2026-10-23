@@ -227,16 +227,16 @@ export default function Hero() {
                 Trusted by 200+ CA, CS & Tax Professional
               </h3>
 
-              {/* Investors & Marquee Clients - Synthesia style */}
+              {/* Investors & Marquee Clients - Label left, names right */}
               <div className="w-full border-t border-gray-200 pt-8">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                  {/* Label */}
-                  <span className="text-sm font-medium text-deep-green/70 whitespace-nowrap">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
+                  {/* Label on the left */}
+                  <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
                     Investors & Marquee Clients:
                   </span>
                   
-                  {/* Logos in clean row */}
-                  <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                  {/* Logos/Names in a row on the right */}
+                  <div className="flex flex-wrap items-center gap-6 md:gap-10 lg:gap-12">
                     {[
                       'Aditya Birla Group',
                       'Kotak',
@@ -245,7 +245,7 @@ export default function Hero() {
                     ].map((name, index) => (
                       <div
                         key={index}
-                        className="text-xl md:text-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer tracking-tight"
+                        className="text-lg md:text-xl lg:text-2xl font-bold text-gray-400 hover:text-gray-900 transition-colors duration-300 cursor-pointer tracking-tight"
                       >
                         {name}
                       </div>

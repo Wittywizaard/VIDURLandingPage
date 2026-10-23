@@ -22,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <NewsTicker />
-      <main>
+      <main className="pt-32">
         <Hero />
         <VideoSection />
         <GeographicCoverage />

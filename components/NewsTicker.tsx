@@ -15,7 +15,7 @@ export default function NewsTicker() {
   const allItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <div className="w-full bg-soft-neutral/30 border-b border-gray-100">
+    <div className="fixed top-20 left-0 right-0 z-40 w-full bg-soft-neutral/30 border-b border-gray-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-3 overflow-hidden flex items-center">
           {/* Static Label */}
@@ -66,6 +66,7 @@ export default function NewsTicker() {
     </div>
   );
 }
+
 
 
 
