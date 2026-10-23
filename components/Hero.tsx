@@ -59,12 +59,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 py-40 text-center w-full">
+      <div className="relative z-20 max-w-[1360px] mx-auto px-6 lg:px-8 pt-24 pb-40 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl mx-auto mt-16"
+          className="max-w-4xl mx-auto"
         >
           {/* Announcement Banner */}
           <motion.a
