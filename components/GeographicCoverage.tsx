@@ -93,34 +93,32 @@ export default function GeographicCoverage() {
             className="flex justify-center"
           >
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Square box container with subtle styling like reference */}
-              <div className="relative aspect-square bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-200/50 shadow-xl p-8 md:p-12 overflow-hidden">
+              {/* Square box container with clean white background */}
+              <div className="relative aspect-square bg-white rounded-[40px] border border-gray-200/80 shadow-2xl overflow-hidden p-0">
                 <video
                   ref={videoRef}
-                  className="w-full h-full object-contain"
+                  className="block w-full h-full object-contain"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  controls={false}
-                  preload="auto"
-                  webkit-playsinline="true"
-                  x5-playsinline="true"
+                  preload="metadata"
+                  aria-label="Animated map showing VIDUR's presence across India"
                   style={{ 
                     pointerEvents: 'none',
-                    background: 'transparent',
-                    mixBlendMode: 'multiply'
+                    display: 'block',
+                    minHeight: 0
                   }}
                 >
                   <source src="/india-map-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-                {/* Subtle caption like reference */}
-                <div className="absolute bottom-6 left-0 right-0 text-center">
-                  <p className="text-sm text-gray-400">
-                    One Thing Is <span className="font-semibold text-gray-500">Spreading</span>
+                {/* Caption overlay */}
+                <div className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">
+                  <p className="text-sm md:text-base text-gray-500">
+                    One Thing Is <span className="font-semibold text-deep-green">Spreading</span>
                   </p>
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm md:text-base text-gray-400">
                     Faster Than Ever
                   </p>
                 </div>
