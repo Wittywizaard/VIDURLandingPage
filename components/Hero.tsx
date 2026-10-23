@@ -227,30 +227,28 @@ export default function Hero() {
                 Trusted by 200+ CA, CS & Tax Professional
               </h3>
 
-              {/* Investors & Marquee Clients - Professional centered display */}
-              <div className="flex flex-col items-center justify-center gap-6 w-full">
-                {/* Label */}
-                <div className="text-center md:text-left">
-                  <h4 className="text-base md:text-lg font-bold text-deep-green">
+              {/* Investors & Marquee Clients - Left aligned like reference */}
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 w-full">
+                {/* Label on the left */}
+                <div className="flex-shrink-0">
+                  <h4 className="text-lg md:text-xl font-bold text-deep-green whitespace-nowrap">
                     Investors & Marquee Clients:
                   </h4>
                 </div>
 
-                {/* Logo Grid - Centered with proper spacing */}
-                <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 lg:gap-12 max-w-5xl">
+                {/* Logo row - horizontal display */}
+                <div className="flex flex-wrap items-center gap-6 md:gap-10 lg:gap-16">
                   {[
                     'Aditya Birla Group',
                     'Kotak', 
                     'Bharat', 
-                    'Nexedge', 
-                    'Wealth ONE 360', 
-                    'ICSI'
+                    'Nexedge'
                   ].map((logo, index) => (
                     <div
                       key={index}
                       className="flex-shrink-0"
                     >
-                      <span className="text-lg md:text-xl lg:text-2xl font-black text-gray-900 whitespace-nowrap tracking-tight hover:text-deep-green transition-colors duration-300 cursor-pointer">
+                      <span className="text-xl md:text-2xl lg:text-3xl font-black text-gray-900 whitespace-nowrap tracking-tight hover:text-deep-green transition-colors duration-300 cursor-pointer">
                         {logo}
                       </span>
                     </div>
