@@ -49,45 +49,6 @@ export default function TrustedByProfessionals() {
     return () => observer.disconnect();
   }, [hasAnimated]);
 
-  const professionals = [
-    {
-      title: 'Chartered Accountants',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
-      description: 'Tax planning, auditing, and compliance workflows'
-    },
-    {
-      title: 'Company Secretaries',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
-      description: 'Corporate governance and regulatory compliance'
-    },
-    {
-      title: 'Legal Professionals',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-        </svg>
-      ),
-      description: 'Legal research, drafting, and case preparation'
-    },
-    {
-      title: 'Tax & Audit Teams',
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      description: 'Enterprise tax advisory and audit documentation'
-    }
-  ];
-
   return (
     <section ref={sectionRef} className="py-12 md:py-16 bg-soft-neutral">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,86 +86,6 @@ export default function TrustedByProfessionals() {
               </div>
               <div className="text-xs md:text-sm font-medium text-deep-green/70">
                 {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Professional Categories - Interactive with Animations */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {professionals.map((prof, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                scale: 1.05,
-                y: -8,
-                transition: { duration: 0.3 }
-              }}
-              className="relative bg-white rounded-2xl p-4 md:p-6 hover:shadow-2xl transition-all duration-300 group cursor-pointer border-2 border-transparent hover:border-highlight-green/40 overflow-hidden"
-            >
-              {/* Animated gradient background on hover */}
-              <motion.div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(135, 206, 80, 0.05) 0%, rgba(13, 86, 73, 0.05) 100%)'
-                }}
-              />
-              
-              {/* Animated pulse effect */}
-              <motion.div
-                className="absolute -inset-1 bg-gradient-to-r from-highlight-green/20 to-deep-green/20 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl"
-                animate={{
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-
-              <div className="relative z-10">
-                {/* Icon with rotation animation */}
-                <motion.div 
-                  className="text-deep-green mb-3 md:mb-4 group-hover:text-highlight-green transition-colors"
-                  whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  {prof.icon}
-                </motion.div>
-                
-                {/* Title */}
-                <h3 className="text-base md:text-lg lg:text-xl font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors">
-                  {prof.title}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-xs md:text-sm text-deep-green/70 leading-relaxed">
-                  {prof.description}
-                </p>
-
-                {/* Animated arrow */}
-                <motion.div
-                  className="mt-3 md:mt-4 flex items-center gap-2 text-xs md:text-sm font-medium text-deep-green group-hover:text-highlight-green"
-                  initial={{ x: 0 }}
-                  whileHover={{ x: 4 }}
-                >
-                  <span>Learn more</span>
-                  <motion.svg 
-                    className="w-4 h-4" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                    animate={{ x: [0, 4, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </motion.svg>
-                </motion.div>
               </div>
             </motion.div>
           ))}

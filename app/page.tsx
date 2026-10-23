@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
 import GeographicCoverage from '@/components/GeographicCoverage';
 import TrustedByProfessionals from '@/components/TrustedByProfessionals';
+import CoreJobs from '@/components/CoreJobs';
 import TrustedKnowledge from '@/components/TrustedKnowledge';
 import ProfessionalCommunity from '@/components/ProfessionalCommunity';
 import ChallengesSolutions from '@/components/ChallengesSolutions';
@@ -27,6 +28,7 @@ export default function Home() {
         <VideoSection />
         <GeographicCoverage />
         <TrustedByProfessionals />
+        <CoreJobs />
         <TrustedKnowledge />
         <ProfessionalCommunity />
         <ChallengesSolutions />
