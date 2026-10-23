@@ -227,28 +227,85 @@ export default function Hero() {
                 Trusted by 200+ CA, CS & Tax Professional
               </h3>
 
-              {/* Investors & Marquee Clients - Horizontal single line */}
+              {/* Investors & Marquee Clients - Sliding Logos */}
               <div className="w-full pt-8">
-                <div className="flex items-center justify-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
+                <div className="flex flex-col items-center gap-6">
                   {/* Label */}
                   <span className="text-sm md:text-base font-semibold text-deep-green whitespace-nowrap">
                     Investors & Marquee Clients:
                   </span>
                   
-                  {/* Client names in single row */}
-                  {[
-                    'Aditya Birla Group',
-                    'Kotak',
-                    'Bharat',
-                    'Nexedge'
-                  ].map((name, index) => (
-                    <div
-                      key={index}
-                      className="text-base md:text-lg lg:text-xl font-semibold text-gray-400 hover:text-gray-700 transition-colors duration-300 cursor-pointer tracking-tight whitespace-nowrap"
+                  {/* Sliding Logos */}
+                  <div className="w-full overflow-hidden">
+                    <motion.div
+                      className="flex items-center gap-12 md:gap-16"
+                      animate={{
+                        x: [0, '-50%']
+                      }}
+                      transition={{
+                        x: {
+                          duration: 30,
+                          repeat: Infinity,
+                          ease: "linear",
+                          repeatType: "loop"
+                        }
+                      }}
                     >
-                      {name}
-                    </div>
-                  ))}
+                      {/* First set of logos */}
+                      {[
+                        { src: '/logos/icai.png', alt: 'ICAI', height: 'h-12' },
+                        { src: '/logos/aditya-birla.png', alt: 'Aditya Birla Group', height: 'h-12' },
+                        { src: '/logos/one36.png', alt: 'One36', height: 'h-10' },
+                        { src: '/logos/ca-india.png', alt: 'CA India', height: 'h-12' },
+                        { src: '/logos/balakrishna.png', alt: 'Balakrishna and Co', height: 'h-14' },
+                        { src: '/logos/baveja-gupta.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
+                        { src: '/logos/beetaone.png', alt: 'Beetaone Fintax', height: 'h-10' },
+                        { src: '/logos/arvind-jain.png', alt: 'Arvind S. Jain & Co', height: 'h-12' },
+                        { src: '/logos/avkg.png', alt: 'AVKG & Associates', height: 'h-10' },
+                        { src: '/logos/chhawchharia.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
+                        { src: '/logos/aanand.png', alt: 'Aanand & Co', height: 'h-10' },
+                        { src: '/logos/agh.png', alt: 'AGH & Associates', height: 'h-10' },
+                        { src: '/logos/ats.png', alt: 'ATS & Co', height: 'h-12' },
+                        { src: '/logos/sreenivasa-rao.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
+                        { src: '/logos/aabk.png', alt: 'AABK & Associates', height: 'h-10' },
+                        { src: '/logos/alam.png', alt: 'Alam & Associates', height: 'h-12' },
+                        { src: '/logos/alpha-academy.png', alt: 'Alpha Academy', height: 'h-10' },
+                        { src: '/logos/ambiz.png', alt: 'Ambiz Next', height: 'h-10' },
+                        { src: '/logos/ankit-malik.png', alt: 'Ankit Malik & Associates', height: 'h-10' }
+                      ].concat([
+                        { src: '/logos/icai.png', alt: 'ICAI', height: 'h-12' },
+                        { src: '/logos/aditya-birla.png', alt: 'Aditya Birla Group', height: 'h-12' },
+                        { src: '/logos/one36.png', alt: 'One36', height: 'h-10' },
+                        { src: '/logos/ca-india.png', alt: 'CA India', height: 'h-12' },
+                        { src: '/logos/balakrishna.png', alt: 'Balakrishna and Co', height: 'h-14' },
+                        { src: '/logos/baveja-gupta.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
+                        { src: '/logos/beetaone.png', alt: 'Beetaone Fintax', height: 'h-10' },
+                        { src: '/logos/arvind-jain.png', alt: 'Arvind S. Jain & Co', height: 'h-12' },
+                        { src: '/logos/avkg.png', alt: 'AVKG & Associates', height: 'h-10' },
+                        { src: '/logos/chhawchharia.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
+                        { src: '/logos/aanand.png', alt: 'Aanand & Co', height: 'h-10' },
+                        { src: '/logos/agh.png', alt: 'AGH & Associates', height: 'h-10' },
+                        { src: '/logos/ats.png', alt: 'ATS & Co', height: 'h-12' },
+                        { src: '/logos/sreenivasa-rao.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
+                        { src: '/logos/aabk.png', alt: 'AABK & Associates', height: 'h-10' },
+                        { src: '/logos/alam.png', alt: 'Alam & Associates', height: 'h-12' },
+                        { src: '/logos/alpha-academy.png', alt: 'Alpha Academy', height: 'h-10' },
+                        { src: '/logos/ambiz.png', alt: 'Ambiz Next', height: 'h-10' },
+                        { src: '/logos/ankit-malik.png', alt: 'Ankit Malik & Associates', height: 'h-10' }
+                      ]).map((logo, index) => (
+                        <div
+                          key={index}
+                          className="flex-shrink-0 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                        >
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            className={`${logo.height} w-auto object-contain`}
+                          />
+                        </div>
+                      ))}
+                    </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
