@@ -222,11 +222,6 @@ export default function Hero() {
             className="mt-12 md:mt-16 w-full"
           >
             <div className="flex flex-col gap-6">
-              {/* Centered heading with brand color */}
-              <h3 className="text-sm md:text-base font-light text-deep-green text-center uppercase tracking-[0.25em]">
-                Trusted by 200+ CA, CS & Tax Professional
-              </h3>
-
               {/* Investors & Marquee Clients - Sliding Logos */}
               <div className="w-full pt-8">
                 <div className="flex flex-col items-center gap-6">
