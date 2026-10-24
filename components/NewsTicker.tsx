@@ -39,7 +39,7 @@ export default function NewsTicker() {
 
   return (
     <motion.div
-      className="fixed top-20 left-0 right-0 z-40 w-full bg-soft-neutral/30 border-b border-gray-100"
+      className="fixed top-0 left-0 right-0 z-50 w-full bg-deep-green border-b border-deep-green/20"
       initial={{ opacity: 1, y: 0 }}
       animate={{
         opacity: isVisible ? 1 : 0,
@@ -52,7 +52,7 @@ export default function NewsTicker() {
           {/* Blinking Dot */}
           <div className="absolute left-4 md:left-8 flex items-center gap-2">
             <motion.div
-              className="w-2 h-2 bg-highlight-green rounded-full"
+              className="w-2 h-2 bg-white rounded-full"
               animate={{
                 opacity: [1, 0.3, 1],
                 scale: [1, 1.3, 1]
@@ -84,7 +84,7 @@ export default function NewsTicker() {
               {allItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 text-sm text-gray-600 font-medium whitespace-nowrap"
+                  className="flex-shrink-0 text-sm text-white/90 font-medium whitespace-nowrap"
                 >
                   {item}
                 </div>
