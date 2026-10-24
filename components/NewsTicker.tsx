@@ -43,30 +43,33 @@ export default function NewsTicker() {
       initial={{ opacity: 1, y: 0 }}
       animate={{
         opacity: isVisible ? 1 : 0,
-        y: isVisible ? 0 : -20
+        y: isVisible ? 0 : -48
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="w-full overflow-hidden">
-        <div className="relative py-3 flex items-center justify-center">
-          {/* Blinking Dot */}
-          <div className="absolute left-4 md:left-8 flex items-center gap-2">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative py-3 flex items-center gap-4">
+          {/* Static Label with Blinking Dot */}
+          <div className="flex items-center gap-2 flex-shrink-0">
             <motion.div
-              className="w-2 h-2 bg-white rounded-full"
+              className="w-2 h-2 bg-highlight-green rounded-full"
               animate={{
-                opacity: [1, 0.3, 1],
-                scale: [1, 1.3, 1]
+                opacity: [1, 0.2, 1],
+                scale: [1, 1.4, 1]
               }}
               transition={{
-                duration: 2,
+                duration: 1,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             />
+            <span className="text-sm font-semibold text-white whitespace-nowrap">
+              Latest Tax & News Updates
+            </span>
           </div>
 
-          {/* Centered Scrolling News */}
-          <div className="max-w-4xl overflow-hidden">
+          {/* Scrolling News */}
+          <div className="flex-1 overflow-hidden">
             <motion.div
               className="flex gap-12"
               animate={{
