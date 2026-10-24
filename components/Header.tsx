@@ -62,7 +62,7 @@ export default function Header() {
   return (
     <header 
       className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white shadow-sm' : 'bg-white'
       }`}
     >
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
