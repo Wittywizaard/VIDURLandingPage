@@ -102,9 +102,6 @@ export default function CoreJobs() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Side - Description */}
             <div>
-              <p className="text-xs md:text-sm font-bold text-white/70 uppercase tracking-wider mb-3">
-                {activeJob.label}
-              </p>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 {activeJob.title}
               </h3>
