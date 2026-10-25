@@ -30,7 +30,7 @@ export default function ChallengesSolutions() {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-soft-neutral/30">
+    <section className="py-12 md:py-16 bg-white">
       <div className="max-w-[1000px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
