@@ -39,7 +39,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-4 bg-white text-deep-green text-base font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300 shadow-xl min-w-[200px]"
+              className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white border-2 border-white text-base font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 shadow-xl min-w-[200px]"
             >
               Start Free Trial
             </motion.button>
