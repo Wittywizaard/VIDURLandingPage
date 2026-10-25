@@ -57,7 +57,7 @@ export default function GeographicCoverage() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-white">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-gray-900">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Text Content */}
@@ -68,18 +68,13 @@ export default function GeographicCoverage() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <p className="text-xs md:text-sm font-bold text-deep-green uppercase tracking-wider mb-3 md:mb-4">
+            <p className="text-xs md:text-sm font-semibold text-white uppercase tracking-wider mb-6">
               EXPANDING OUR PRESENCE ACROSS INDIA
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6">
-              <span className="text-deep-green">Live in</span>
-              <br />
-              <span className="text-deep-green text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold">
-                {count}+
-              </span>
-              <span className="text-deep-green text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold ml-2 md:ml-4">Cities</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Live in {count}+ Cities
             </h2>
-            <p className="text-sm md:text-base lg:text-lg text-deep-green/70 max-w-lg mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Empowering professionals across India, from leading metropolitan firms to independent practices, with smarter research, seamless drafting, and AI-powered solutions.
             </p>
           </motion.div>
