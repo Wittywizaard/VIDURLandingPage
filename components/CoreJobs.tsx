@@ -74,7 +74,7 @@ export default function CoreJobs() {
         </motion.div>
 
         {/* Sticky Tabs Container */}
-        <div className="sticky top-20 z-30 flex justify-center pb-8">
+        <div className="sticky top-20 z-30 flex justify-center pb-8 bg-white">
           {/* Tabs - Sliding Segmented Control */}
           <div className="inline-flex bg-white rounded-full p-1.5 gap-1 shadow-2xl border border-gray-100">
             {jobs.map((job, index) => (
