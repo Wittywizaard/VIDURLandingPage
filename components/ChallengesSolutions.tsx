@@ -30,20 +30,20 @@ export default function ChallengesSolutions() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-soft-neutral/30">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 bg-soft-neutral/30">
+      <div className="max-w-[1000px] mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-3 md:mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-3">
             AI Should Help, Not Create Risk
           </h2>
-          <p className="text-base md:text-lg text-deep-green/70 max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-black max-w-2xl mx-auto">
             See how VIDUR addresses the everyday challenges professionals face with generic AI tools
           </p>
         </motion.div>
