@@ -97,24 +97,24 @@ export default function CoreJobs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-soft-neutral rounded-3xl p-6 md:p-10 shadow-xl"
+          className="bg-deep-green rounded-3xl p-6 md:p-10 shadow-xl"
         >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Side - Description */}
             <div>
-              <p className="text-xs md:text-sm font-bold text-deep-green/70 uppercase tracking-wider mb-3">
+              <p className="text-xs md:text-sm font-bold text-white/70 uppercase tracking-wider mb-3">
                 {activeJob.label}
               </p>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 {activeJob.title}
               </h3>
-              <p className="text-base md:text-lg text-deep-green/80 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-white/90 mb-4 leading-relaxed">
                 {activeJob.description}
               </p>
-              <p className="text-sm text-deep-green/60 italic mb-6">
+              <p className="text-sm text-white/70 italic mb-6">
                 {activeJob.note}
               </p>
-              <button className="btn-gradient-primary inline-flex items-center gap-2">
+              <button className="bg-white hover:bg-gray-100 text-deep-green px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition-all">
                 Start Free Trial
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
