@@ -49,20 +49,20 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-soft-neutral overflow-hidden">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 bg-soft-neutral overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-3 md:mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-2">
             What Professionals Say About VIDUR
           </h2>
-          <p className="text-base md:text-lg text-deep-green/70 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-deep-green/70 max-w-2xl mx-auto">
             Real stories from the professionals who use VIDUR.
           </p>
         </motion.div>
@@ -70,49 +70,41 @@ export default function Testimonials() {
         {/* Continuous Scrolling Testimonials */}
         <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex gap-6 animate-testimonial-scroll">
+            <div className="flex gap-4 animate-testimonial-scroll">
               {/* Duplicate testimonials for seamless loop */}
               {[...testimonials, ...testimonials, ...testimonials].map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-[320px] md:w-[380px] bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer border border-deep-green/10"
-                  whileHover={{ scale: 1.02, y: -8 }}
+                  className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer border border-deep-green/10"
+                  whileHover={{ scale: 1.02, y: -4 }}
                 >
                   {/* Quote Icon */}
-                  <div className="mb-4">
-                    <svg className="w-10 h-10 text-highlight-green" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="mb-3">
+                    <svg className="w-8 h-8 text-highlight-green" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg md:text-xl font-bold text-deep-green mb-3 group-hover:text-highlight-green transition-colors leading-snug min-h-[60px]">
+                  <h3 className="text-base md:text-lg font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-snug">
                     {testimonial.title}
                   </h3>
 
                   {/* Quote */}
-                  <p className="text-sm md:text-base text-deep-green/70 leading-relaxed mb-6 line-clamp-4">
+                  <p className="text-xs md:text-sm text-deep-green/70 leading-relaxed mb-4 line-clamp-3">
                     "{testimonial.quote}"
                   </p>
 
-                  {/* Read story link */}
-                  <button className="text-sm font-bold text-highlight-green hover:text-deep-green transition-colors inline-flex items-center gap-2 mb-6">
-                    {testimonial.story}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
-
                   {/* Author Info with Avatar */}
-                  <div className="flex items-center gap-3 pt-4 border-t border-deep-green/10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  <div className="flex items-center gap-2 pt-3 border-t border-deep-green/10">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                       {testimonial.author.charAt(0)}
                     </div>
                     <div>
-                      <p className="text-sm md:text-base font-bold text-deep-green">
+                      <p className="text-sm font-bold text-deep-green">
                         {testimonial.author}
                       </p>
-                      <p className="text-xs md:text-sm text-deep-green/60">
+                      <p className="text-xs text-deep-green/60">
                         {testimonial.designation}
                       </p>
                     </div>
@@ -123,8 +115,8 @@ export default function Testimonials() {
           </div>
 
           {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-soft-neutral to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-soft-neutral to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
 
