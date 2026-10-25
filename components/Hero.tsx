@@ -207,18 +207,18 @@ export default function Hero() {
             className="mt-12 md:mt-16 w-full"
           >
             <div className="flex flex-col gap-6">
-              {/* Client Logos - Professional Display */}
-              <div className="w-full pt-8 border-t border-gray-100">
-                <div className="flex items-center gap-8">
-                  {/* Label on the left */}
-                  <span className="text-sm font-semibold text-deep-green whitespace-nowrap flex-shrink-0">
+              {/* Client Logos - Clean Horizontal Layout */}
+              <div className="w-full pt-6">
+                <div className="flex flex-col items-center gap-4">
+                  {/* Label centered above */}
+                  <span className="text-xs font-medium text-black/60 uppercase tracking-wider">
                     Trusted by 25000+ Professionals
                   </span>
                   
-                  {/* Sliding Logos on the right */}
-                  <div className="flex-1 overflow-hidden">
+                  {/* Sliding Logos */}
+                  <div className="w-full overflow-hidden">
                     <motion.div
-                      className="flex items-center gap-16"
+                      className="flex items-center gap-8"
                       animate={{
                         x: [0, '-50%']
                       }}
@@ -233,47 +233,47 @@ export default function Hero() {
                     >
                       {/* First set of logos */}
                       {[
-                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-16' },
-                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-16' },
-                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-16' },
-                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-14' },
-                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-14' },
-                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-14' },
-                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-16' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-18' },
-                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-14' },
-                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-14' },
-                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-14' },
-                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-14' },
-                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-14' },
-                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-16' },
-                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-14' },
-                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-14' },
-                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-16' },
-                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-14' }
+                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-12' },
+                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-12' },
+                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-12' },
+                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-10' },
+                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-10' },
+                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-10' },
+                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-12' },
+                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-14' },
+                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
+                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-10' },
+                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
+                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-10' },
+                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-10' },
+                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-12' },
+                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
+                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-10' },
+                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-12' },
+                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-10' }
                       ].concat([
-                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-16' },
-                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-16' },
-                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-16' },
-                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-14' },
-                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-14' },
-                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-14' },
-                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-16' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-18' },
-                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-14' },
-                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-14' },
-                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-14' },
-                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-14' },
-                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-14' },
-                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-16' },
-                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-14' },
-                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-14' },
-                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-16' },
-                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-14' }
+                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-12' },
+                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-12' },
+                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-12' },
+                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-10' },
+                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-10' },
+                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-10' },
+                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-12' },
+                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-14' },
+                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
+                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-10' },
+                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
+                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-10' },
+                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-10' },
+                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-12' },
+                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
+                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-10' },
+                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-12' },
+                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-10' }
                       ]).map((logo, index) => (
                         <div
                           key={index}
-                          className="flex-shrink-0 flex items-center justify-center transition-all duration-300 opacity-80 hover:opacity-100"
+                          className="flex-shrink-0 flex items-center justify-center transition-opacity duration-300 opacity-70 hover:opacity-100"
                         >
                           <img
                             src={logo.src}
