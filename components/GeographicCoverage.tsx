@@ -84,7 +84,7 @@ export default function GeographicCoverage() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
-            <div className="relative w-full max-w-lg mx-auto">
+            <div className="relative w-full max-w-md mx-auto">
               {/* Square box container with clean white background */}
               <div className="relative aspect-square bg-white rounded-[40px] border border-gray-200/80 shadow-2xl overflow-hidden p-0">
                 <video
