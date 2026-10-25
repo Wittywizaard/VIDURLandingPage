@@ -87,7 +87,6 @@ export default function CoreJobs() {
                     : 'text-black hover:text-gray-900'
                 }`}
               >
-                <span className="w-4 h-4 flex-shrink-0">{job.icon}</span>
                 {job.tabTitle}
               </button>
             ))}
