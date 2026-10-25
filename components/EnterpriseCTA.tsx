@@ -16,7 +16,7 @@ export default function EnterpriseCTA() {
             {/* Left - Heading */}
             <div>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
-                Trusted by leading enterprises and professionals
+                Trusted by Tax & Corporate Law professionals
               </h2>
             </div>
             
