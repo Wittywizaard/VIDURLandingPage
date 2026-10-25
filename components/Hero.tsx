@@ -17,47 +17,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-      {/* Premium background patterns */}
-      <div className="absolute inset-0 opacity-20">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-deep-green/20 to-highlight-green/20 rounded-full filter blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-highlight-green/20 to-deep-green/20 rounded-full filter blur-3xl"
-        />
-      </div>
-
-      {/* Subtle grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.01]">
-        <svg width="100%" height="100%">
-          <defs>
-            <pattern id="premium-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0D5649" strokeWidth="1"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#premium-grid)" />
-        </svg>
-      </div>
-
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 text-center w-full">
         <motion.div
