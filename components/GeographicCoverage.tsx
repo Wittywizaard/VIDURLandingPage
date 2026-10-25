@@ -57,7 +57,7 @@ export default function GeographicCoverage() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-[#1a2832]">
+    <section ref={sectionRef} className="py-16 md:py-24 bg-[#1a2f28]">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Text Content */}
