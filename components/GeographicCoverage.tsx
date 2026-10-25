@@ -68,9 +68,6 @@ export default function GeographicCoverage() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <p className="text-xs md:text-sm font-semibold text-white uppercase tracking-wider mb-6">
-              EXPANDING OUR PRESENCE ACROSS INDIA
-            </p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Live in {count}+ Cities
             </h2>
