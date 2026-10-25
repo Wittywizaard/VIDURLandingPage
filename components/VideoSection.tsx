@@ -13,15 +13,17 @@ export default function VideoSection() {
           transition={{ duration: 0.6 }}
           className="relative w-full max-w-5xl mx-auto"
         >
-          <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl" style={{ paddingBottom: '56.25%', position: 'relative', height: 0 }}>
-            <iframe
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              src="https://www.youtube.com/embed/oIUTbT5j_o4?autoplay=1&mute=1&loop=1&playlist=oIUTbT5j_o4&controls=0&showinfo=0&rel=0&modestbranding=1"
-              title="VIDUR Product Demo"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+          <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl">
+            <video
+              className="w-full h-auto"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/homepage-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </motion.div>
       </div>
