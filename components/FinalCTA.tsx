@@ -25,12 +25,9 @@ export default function FinalCTA() {
           </p>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Bring VIDUR Into Your Practice
           </h2>
-
-          {/* Description - keeping space for layout */}
-          <div className="mb-10 h-[60px]"></div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
