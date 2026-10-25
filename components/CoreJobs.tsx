@@ -66,9 +66,9 @@ export default function CoreJobs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-6"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
             Discover What VIDUR Can Do
           </h2>
         </motion.div>
