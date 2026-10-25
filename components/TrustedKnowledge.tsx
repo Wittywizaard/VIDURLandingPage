@@ -95,9 +95,6 @@ export default function TrustedKnowledge() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <p className="text-xs md:text-sm font-bold text-deep-green/60 uppercase tracking-wider mb-2">
-            A PROFESSIONAL REFERENCE SHELF
-          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
             Trusted Knowledge & Sources
           </h2>
