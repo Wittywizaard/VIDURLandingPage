@@ -149,7 +149,7 @@ export default function Hero() {
 
           {/* Trust Points - Centered without icons */}
           <motion.div 
-            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-black"
+            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-black mt-8 md:mt-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
