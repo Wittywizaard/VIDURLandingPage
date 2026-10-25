@@ -6,15 +6,15 @@ export default function Testimonials() {
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: '-SboNnemOSA'
+      videoId: '6ade5732eebf69da71ee1221'
     },
     {
       type: 'video',
-      videoId: '4fLWT4Qc5pc'
+      videoId: '6ade5749e655cfbd812761b8'
     },
     {
       type: 'video',
-      videoId: 'aFw62rOxvF0'
+      videoId: '6ade5767e655cfbd812761c6'
     }
   ];
 
@@ -73,21 +73,22 @@ export default function Testimonials() {
         {/* Continuous Scrolling Testimonials */}
         <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex gap-4 animate-testimonial-scroll">
+            <div className="flex gap-6 animate-testimonial-scroll">
               {/* Duplicate testimonials for seamless loop */}
               {[...allTestimonials, ...allTestimonials, ...allTestimonials].map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-[280px] md:w-[320px] bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer border border-deep-green/10 overflow-hidden"
+                  className="flex-shrink-0 w-[350px] md:w-[380px] bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-200 overflow-hidden"
                   whileHover={{ scale: 1.02, y: -4 }}
                 >
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
                     <div className="relative w-full h-[400px] md:h-[450px] bg-black overflow-hidden">
                       <iframe
-                        src={`https://www.youtube.com/embed/${testimonial.videoId}?controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&playsinline=1`}
+                        src={`https://play.gumlet.io/embed/${testimonial.videoId}`}
                         className="w-full h-full"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
                         style={{ 
                           border: 'none'
                         }}
@@ -95,29 +96,28 @@ export default function Testimonials() {
                     </div>
                   ) : (
                     /* Text Testimonial */
-                    <div className="p-5">
-                      {/* Title */}
-                      <h3 className="text-base md:text-lg font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-snug">
-                        {testimonial.title}
-                      </h3>
-
+                    <div className="p-6 md:p-8 flex flex-col h-[400px] md:h-[450px] justify-between">
                       {/* Quote */}
-                      <p className="text-xs md:text-sm text-black leading-relaxed mb-4 line-clamp-3">
-                        {testimonial.quote}
-                      </p>
+                      <div className="flex-1 flex flex-col justify-center">
+                        <p className="text-base md:text-lg text-black leading-relaxed">
+                          {testimonial.quote}
+                        </p>
+                      </div>
 
-                      {/* Author Info with Avatar */}
-                      <div className="flex items-center gap-2 pt-3 border-t border-deep-green/10">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                          {testimonial.author.charAt(0)}
-                        </div>
-                        <div>
-                          <p className="text-sm font-bold text-deep-green">
-                            {testimonial.author}
-                          </p>
-                          <p className="text-xs text-deep-green/60">
-                            {testimonial.designation}
-                          </p>
+                      {/* Author Info at Bottom */}
+                      <div className="mt-6 pt-6 border-t border-gray-200">
+                        <div className="flex items-center gap-3">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+                            {testimonial.author.charAt(0)}
+                          </div>
+                          <div>
+                            <p className="text-base font-bold text-deep-green">
+                              {testimonial.author}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              {testimonial.designation}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
