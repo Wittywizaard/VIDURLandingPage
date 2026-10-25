@@ -4,11 +4,12 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a3d32] via-[#0D5649] to-white relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a3d32] via-[#0D5649] via-[#1a6e5a] via-[#2d8b6f] via-[#4ca885] to-white relative overflow-hidden">
       {/* Subtle decorative blur elements */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-20 w-96 h-96 bg-deep-green rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-40 left-1/2 w-[500px] h-[500px] bg-emerald-200 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
