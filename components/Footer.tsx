@@ -15,7 +15,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-br from-[#052f23] via-deep-green to-[#0a3d32] text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#021a13] via-[#052f23] to-[#031f18] text-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-highlight-green rounded-full blur-3xl"></div>
