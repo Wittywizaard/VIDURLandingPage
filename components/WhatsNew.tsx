@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export default function WhatsNew() {
   const features = [
     {
-      number: '01',
       title: 'Professional GSTAT Appeal Toolkit',
       description: 'Comprehensive tools for preparing and managing GST appeals with automated form generation, case law research, and precedent analysis.',
       image: '⚖️',
@@ -13,7 +12,6 @@ export default function WhatsNew() {
       url: 'https://drive.google.com/file/d/1CvjE-UMXv3Q01X-G-SHpsi-mNs7atsgo/view?usp=drive_link'
     },
     {
-      number: '02',
       title: 'Contribute your knowledge',
       description: 'Import and integrate your firm\'s internal knowledge base, templates, and expertise directly into VIDUR for personalized AI assistance.',
       image: '📖',
@@ -52,15 +50,10 @@ export default function WhatsNew() {
             >
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div className="inline-block mb-4">
-                  <span className="text-xs font-bold text-white bg-deep-green px-3 py-1 rounded-full">
-                    {feature.number}
-                  </span>
-                </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-deep-green mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-lg text-deep-green/70 mb-6 leading-relaxed">
+                <p className="text-lg text-black mb-6 leading-relaxed">
                   {feature.description}
                 </p>
                 {feature.url ? (
