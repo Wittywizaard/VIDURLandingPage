@@ -103,9 +103,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-sm' : 'bg-white'
-      }`}
+      className="fixed top-12 left-0 right-0 z-40 bg-white shadow-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -147,7 +145,7 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 bg-white rounded-2xl shadow-2xl py-6 px-6 border border-gray-100 min-w-[400px]"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 bg-white rounded-2xl shadow-2xl py-6 px-6 border border-gray-100 min-w-[400px] z-50"
                   >
                     <div className="flex gap-8">
                       {item.sections?.map((section) => (
