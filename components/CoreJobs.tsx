@@ -78,10 +78,10 @@ export default function CoreJobs() {
               <button
                 key={job.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeTab === index
-                    ? 'bg-deep-green text-white shadow-lg'
-                    : 'bg-soft-neutral text-deep-green hover:bg-deep-green/10'
+                    ? 'bg-[#1a2332] text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
                 {job.icon}
