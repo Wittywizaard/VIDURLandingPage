@@ -23,7 +23,7 @@ export default function EnterpriseCTA() {
             {/* Right - Description and CTA */}
             <div className="text-center lg:text-left">
               <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
-                Get custom pricing, a personalized demo, and see how teams like yours research, draft, and advise with VIDUR.
+                Get a personalized demo, and see how teams like yours research, draft, and advise with VIDUR.
               </p>
               <button className="bg-deep-green hover:bg-deep-green/90 text-white px-6 py-3 rounded-full text-base font-semibold transition-all inline-flex items-center gap-2">
                 Book demo
