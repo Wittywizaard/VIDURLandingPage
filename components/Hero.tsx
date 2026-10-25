@@ -188,7 +188,7 @@ export default function Hero() {
                   {/* Sliding Logos on the right */}
                   <div className="flex-1 overflow-hidden">
                     <motion.div
-                      className="flex items-center gap-10"
+                      className="flex items-center gap-6"
                       animate={{
                         x: [0, '-50%']
                       }}
