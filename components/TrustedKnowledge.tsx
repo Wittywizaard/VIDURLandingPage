@@ -106,17 +106,17 @@ export default function TrustedKnowledge() {
         {/* Continuous Scrolling Carousel */}
         <div className="relative">
           <div className="overflow-hidden py-4">
-            <div className="flex gap-6 animate-book-scroll">
+            <div className="flex gap-4 animate-book-scroll">
               {/* Duplicate sources for seamless loop */}
               {[...sources, ...sources, ...sources, ...sources].map((source, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-[260px] md:w-[300px] bg-white rounded-2xl p-6 border border-gray-200/80 flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  className="flex-shrink-0 w-[220px] md:w-[240px] bg-white rounded-2xl p-4 border border-gray-200/80 flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
                   whileHover={{ scale: 1.02, y: -6 }}
                 >
                   {/* Book Cover */}
-                  <div className="flex-1 flex items-center justify-center mb-6">
-                    <div className={`w-44 h-56 md:w-48 md:h-60 ${source.bookStyle} rounded-lg shadow-xl relative overflow-hidden transform transition-transform duration-300 group-hover:scale-105`}>
+                  <div className="flex-1 flex items-center justify-center mb-4">
+                    <div className={`w-36 h-48 md:w-40 md:h-52 ${source.bookStyle} rounded-lg shadow-xl relative overflow-hidden transform transition-transform duration-300 group-hover:scale-105`}>
                       {source.bookContent}
                     </div>
                   </div>
@@ -126,7 +126,7 @@ export default function TrustedKnowledge() {
                     <div className="text-xs text-deep-green/60 font-semibold mb-1 uppercase tracking-wide">
                       {source.label}
                     </div>
-                    <h3 className="text-base md:text-lg font-bold text-deep-green group-hover:text-highlight-green transition-colors leading-tight">
+                    <h3 className="text-sm md:text-base font-bold text-deep-green group-hover:text-highlight-green transition-colors leading-tight">
                       {source.title}
                     </h3>
                   </div>
