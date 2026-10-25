@@ -195,7 +195,7 @@ export default function Footer() {
         href="https://wa.me/"
         target="_blank"
         rel="noopener noreferrer"
-        className="group fixed bottom-6 right-6 bg-highlight-green hover:bg-[#78bd41] text-dark-accent font-bold rounded-full shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 z-50 overflow-hidden"
+        className="group fixed bottom-6 right-6 bg-deep-green hover:bg-deep-green/90 text-white font-bold rounded-full shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 z-50 overflow-hidden"
       >
         <div className="flex items-center gap-2 px-4 py-3">
           <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
