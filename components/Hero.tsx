@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-24 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -149,7 +149,7 @@ export default function Hero() {
 
           {/* Trust Points - Centered without icons */}
           <motion.div 
-            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-black mt-8 md:mt-10"
+            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-black mt-4 md:mt-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
