@@ -46,15 +46,17 @@ export default function FinalCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}
               whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
               className="px-10 py-5 bg-highlight-green text-dark-accent text-lg font-bold rounded-xl hover:bg-[#78bd41] transition-all duration-200 shadow-2xl min-w-[200px]"
             >
               Start Free Trial
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}
               whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
               className="px-10 py-5 bg-white text-deep-green text-lg font-bold rounded-xl hover:bg-soft-neutral transition-all duration-200 shadow-2xl min-w-[200px]"
             >
               Book a Demo

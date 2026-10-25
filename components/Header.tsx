@@ -188,9 +188,9 @@ export default function Header() {
             <button className="text-sm font-medium transition-colors text-black hover:text-deep-green">
               Log in
             </button>
-            <button className="bg-deep-green hover:bg-deep-green/90 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all inline-flex items-center gap-2">
+            <button className="bg-deep-green text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 inline-flex items-center gap-2 hover:bg-deep-green/90 hover:shadow-lg hover:scale-105 active:scale-95">
               Get started
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
@@ -257,7 +257,7 @@ export default function Header() {
                 <button className="block w-full text-left text-deep-green font-medium text-sm py-2">
                   Log in
                 </button>
-                <button className="bg-deep-green text-white w-full px-5 py-2.5 rounded-full text-sm font-medium">
+                <button className="bg-deep-green text-white w-full px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-deep-green/90 hover:shadow-lg active:scale-95">
                   Get started
                 </button>
               </div>

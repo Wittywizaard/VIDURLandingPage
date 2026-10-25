@@ -124,13 +124,14 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6 }}
           >
             <motion.button 
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 40px rgba(10, 61, 50, 0.3)" }}
               whileTap={{ scale: 0.98 }}
-              className="bg-deep-green hover:bg-deep-green/90 text-white px-6 py-3.5 rounded-full text-base font-medium transition-all inline-flex items-center justify-center gap-2 w-full sm:w-auto min-w-[200px] shadow-lg"
+              transition={{ duration: 0.3 }}
+              className="bg-deep-green hover:bg-deep-green/90 text-white px-6 py-3.5 rounded-full text-base font-medium transition-all inline-flex items-center justify-center gap-2 w-full sm:w-auto min-w-[200px] shadow-lg group"
             >
               Try VIDUR
               <svg 
-                className="w-4 h-4" 
+                className="w-4 h-4 transition-transform group-hover:translate-x-1" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -139,8 +140,9 @@ export default function Hero() {
               </svg>
             </motion.button>
             <motion.button 
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)" }}
               whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.3 }}
               className="bg-white hover:bg-gray-50 text-black border-2 border-gray-200 px-6 py-3.5 rounded-full text-base font-medium transition-all inline-flex items-center justify-center gap-2 w-full sm:w-auto min-w-[200px]"
             >
               Book a free demo

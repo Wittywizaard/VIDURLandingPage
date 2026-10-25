@@ -26,10 +26,10 @@ export default function EnterpriseCTA() {
               <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
                 Get a personalized demo, and see how teams like yours research, draft, and advise with VIDUR.
               </p>
-              <button className="bg-deep-green hover:bg-deep-green/90 text-white px-6 py-3 rounded-full text-base font-semibold transition-all inline-flex items-center gap-2">
+              <button className="bg-deep-green text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 inline-flex items-center gap-2 hover:bg-deep-green/90 hover:shadow-lg hover:scale-105 active:scale-95 group">
                 Book demo
                 <svg 
-                  className="w-4 h-4" 
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1" 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"

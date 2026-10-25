@@ -110,9 +110,9 @@ export default function CoreJobs() {
               <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
                 {activeJob.description}
               </p>
-              <button className="bg-white hover:bg-gray-100 text-deep-green px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition-all">
+              <button className="bg-white text-deep-green px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:bg-gray-100 hover:shadow-xl hover:scale-105 active:scale-95 group">
                 Start Free Trial
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
