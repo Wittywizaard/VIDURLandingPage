@@ -85,12 +85,13 @@ export default function Testimonials() {
                     /* Video Testimonial */
                     <div className="relative w-full h-[400px] md:h-[450px] bg-black overflow-hidden">
                       <iframe
-                        src={`https://play.gumlet.io/embed/${testimonial.videoId}`}
+                        src={`https://play.gumlet.io/embed/${testimonial.videoId}?preload=true&autoplay=false&loop=false&disable_player_controls=true`}
                         className="w-full h-full"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         style={{ 
-                          border: 'none'
+                          border: 'none',
+                          pointerEvents: 'none'
                         }}
                       ></iframe>
                     </div>
