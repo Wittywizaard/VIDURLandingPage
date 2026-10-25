@@ -180,7 +180,7 @@ export default function Hero() {
                 <div className="flex items-center gap-6">
                   {/* Label on the left */}
                   <div className="flex-shrink-0">
-                    <span className="text-xs font-medium text-black whitespace-nowrap">
+                    <span className="text-sm md:text-base font-bold text-black whitespace-nowrap">
                       Trusted by 25000+ professionals
                     </span>
                   </div>
