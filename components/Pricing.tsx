@@ -69,14 +69,16 @@ export default function Pricing() {
             >
               {/* Content wrapper for glassmorphism */}
               <div className={plan.highlight ? 'relative z-10' : ''}>
-              {/* Badge for highlighted plan */}
-              {plan.highlight && (
-                <div className="inline-block mb-3">
-                  <span className="text-xs font-bold bg-highlight-green text-dark-accent px-3 py-1 rounded-full">
-                    RECOMMENDED
-                  </span>
-                </div>
-              )}
+              {/* Badge for highlighted plan - or placeholder for alignment */}
+              <div className="mb-3" style={{ minHeight: '28px' }}>
+                {plan.highlight && (
+                  <div className="inline-block">
+                    <span className="text-xs font-bold bg-highlight-green text-dark-accent px-3 py-1 rounded-full">
+                      RECOMMENDED
+                    </span>
+                  </div>
+                )}
+              </div>
 
               {/* Category */}
               <h3 className={`text-xl md:text-2xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-deep-green'}`}>
@@ -110,7 +112,7 @@ export default function Pricing() {
               <button
                 className={`w-full py-3 rounded-lg text-sm font-semibold transition-all duration-200 transform hover:translate-y-[-2px] ${
                   plan.highlight
-                    ? 'bg-highlight-green text-dark-accent hover:bg-[#78bd41] shadow-lg'
+                    ? 'bg-white text-deep-green hover:bg-gray-50 shadow-lg'
                     : 'bg-white text-deep-green border border-deep-green hover:bg-deep-green hover:text-white'
                 }`}
               >
