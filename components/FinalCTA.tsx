@@ -20,12 +20,12 @@ export default function FinalCTA() {
           className="flex flex-col items-center justify-center"
         >
           {/* Section Label */}
-          <p className="text-base md:text-lg font-bold text-white uppercase tracking-wider mb-6">
+          <p className="text-base md:text-lg font-bold text-white uppercase tracking-wider mb-4">
             START WITH VIDUR
           </p>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 leading-tight max-w-4xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight max-w-4xl">
             Bring VIDUR Into Your Practice
           </h2>
 
