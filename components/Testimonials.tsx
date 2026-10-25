@@ -83,13 +83,19 @@ export default function Testimonials() {
                 >
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
-                    <div className="relative w-full h-[400px] md:h-[450px] bg-black flex items-center justify-center">
-                      <iframe
-                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview`}
-                        className="w-full h-full"
-                        allow="encrypted-media"
-                        style={{ border: 'none' }}
-                      ></iframe>
+                    <div className="relative w-full h-[400px] md:h-[450px] bg-black overflow-hidden">
+                      <div className="absolute inset-0" style={{ bottom: '-60px' }}>
+                        <iframe
+                          src={`https://drive.google.com/file/d/${testimonial.videoId}/preview`}
+                          className="w-full h-full"
+                          allow="encrypted-media"
+                          style={{ 
+                            border: 'none',
+                            height: 'calc(100% + 60px)',
+                            pointerEvents: 'auto'
+                          }}
+                        ></iframe>
+                      </div>
                     </div>
                   ) : (
                     /* Text Testimonial */
