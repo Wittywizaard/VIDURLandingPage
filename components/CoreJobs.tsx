@@ -97,7 +97,7 @@ export default function CoreJobs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-deep-green rounded-3xl p-6 md:p-10 shadow-xl"
+          className="bg-[#0a3d32] rounded-3xl p-6 md:p-10 shadow-xl"
         >
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Side - Description */}
