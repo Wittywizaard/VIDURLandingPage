@@ -80,7 +80,7 @@ export default function CoreJobs() {
                 onClick={() => setActiveTab(index)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeTab === index
-                    ? 'bg-[#1a2332] text-white'
+                    ? 'bg-deep-green text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
