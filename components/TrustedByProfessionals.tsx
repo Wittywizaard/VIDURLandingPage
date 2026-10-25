@@ -55,10 +55,10 @@ export default function TrustedByProfessionals() {
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
-            { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
             { value: stats.experts, label: 'Experts and commentaries', suffix: '+' },
-            { value: stats.queries, label: 'Query solved', suffix: '+' },
-            { value: stats.cities, label: 'Live in cities', suffix: '+' }
+            { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
+            { value: stats.cities, label: 'Live in cities', suffix: '+' },
+            { value: stats.queries, label: 'Query solved', suffix: '+' }
           ].map((stat, index) => (
             <motion.div
               key={index}
