@@ -20,8 +20,8 @@ import ScrollToTop from '@/components/ScrollToTop';
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
       <NewsTicker />
+      <Header />
       <main className="pt-32">
         <Hero />
         <VideoSection />
