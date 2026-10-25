@@ -134,10 +134,6 @@ export default function TrustedKnowledge() {
               ))}
             </div>
           </div>
-
-          {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
         </div>
       </div>
 
