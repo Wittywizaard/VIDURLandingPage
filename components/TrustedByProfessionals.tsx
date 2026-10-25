@@ -50,7 +50,7 @@ export default function TrustedByProfessionals() {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="py-8 md:py-12 bg-white">
+    <section ref={sectionRef} className="py-6 md:py-8 bg-white">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start justify-items-center">

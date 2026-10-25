@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function EnterpriseCTA() {
   return (
-    <section className="py-8 md:py-12 bg-white">
+    <section className="py-6 md:py-8 bg-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
