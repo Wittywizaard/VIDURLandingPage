@@ -58,7 +58,7 @@ export default function CoreJobs() {
   const activeJob = jobs[activeTab];
 
   return (
-    <section className="py-16 md:py-20 bg-deep-green">
+    <section className="py-16 md:py-20 bg-white">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -68,7 +68,7 @@ export default function CoreJobs() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-8">
             Discover What VIDUR Can Do
           </h2>
 
@@ -102,6 +102,9 @@ export default function CoreJobs() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Side - Description */}
             <div>
+              <p className="text-xs md:text-sm font-bold text-deep-green/70 uppercase tracking-wider mb-3">
+                {activeJob.label}
+              </p>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
                 {activeJob.title}
               </h3>
