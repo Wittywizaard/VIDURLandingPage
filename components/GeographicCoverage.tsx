@@ -68,10 +68,10 @@ export default function GeographicCoverage() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Live in {count}+ Cities
             </h2>
-            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-sm md:text-base text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Empowering professionals across India, from leading metropolitan firms to independent practices, with smarter research, seamless drafting, and AI-powered solutions.
             </p>
           </motion.div>
