@@ -85,7 +85,7 @@ export default function TrustedKnowledge() {
   ];
 
   return (
-    <section id="knowledge" className="py-20 bg-soft-neutral overflow-hidden">
+    <section id="knowledge" className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
