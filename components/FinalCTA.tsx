@@ -19,7 +19,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
         >
           {/* Section Label */}
-          <p className="text-xs font-bold text-white uppercase tracking-widest mb-4">
+          <p className="text-sm font-bold text-white uppercase tracking-widest mb-4">
             START WITH VIDUR
           </p>
 
