@@ -32,7 +32,7 @@ export default function Footer() {
               <img 
                 src="/vidur-logo.png" 
                 alt="VIDUR" 
-                className="h-14 w-auto brightness-0 invert mb-4"
+                className="h-16 w-auto mb-4"
               />
               <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-md">
                 VIDUR is the #1 AI Platform for Tax & Corporate Law Professionals. Our AI-powered research, drafting, and advisory tools empower CAs and lawyers across India.
