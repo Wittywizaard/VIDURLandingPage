@@ -35,7 +35,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05, boxShadow: "0 25px 60px rgba(255, 255, 255, 0.35)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-10 py-4 bg-white text-black text-base font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl min-w-[220px]"
+              className="px-8 py-3 bg-white text-black text-lg font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl min-w-[200px]"
             >
               Start Free Trial
             </motion.button>
@@ -43,7 +43,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05, boxShadow: "0 25px 60px rgba(255, 255, 255, 0.25)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-10 py-4 bg-white/15 backdrop-blur-md text-white border-2 border-white/40 text-base font-bold rounded-xl hover:bg-white/25 hover:border-white/60 transition-all duration-300 shadow-2xl min-w-[220px]"
+              className="px-8 py-3 bg-white/15 backdrop-blur-md text-white border-2 border-white/40 text-lg font-bold rounded-xl hover:bg-white/25 hover:border-white/60 transition-all duration-300 shadow-2xl min-w-[200px]"
             >
               Book a Demo
             </motion.button>
