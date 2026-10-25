@@ -69,7 +69,7 @@ export default function CoreJobs() {
           className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep-green mb-8">
-            One Workspace. Three Core Jobs.
+            Discover What VIDUR Can Do
           </h2>
 
           {/* Tabs */}
