@@ -93,12 +93,12 @@ export default function TrustedKnowledge() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-12 text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
             Trusted Knowledge & Sources
           </h2>
-          <p className="text-base md:text-lg text-deep-green/70 max-w-3xl">
+          <p className="text-base md:text-lg text-deep-green max-w-3xl mx-auto">
             Built on verified professional knowledge from India's most trusted resources
           </p>
         </motion.div>
