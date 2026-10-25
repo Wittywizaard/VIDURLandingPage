@@ -25,7 +25,7 @@ export default function FinalCTA() {
           </p>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-12 leading-tight max-w-4xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-12 leading-tight max-w-4xl">
             Bring VIDUR Into Your Practice
           </h2>
 
