@@ -98,7 +98,7 @@ export default function TrustedKnowledge() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
             Trusted Knowledge & Sources
           </h2>
-          <p className="text-base md:text-lg text-deep-green max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-black max-w-3xl mx-auto">
             Built on verified professional knowledge from India's most trusted resources
           </p>
         </motion.div>
@@ -124,7 +124,7 @@ export default function TrustedKnowledge() {
                   {/* Content */}
                   <div>
                     <div className="text-xs text-deep-green/50 font-medium mb-1">
-                      {source.number} / {source.label}
+                      {source.label}
                     </div>
                     <h3 className="text-lg md:text-xl font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-snug">
                       {source.title}
