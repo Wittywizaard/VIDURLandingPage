@@ -62,8 +62,8 @@ export default function Testimonials() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-2">
             What Professionals Say About VIDUR
           </h2>
-          <p className="text-sm md:text-base text-deep-green/70 max-w-2xl mx-auto">
-            Real stories from the professionals who use VIDUR.
+          <p className="text-sm md:text-base text-black max-w-2xl mx-auto">
+            Stories from the professionals who use VIDUR.
           </p>
         </motion.div>
 

@@ -8,7 +8,6 @@ import TrustedByProfessionals from '@/components/TrustedByProfessionals';
 import CoreJobs from '@/components/CoreJobs';
 import TrustedKnowledge from '@/components/TrustedKnowledge';
 import ChallengesSolutions from '@/components/ChallengesSolutions';
-import BookDemo from '@/components/BookDemo';
 import Testimonials from '@/components/Testimonials';
 import WhatsNew from '@/components/WhatsNew';
 import LearningResources from '@/components/LearningResources';
@@ -31,7 +30,6 @@ export default function Home() {
         <CoreJobs />
         <TrustedKnowledge />
         <ChallengesSolutions />
-        <BookDemo />
         <Testimonials />
         <WhatsNew />
         <LearningResources />
