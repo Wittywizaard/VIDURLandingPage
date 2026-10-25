@@ -16,7 +16,7 @@ export default function EnterpriseCTA() {
           <div className="grid lg:grid-cols-[1fr,1.2fr] gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left - Heading */}
             <div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-black leading-snug">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight">
                 Trusted by Tax & Corporate Law professionals
               </h2>
             </div>
