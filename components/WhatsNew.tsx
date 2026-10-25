@@ -20,15 +20,15 @@ export default function WhatsNew() {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-4">
             What's New in VIDUR
@@ -36,7 +36,7 @@ export default function WhatsNew() {
         </motion.div>
 
         {/* Features */}
-        <div className="space-y-12">
+        <div className="space-y-10">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -44,16 +44,16 @@ export default function WhatsNew() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+              className={`grid lg:grid-cols-2 gap-6 lg:gap-8 items-center ${
                 index % 2 === 1 ? 'lg:grid-flow-dense' : ''
               }`}
             >
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <h3 className="text-3xl md:text-4xl font-bold text-deep-green mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-deep-green mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-lg text-black mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-black mb-4 leading-relaxed">
                   {feature.description}
                 </p>
                 {feature.url ? (
@@ -62,20 +62,20 @@ export default function WhatsNew() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 4 }}
-                    className="inline-flex items-center gap-2 text-deep-green font-bold hover:text-deep-green/80 transition-colors"
+                    className="inline-flex items-center gap-2 text-deep-green text-sm font-semibold hover:text-deep-green/80 transition-colors"
                   >
                     {feature.link}
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </motion.a>
                 ) : (
                   <motion.button
                     whileHover={{ x: 4 }}
-                    className="inline-flex items-center gap-2 text-deep-green font-bold hover:text-deep-green/80 transition-colors"
+                    className="inline-flex items-center gap-2 text-deep-green text-sm font-semibold hover:text-deep-green/80 transition-colors"
                   >
                     {feature.link}
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </motion.button>
@@ -87,7 +87,7 @@ export default function WhatsNew() {
                 <div className="relative">
                   {index === 0 ? (
                     // Video for GSTAT Toolkit
-                    <div className="aspect-video bg-white rounded-2xl border-2 border-deep-green/10 shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
+                    <div className="aspect-video bg-white rounded-xl border border-deep-green/10 shadow-md overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
                       <video
                         className="w-full h-full object-cover"
                         autoPlay
@@ -106,19 +106,16 @@ export default function WhatsNew() {
                     </div>
                   ) : (
                     // Emoji for other features
-                    <div className="aspect-video bg-white rounded-2xl border-2 border-deep-green/10 flex items-center justify-center shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
-                      <div className="text-center p-8">
-                        <div className="text-7xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="aspect-video bg-white rounded-xl border border-deep-green/10 flex items-center justify-center shadow-md overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
+                      <div className="text-center p-6">
+                        <div className="text-6xl mb-3 group-hover:scale-110 transition-transform duration-300">
                           {feature.image}
                         </div>
-                        <p className="text-deep-green/60 font-medium">
-                          Professional {feature.title}
-                        </p>
                       </div>
                     </div>
                   )}
                   {/* Decorative element */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-highlight-green/20 rounded-full -z-10"></div>
+                  <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-highlight-green/10 rounded-full -z-10"></div>
                 </div>
               </div>
             </motion.div>
