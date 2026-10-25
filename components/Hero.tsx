@@ -16,7 +16,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white pt-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white">
       {/* Premium background patterns */}
       <div className="absolute inset-0 opacity-40">
         <motion.div
@@ -59,7 +59,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             whileHover={{ scale: 1.02 }}
-            className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer text-sm"
+            className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer text-sm"
           >
             <span className="text-base">🚀</span>
             <span className="font-semibold text-black">
@@ -89,7 +89,7 @@ export default function Hero() {
 
           {/* Hero Headline */}
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -172,7 +172,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-12 md:mt-16 w-full"
+            className="mt-8 md:mt-10 w-full"
           >
             <div className="flex flex-col gap-6">
               {/* Client Logos - Clean Horizontal Layout */}
