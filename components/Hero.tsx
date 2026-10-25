@@ -176,7 +176,7 @@ export default function Hero() {
           >
             <div className="flex flex-col gap-6">
               {/* Client Logos - Horizontal Layout with Left Label */}
-              <div className="w-full pt-4 border-t border-gray-100">
+              <div className="w-full pt-4">
                 <div className="flex items-center gap-6">
                   {/* Label on the left */}
                   <div className="flex-shrink-0">
