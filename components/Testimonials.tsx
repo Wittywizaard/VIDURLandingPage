@@ -6,15 +6,15 @@ export default function Testimonials() {
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: 'bvsion3esc2bab1'
+      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm'
     },
     {
       type: 'video',
-      videoId: 'jpnl036ocolzzi2'
+      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t'
     },
     {
       type: 'video',
-      videoId: 'jnb42g8fb7gpdoh'
+      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm'
     }
   ];
 
@@ -85,10 +85,9 @@ export default function Testimonials() {
                     /* Video Testimonial */
                     <div className="relative w-full h-[360px] bg-black overflow-hidden">
                       <iframe
-                        src={`https://fast.wistia.net/embed/iframe/${testimonial.videoId}?videoFoam=true&playerColor=0a3d32`}
+                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview`}
                         className="w-full h-full"
-                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                        allowFullScreen
+                        allow="encrypted-media"
                         style={{ 
                           border: 'none'
                         }}
