@@ -21,20 +21,62 @@ export default function Header() {
       name: 'Platform',
       hasDropdown: true,
       href: '#platform',
-      items: [
-        { name: 'Overview', href: '#' },
-        { name: 'Features', href: '#features' },
-        { name: 'Integrations', href: '#' }
+      sections: [
+        {
+          title: 'PRODUCTS',
+          items: [
+            { 
+              name: 'AI Research Engine', 
+              description: 'AI-powered tax and legal research',
+              href: '#research' 
+            },
+            { 
+              name: 'Document Intelligence', 
+              description: 'Smart document analysis',
+              href: '#documents' 
+            },
+            { 
+              name: 'Knowledge Management', 
+              description: 'Centralized knowledge base',
+              href: '#knowledge' 
+            }
+          ]
+        },
+        {
+          title: 'USE CASES',
+          items: [
+            { name: 'For CAs', href: '#cas' },
+            { name: 'For CS Professionals', href: '#cs' },
+            { name: 'For Tax Practitioners', href: '#tax' }
+          ]
+        }
       ]
     },
     {
       name: 'Resources',
       hasDropdown: true,
       href: '#resources',
-      items: [
-        { name: 'Documentation', href: '#' },
-        { name: 'Webinars', href: '#webinars' },
-        { name: 'Knowledge Base', href: '#knowledge' }
+      sections: [
+        {
+          title: 'LEARN',
+          items: [
+            { 
+              name: 'Documentation', 
+              description: 'Complete platform guides',
+              href: '#docs' 
+            },
+            { 
+              name: 'Webinars', 
+              description: 'Live training sessions',
+              href: '#webinars' 
+            },
+            { 
+              name: 'Knowledge Base', 
+              description: 'FAQs and tutorials',
+              href: '#kb' 
+            }
+          ]
+        }
       ]
     },
     {
@@ -65,7 +107,7 @@ export default function Header() {
         isScrolled ? 'bg-white shadow-sm' : 'bg-white'
       }`}
     >
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* VIDUR Brand Logo */}
           <div className="flex-shrink-0">
@@ -73,13 +115,13 @@ export default function Header() {
               <img 
                 src="/vidur-logo.png" 
                 alt="VIDUR" 
-                className="h-16 w-auto"
+                className="h-14 w-auto"
               />
             </a>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -89,11 +131,13 @@ export default function Header() {
               >
                 <a
                   href={item.href || '#'}
-                  className="text-sm font-medium transition-colors text-deep-green hover:text-highlight-green"
+                  className="text-base font-medium transition-colors text-gray-900 hover:text-deep-green flex items-center gap-1"
                 >
                   {item.name}
                   {item.hasDropdown && (
-                    <span className="ml-1 inline-block text-xs">▼</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   )}
                 </a>
                 
@@ -103,17 +147,35 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100"
+                    className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 bg-white rounded-2xl shadow-2xl py-6 px-6 border border-gray-100 min-w-[400px]"
                   >
-                    {item.items?.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-deep-green hover:bg-soft-neutral transition-colors"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
+                    <div className="flex gap-8">
+                      {item.sections?.map((section) => (
+                        <div key={section.title} className="flex-1">
+                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                            {section.title}
+                          </h3>
+                          <div className="space-y-1">
+                            {section.items?.map((subItem) => (
+                              <a
+                                key={subItem.name}
+                                href={subItem.href}
+                                className="block px-3 py-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                              >
+                                <div className="font-medium text-gray-900 group-hover:text-deep-green text-sm mb-0.5">
+                                  {subItem.name}
+                                </div>
+                                {subItem.description && (
+                                  <div className="text-xs text-gray-500">
+                                    {subItem.description}
+                                  </div>
+                                )}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </div>
@@ -122,13 +184,13 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="text-sm font-medium transition-colors text-deep-green hover:text-highlight-green">
+            <button className="text-sm font-medium transition-colors text-gray-900 hover:text-deep-green">
               Log in
             </button>
-            <button className="btn-gradient-primary !px-5 !py-2.5 !text-sm inline-flex items-center gap-2">
-              Try VIDUR
+            <button className="bg-deep-green hover:bg-deep-green/90 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all inline-flex items-center gap-2">
+              Get started
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
           </div>
@@ -167,17 +229,24 @@ export default function Header() {
                   >
                     {item.name}
                   </a>
-                  {item.hasDropdown && item.items && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {item.items.map((subItem) => (
-                        <a
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block text-sm text-deep-green/80 py-1 hover:text-highlight-green"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </a>
+                  {item.hasDropdown && item.sections && (
+                    <div className="ml-4 mt-2 space-y-3">
+                      {item.sections.map((section) => (
+                        <div key={section.title}>
+                          <h4 className="text-xs font-semibold text-gray-500 uppercase mb-1">
+                            {section.title}
+                          </h4>
+                          {section.items?.map((subItem) => (
+                            <a
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block text-sm text-deep-green/80 py-1 hover:text-highlight-green"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </a>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   )}
@@ -187,8 +256,8 @@ export default function Header() {
                 <button className="block w-full text-left text-deep-green font-medium text-sm py-2">
                   Log in
                 </button>
-                <button className="btn-gradient-primary !w-full !text-sm">
-                  Try VIDUR
+                <button className="bg-deep-green text-white w-full px-5 py-2.5 rounded-full text-sm font-medium">
+                  Get started
                 </button>
               </div>
             </div>

@@ -47,7 +47,7 @@ export default function NewsTicker() {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-3 flex items-center gap-4">
           {/* Static Label with Blinking Dot */}
           <div className="flex items-center gap-2 flex-shrink-0">
