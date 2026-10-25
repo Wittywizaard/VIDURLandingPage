@@ -108,11 +108,8 @@ export default function CoreJobs() {
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 {activeJob.title}
               </h3>
-              <p className="text-base md:text-lg text-white/90 mb-4 leading-relaxed">
+              <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
                 {activeJob.description}
-              </p>
-              <p className="text-sm text-white/70 italic mb-6">
-                {activeJob.note}
               </p>
               <button className="bg-white hover:bg-gray-100 text-deep-green px-6 py-3 rounded-full font-semibold inline-flex items-center gap-2 transition-all">
                 Start Free Trial
