@@ -73,18 +73,18 @@ export default function CoreJobs() {
           </h2>
 
           {/* Tabs - Sliding Segmented Control */}
-          <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
+          <div className="inline-flex bg-white rounded-full p-1 gap-0.5 shadow-lg border border-gray-200">
             {jobs.map((job, index) => (
               <button
                 key={job.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
                   activeTab === index
-                    ? 'bg-deep-green text-white shadow-md'
+                    ? 'bg-deep-green text-white shadow-sm'
                     : 'text-black hover:text-gray-900'
                 }`}
               >
-                {job.icon}
+                <span className="w-4 h-4 flex-shrink-0">{job.icon}</span>
                 {job.tabTitle}
               </button>
             ))}
