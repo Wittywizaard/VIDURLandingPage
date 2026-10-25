@@ -112,17 +112,6 @@ export default function BookDemo() {
                     transition={{ duration: 0.6 }}
                   />
                 </motion.button>
-
-                {/* Small text under button */}
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  viewport={{ once: true }}
-                  className="text-white/60 text-xs md:text-sm text-center lg:text-right mt-3 md:mt-4"
-                >
-                  Free • No credit card required
-                </motion.p>
               </motion.div>
             </div>
           </div>
