@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a3d32] via-[#064232] to-[#032e25] relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-[#0a3d32] via-[#0D5649] to-white relative overflow-hidden">
       {/* Subtle decorative blur elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-highlight-green rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-20 w-96 h-96 bg-deep-green rounded-full blur-3xl"></div>
       </div>
 
@@ -19,7 +19,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
         >
           {/* Section Label */}
-          <p className="text-xs font-bold text-highlight-green uppercase tracking-widest mb-4">
+          <p className="text-xs font-bold text-white uppercase tracking-widest mb-4">
             START WITH VIDUR
           </p>
 
@@ -29,17 +29,17 @@ export default function FinalCTA() {
           </h2>
 
           {/* Description */}
-          <p className="text-base md:text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             Join thousands of professionals who trust VIDUR for their critical tax and legal work
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(135, 206, 80, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-4 bg-highlight-green text-dark-accent text-base font-semibold rounded-lg hover:bg-[#78bd41] transition-all duration-300 shadow-xl min-w-[200px]"
+              className="px-8 py-4 bg-white text-deep-green text-base font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300 shadow-xl min-w-[200px]"
             >
               Start Free Trial
             </motion.button>
