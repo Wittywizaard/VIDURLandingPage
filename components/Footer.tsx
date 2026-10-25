@@ -25,8 +25,6 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-8 py-16 md:py-20 relative z-10">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10 mb-12">
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-10 mb-12">
           
           {/* Column 1: Brand & Description - Spans 2 columns on large screens */}
           <div className="col-span-2 lg:col-span-2">
