@@ -66,38 +66,38 @@ export default function Hero() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-5xl mx-auto"
         >
-          {/* Announcement Banner */}
+          {/* Announcement Banner - Compact */}
           <motion.a
             href="#api"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            whileHover={{ scale: 1.02, y: -2 }}
-            className="inline-flex items-center gap-3 bg-white border border-deep-green/20 rounded-full px-6 py-3 mb-6 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+            whileHover={{ scale: 1.02 }}
+            className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer text-sm"
           >
-            <span className="text-xl">🚀</span>
-            <span className="text-sm md:text-base font-semibold text-deep-green">
+            <span className="text-base">🚀</span>
+            <span className="font-semibold text-black">
               VIDUR APIs Are Now Live!
             </span>
-            <span className="text-sm md:text-base text-deep-green/70 hidden sm:inline">
+            <span className="text-black/60">
               Your Platform. VIDUR's Intelligence
             </span>
-            <span className="text-sm font-bold text-highlight-green group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+            <span className="font-medium text-deep-green group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
               Explore Now
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </span>
           </motion.a>
 
-          {/* Hero Headline - Premium styling with rotating text */}
+          {/* Hero Headline */}
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="block bg-gradient-to-r from-deep-green via-deep-green to-highlight-green bg-clip-text text-transparent">
+            <span className="block text-deep-green">
               AI Built For
             </span>
             <span className="block text-deep-green">
@@ -119,52 +119,40 @@ export default function Hero() {
             </span>
           </motion.h1>
 
-          {/* Premium CTAs with enhanced shadows */}
+          {/* CTA Buttons - Synthesia Style */}
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+            className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
             <motion.button 
-              whileHover={{ scale: 1.02, y: -2 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-gradient-primary group inline-flex items-center justify-center gap-2 w-full sm:w-64 shadow-xl"
+              className="bg-deep-green hover:bg-deep-green/90 text-white px-6 py-3.5 rounded-full text-base font-medium transition-all inline-flex items-center justify-center gap-2 w-full sm:w-auto min-w-[200px] shadow-lg"
             >
               Try VIDUR
-              <motion.svg 
-                className="w-5 h-5" 
+              <svg 
+                className="w-4 h-4" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </motion.svg>
+              </svg>
             </motion.button>
             <motion.button 
-              whileHover={{ scale: 1.02, y: -2 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-gradient-secondary group inline-flex items-center justify-center gap-2 w-full sm:w-64 shadow-lg"
+              className="bg-white hover:bg-gray-50 text-black border-2 border-gray-200 px-6 py-3.5 rounded-full text-base font-medium transition-all inline-flex items-center justify-center gap-2 w-full sm:w-auto min-w-[200px]"
             >
               Book a free demo
-              <motion.svg 
-                className="w-5 h-5" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                animate={{ x: [0, 4, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </motion.svg>
             </motion.button>
           </motion.div>
 
-          {/* Premium Trust Points */}
+          {/* Trust Points */}
           <motion.div 
-            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-gray-900"
+            className="flex flex-wrap gap-6 md:gap-8 justify-center text-xs md:text-sm text-black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
@@ -222,18 +210,13 @@ export default function Hero() {
             className="mt-12 md:mt-16 w-full"
           >
             <div className="flex flex-col gap-6">
-              {/* Client Logos - Synthesia Style */}
+              {/* Client Logos - Professional Display */}
               <div className="w-full pt-8 border-t border-gray-100">
                 <div className="flex items-center gap-8">
-                  {/* Label on the left - Two lines */}
-                  <div className="flex flex-col gap-1 flex-shrink-0">
-                    <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
-                      Live in 170+ Cities
-                    </span>
-                    <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
-                      Trusted by 25000+ Professionals
-                    </span>
-                  </div>
+                  {/* Label on the left */}
+                  <span className="text-sm font-semibold text-deep-green whitespace-nowrap flex-shrink-0">
+                    Trusted by 25000+ Professionals
+                  </span>
                   
                   {/* Sliding Logos on the right */}
                   <div className="flex-1 overflow-hidden">
@@ -293,12 +276,12 @@ export default function Hero() {
                       ]).map((logo, index) => (
                         <div
                           key={index}
-                          className="flex-shrink-0 flex items-center justify-center transition-all duration-300"
+                          className="flex-shrink-0 flex items-center justify-center transition-all duration-300 opacity-80 hover:opacity-100"
                         >
                           <img
                             src={logo.src}
                             alt={logo.alt}
-                            className={`${logo.height} w-auto object-contain filter brightness-0 opacity-40 hover:brightness-100 hover:opacity-100 transition-all duration-300`}
+                            className={`${logo.height} w-auto object-contain`}
                           />
                         </div>
                       ))}

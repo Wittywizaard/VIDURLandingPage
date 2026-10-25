@@ -129,7 +129,7 @@ export default function Header() {
               >
                 <a
                   href={item.href || '#'}
-                  className="text-base font-medium transition-colors text-gray-900 hover:text-deep-green flex items-center gap-1"
+                  className="text-base font-medium transition-colors text-black hover:text-deep-green flex items-center gap-1"
                 >
                   {item.name}
                   {item.hasDropdown && (
@@ -150,7 +150,7 @@ export default function Header() {
                     <div className="flex gap-8">
                       {item.sections?.map((section) => (
                         <div key={section.title} className="flex-1">
-                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                          <h3 className="text-xs font-semibold text-black/70 uppercase tracking-wider mb-4">
                             {section.title}
                           </h3>
                           <div className="space-y-1">
@@ -160,11 +160,11 @@ export default function Header() {
                                 href={subItem.href}
                                 className="block px-3 py-3 rounded-lg hover:bg-gray-50 transition-colors group"
                               >
-                                <div className="font-medium text-gray-900 group-hover:text-deep-green text-sm mb-0.5">
+                                <div className="font-medium text-black group-hover:text-deep-green text-sm mb-0.5">
                                   {subItem.name}
                                 </div>
                                 {subItem.description && (
-                                  <div className="text-xs text-gray-500">
+                                  <div className="text-xs text-black/60">
                                     {subItem.description}
                                   </div>
                                 )}
@@ -182,7 +182,7 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="text-sm font-medium transition-colors text-gray-900 hover:text-deep-green">
+            <button className="text-sm font-medium transition-colors text-black hover:text-deep-green">
               Log in
             </button>
             <button className="bg-deep-green hover:bg-deep-green/90 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all inline-flex items-center gap-2">
