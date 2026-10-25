@@ -36,18 +36,18 @@ export default function FinalCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(0, 0, 0, 0.3)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-3 bg-deep-green text-white text-lg font-bold rounded-xl hover:bg-[#0a3d32] transition-all duration-300 shadow-xl min-w-[200px]"
+              className="px-8 py-3 bg-white/20 backdrop-blur-xl text-white text-lg font-bold rounded-xl hover:bg-white/30 transition-all duration-300 shadow-2xl min-w-[200px] border-2 border-white/40"
             >
               Start Free Trial
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 50px rgba(0, 0, 0, 0.25)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.25)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-3 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 text-lg font-bold rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-xl min-w-[200px]"
+              className="px-8 py-3 bg-white/15 backdrop-blur-xl text-white border-2 border-white/30 text-lg font-bold rounded-xl hover:bg-white/25 hover:border-white/50 transition-all duration-300 shadow-2xl min-w-[200px]"
             >
               Book a Demo
             </motion.button>
