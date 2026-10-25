@@ -126,12 +126,9 @@ export default function TrustedKnowledge() {
                     <div className="text-xs text-deep-green/60 font-semibold mb-1 uppercase tracking-wide">
                       {source.label}
                     </div>
-                    <h3 className="text-base md:text-lg font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-tight">
+                    <h3 className="text-base md:text-lg font-bold text-deep-green group-hover:text-highlight-green transition-colors leading-tight">
                       {source.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                      {source.description}
-                    </p>
                   </div>
                 </motion.div>
               ))}
