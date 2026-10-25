@@ -50,7 +50,7 @@ export default function TrustedByProfessionals() {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-white">
+    <section ref={sectionRef} className="py-8 md:py-12 bg-white">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Statistics Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -68,7 +68,7 @@ export default function TrustedByProfessionals() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1 md:mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-1 md:mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
               <div className="text-xs md:text-sm font-medium text-black">
