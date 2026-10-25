@@ -29,10 +29,8 @@ export default function FinalCTA() {
             Bring VIDUR Into Your Practice
           </h2>
 
-          {/* Description */}
-          <p className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Join thousands of professionals who trust VIDUR for their critical tax and legal work
-          </p>
+          {/* Description - keeping space for layout */}
+          <div className="mb-10 h-[60px]"></div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
