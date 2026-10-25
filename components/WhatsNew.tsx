@@ -30,7 +30,7 @@ export default function WhatsNew() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-section-lg font-bold text-deep-green mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-4">
             What's New in VIDUR
           </h2>
         </motion.div>
