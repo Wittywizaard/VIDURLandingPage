@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#032d23] via-[#064d3f] via-[#0a6b57] via-[#2d8b6f] via-[#5aa890] to-white relative overflow-hidden">
+    <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#032d23] via-[#064d3f] via-[#0a6b57] via-[#0e8a70] via-[#3aa587] to-white relative overflow-hidden">
       {/* Enhanced decorative blur elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-1/4 w-[700px] h-[700px] bg-gradient-to-br from-emerald-500/25 to-teal-400/25 rounded-full blur-[140px]"></div>
-        <div className="absolute bottom-10 left-1/4 w-[700px] h-[700px] bg-gradient-to-tr from-green-400/20 to-emerald-300/20 rounded-full blur-[140px]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-teal-300/15 via-emerald-400/15 to-green-300/15 rounded-full blur-[160px]"></div>
+        <div className="absolute top-20 right-1/4 w-[700px] h-[700px] bg-gradient-to-br from-emerald-600/20 to-teal-500/20 rounded-full blur-[140px]"></div>
+        <div className="absolute bottom-10 left-1/4 w-[700px] h-[700px] bg-gradient-to-tr from-green-500/15 to-emerald-400/15 rounded-full blur-[140px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-teal-400/10 via-emerald-500/10 to-green-400/10 rounded-full blur-[160px]"></div>
       </div>
       
       {/* Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/5 to-white/5"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <motion.div
@@ -36,18 +36,18 @@ export default function FinalCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.3)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-3 bg-white text-black text-lg font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl min-w-[200px] ring-2 ring-white/20"
+              className="px-8 py-3 bg-white/95 text-black text-lg font-bold rounded-xl hover:bg-white transition-all duration-300 shadow-2xl min-w-[200px] ring-1 ring-white/30"
             >
               Start Free Trial
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.35)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.25)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-3 bg-white text-black border-2 border-white text-lg font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl min-w-[200px]"
+              className="px-8 py-3 bg-white/95 text-black border-2 border-white/50 text-lg font-bold rounded-xl hover:bg-white transition-all duration-300 shadow-2xl min-w-[200px]"
             >
               Book a Demo
             </motion.button>
