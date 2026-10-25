@@ -1,8 +1,24 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function NewsTicker() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const newsItems = [
     'Latest Tax & Legal Updates 3 Crore Cross-Charge Demand Quashed',
     'FAQs on GST Law and procedures',
@@ -15,7 +31,16 @@ export default function NewsTicker() {
   const allItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 w-full bg-deep-green border-b border-deep-green/20">
+    <motion.div
+      className="fixed top-0 left-0 right-0 z-50 w-full bg-deep-green border-b border-deep-green/20"
+      initial={{ opacity: 1, y: 0 }}
+      animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : -60
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-3 flex items-center gap-4">
           {/* Static Label with Blinking Dot */}
@@ -65,7 +90,7 @@ export default function NewsTicker() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
