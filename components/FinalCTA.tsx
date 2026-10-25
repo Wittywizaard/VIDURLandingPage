@@ -47,7 +47,7 @@ export default function FinalCTA() {
               whileHover={{ scale: 1.05, boxShadow: "0 30px 70px rgba(255, 255, 255, 0.35)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="px-8 py-3 bg-white/20 backdrop-blur-xl text-black border-2 border-white/50 text-lg font-bold rounded-xl hover:bg-white/30 hover:border-white/70 transition-all duration-300 shadow-2xl min-w-[200px]"
+              className="px-8 py-3 bg-white text-black border-2 border-white text-lg font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl min-w-[200px]"
             >
               Book a Demo
             </motion.button>
