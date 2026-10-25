@@ -6,15 +6,15 @@ export default function Testimonials() {
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm'
+      videoId: '-SboNnemOSA'
     },
     {
       type: 'video',
-      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t'
+      videoId: '4fLWT4Qc5pc'
     },
     {
       type: 'video',
-      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm'
+      videoId: 'aFw62rOxvF0'
     }
   ];
 
@@ -84,18 +84,14 @@ export default function Testimonials() {
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
                     <div className="relative w-full h-[400px] md:h-[450px] bg-black overflow-hidden">
-                      <div className="absolute inset-0" style={{ bottom: '-60px' }}>
-                        <iframe
-                          src={`https://drive.google.com/file/d/${testimonial.videoId}/preview`}
-                          className="w-full h-full"
-                          allow="encrypted-media"
-                          style={{ 
-                            border: 'none',
-                            height: 'calc(100% + 60px)',
-                            pointerEvents: 'auto'
-                          }}
-                        ></iframe>
-                      </div>
+                      <iframe
+                        src={`https://www.youtube.com/embed/${testimonial.videoId}?controls=0&modestbranding=1&rel=0&showinfo=0&fs=0&playsinline=1`}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        style={{ 
+                          border: 'none'
+                        }}
+                      ></iframe>
                     </div>
                   ) : (
                     /* Text Testimonial */
