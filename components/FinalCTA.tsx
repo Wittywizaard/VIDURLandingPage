@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#064d3f] via-[#0a6b57] via-[#0e8a70] via-[#4ba889] via-[#7fc9aa] to-white relative overflow-hidden">
+    <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#032d23] via-[#064d3f] via-[#0a6b57] via-[#2d8b6f] via-[#5aa890] to-white relative overflow-hidden">
       {/* Enhanced decorative blur elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-1/4 w-[700px] h-[700px] bg-gradient-to-br from-emerald-400/30 to-teal-300/30 rounded-full blur-[140px]"></div>
-        <div className="absolute bottom-10 left-1/4 w-[700px] h-[700px] bg-gradient-to-tr from-green-300/25 to-emerald-200/25 rounded-full blur-[140px]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-teal-200/20 via-emerald-300/20 to-green-200/20 rounded-full blur-[160px]"></div>
+        <div className="absolute top-20 right-1/4 w-[700px] h-[700px] bg-gradient-to-br from-emerald-500/25 to-teal-400/25 rounded-full blur-[140px]"></div>
+        <div className="absolute bottom-10 left-1/4 w-[700px] h-[700px] bg-gradient-to-tr from-green-400/20 to-emerald-300/20 rounded-full blur-[140px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-teal-300/15 via-emerald-400/15 to-green-300/15 rounded-full blur-[160px]"></div>
       </div>
       
       {/* Subtle overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/10"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <motion.div
