@@ -68,30 +68,6 @@ export default function BookDemo() {
                   Book a Demo in{' '}
                   <span className="text-highlight-green">2 Minutes</span>
                 </h2>
-                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-xl">
-                  See how VIDUR transforms professional tax and legal work. Schedule a personalized demonstration with our team.
-                </p>
-
-                {/* Trust indicators */}
-                <div className="flex flex-wrap gap-4 md:gap-6 mt-6 md:mt-8">
-                  {[
-                    { icon: '⚡', text: 'Instant setup' },
-                    { icon: '🔒', text: 'Secure platform' },
-                    { icon: '✓', text: 'No commitment' }
-                  ].map((item, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.4 + idx * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-center gap-2 text-white/80 text-sm md:text-base"
-                    >
-                      <span className="text-lg">{item.icon}</span>
-                      <span>{item.text}</span>
-                    </motion.div>
-                  ))}
-                </div>
               </motion.div>
             </div>
 
