@@ -153,6 +153,17 @@ export default function Testimonials() {
         .animate-testimonial-scroll:hover {
           animation-play-state: paused;
         }
+
+        /* Hide Gumlet video controls */
+        :global(iframe) {
+          position: relative;
+        }
+        
+        :global(.gumlet-player-controls),
+        :global(.vjs-control-bar),
+        :global(.plyr__controls) {
+          display: none !important;
+        }
       `}</style>
     </section>
   );
