@@ -62,7 +62,7 @@ export default function WhatsNew() {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ x: 4 }}
-                    className="inline-flex items-center gap-2 text-highlight-green font-bold hover:text-deep-green transition-colors"
+                    className="inline-flex items-center gap-2 text-deep-green font-bold hover:text-deep-green/80 transition-colors"
                   >
                     {feature.link}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function WhatsNew() {
                 ) : (
                   <motion.button
                     whileHover={{ x: 4 }}
-                    className="inline-flex items-center gap-2 text-highlight-green font-bold hover:text-deep-green transition-colors"
+                    className="inline-flex items-center gap-2 text-deep-green font-bold hover:text-deep-green/80 transition-colors"
                   >
                     {feature.link}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ export default function WhatsNew() {
                     </div>
                   ) : (
                     // Emoji for other features
-                    <div className="aspect-video bg-gradient-to-br from-soft-neutral to-white rounded-2xl border-2 border-deep-green/10 flex items-center justify-center shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
+                    <div className="aspect-video bg-white rounded-2xl border-2 border-deep-green/10 flex items-center justify-center shadow-lg overflow-hidden group hover:border-highlight-green/30 transition-all duration-300">
                       <div className="text-center p-8">
                         <div className="text-7xl mb-4 group-hover:scale-110 transition-transform duration-300">
                           {feature.image}
