@@ -89,37 +89,48 @@ export default function Testimonials() {
                 >
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
-                    <div className="relative w-full h-full bg-black">
-                      <iframe
-                        key={playingVideo === `${index}-${testimonial.videoId}` ? 'playing' : 'paused'}
-                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview${playingVideo === `${index}-${testimonial.videoId}` ? '' : '?t=1'}`}
-                        className="w-full h-[400px] md:h-[450px]"
-                        allow="encrypted-media"
-                        style={{ pointerEvents: 'auto' }}
-                      ></iframe>
-                      {playingVideo !== `${index}-${testimonial.videoId}` && (
+                    <div className="relative w-full h-[400px] md:h-[450px] bg-black flex items-center justify-center">
+                      <div className="relative w-full h-full">
+                        <iframe
+                          key={playingVideo === `${index}-${testimonial.videoId}` ? 'playing' : 'paused'}
+                          src={`https://drive.google.com/file/d/${testimonial.videoId}/preview${playingVideo === `${index}-${testimonial.videoId}` ? '?autoplay=1' : ''}`}
+                          className="absolute inset-0 w-full h-full object-contain"
+                          allow="autoplay; encrypted-media"
+                          style={{ border: 'none', pointerEvents: 'none' }}
+                        ></iframe>
+                        
+                        {/* Custom Play/Pause Button */}
                         <button
-                          onClick={() => setPlayingVideo(`${index}-${testimonial.videoId}`)}
-                          className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-all group"
+                          onClick={() => setPlayingVideo(
+                            playingVideo === `${index}-${testimonial.videoId}` 
+                              ? null 
+                              : `${index}-${testimonial.videoId}`
+                          )}
+                          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10"
                         >
-                          <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                            <svg className="w-8 h-8 md:w-10 md:h-10 text-deep-green ml-1" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M8 5v14l11-7z"/>
-                            </svg>
+                          <div className="bg-[#1a1d29] hover:bg-[#252938] text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all whitespace-nowrap">
+                            {playingVideo === `${index}-${testimonial.videoId}` ? (
+                              <>
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                                <span className="text-sm font-medium">Pause</span>
+                              </>
+                            ) : (
+                              <>
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span className="text-sm font-medium">Play story</span>
+                              </>
+                            )}
                           </div>
                         </button>
-                      )}
+                      </div>
                     </div>
                   ) : (
                     /* Text Testimonial */
                     <div className="p-5">
-                      {/* Quote Icon */}
-                      <div className="mb-3">
-                        <svg className="w-8 h-8 text-highlight-green" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                        </svg>
-                      </div>
-
                       {/* Title */}
                       <h3 className="text-base md:text-lg font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-snug">
                         {testimonial.title}
