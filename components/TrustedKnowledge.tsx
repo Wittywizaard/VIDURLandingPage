@@ -95,10 +95,10 @@ export default function TrustedKnowledge() {
           viewport={{ once: true }}
           className="mb-6 text-center"
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-3">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-deep-green mb-2">
             Trusted Knowledge & Sources
           </h2>
-          <p className="text-sm md:text-base text-black max-w-3xl mx-auto">
+          <p className="text-xs md:text-sm text-black max-w-3xl mx-auto">
             Built on verified professional knowledge from India's most trusted resources
           </p>
         </motion.div>
