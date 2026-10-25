@@ -35,9 +35,6 @@ export default function WhatsNew() {
           <h2 className="text-4xl md:text-5xl lg:text-section-lg font-bold text-deep-green mb-4">
             What's New in VIDUR
           </h2>
-          <p className="text-lg text-deep-green/80 max-w-2xl mx-auto">
-            Continuously evolving features designed for professional excellence
-          </p>
         </motion.div>
 
         {/* Features */}
@@ -128,7 +125,7 @@ export default function WhatsNew() {
                     </div>
                   )}
                   {/* Decorative element */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-highlight-green/20 rounded-full filter blur-2xl -z-10"></div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-highlight-green/20 rounded-full -z-10"></div>
                 </div>
               </div>
             </motion.div>
