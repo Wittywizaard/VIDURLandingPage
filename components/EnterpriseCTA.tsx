@@ -13,16 +13,16 @@ export default function EnterpriseCTA() {
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid lg:grid-cols-[1fr,1.2fr] gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left - Heading */}
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight">
                 Trusted by Tax & Corporate Law professionals
               </h2>
             </div>
             
             {/* Right - Description and CTA */}
-            <div className="text-center lg:text-left">
+            <div>
               <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
                 Get a personalized demo, and see how teams like yours research, draft, and advise with VIDUR.
               </p>
