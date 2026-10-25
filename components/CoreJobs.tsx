@@ -68,7 +68,7 @@ export default function CoreJobs() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep-green mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-8">
             Discover What VIDUR Can Do
           </h2>
 
@@ -78,10 +78,10 @@ export default function CoreJobs() {
               <button
                 key={job.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
                   activeTab === index
                     ? 'bg-deep-green text-white shadow-md'
-                    : 'text-gray-700 hover:text-gray-900'
+                    : 'text-black hover:text-gray-900'
                 }`}
               >
                 {job.icon}
