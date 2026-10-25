@@ -12,12 +12,13 @@ export default function FinalCTA() {
         <div className="absolute top-40 left-1/2 w-[500px] h-[500px] bg-emerald-200 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="flex flex-col items-center justify-center"
         >
           {/* Section Label */}
           <p className="text-sm font-bold text-white uppercase tracking-widest mb-4">
@@ -25,12 +26,9 @@ export default function FinalCTA() {
           </p>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
             Bring VIDUR Into Your Practice
           </h2>
-
-          {/* Spacer to maintain section height */}
-          <div className="mb-10 h-[60px]"></div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
