@@ -52,7 +52,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-12 md:py-16 bg-white overflow-hidden">
+    <section className="py-10 md:py-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -60,7 +60,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="text-center mb-8"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-deep-green mb-2">
             What Professionals Say About VIDUR
@@ -73,17 +73,17 @@ export default function Testimonials() {
         {/* Continuous Scrolling Testimonials */}
         <div className="relative">
           <div className="overflow-hidden">
-            <div className="flex gap-6 animate-testimonial-scroll">
+            <div className="flex gap-5 animate-testimonial-scroll">
               {/* Duplicate testimonials for seamless loop */}
               {[...allTestimonials, ...allTestimonials, ...allTestimonials].map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-[350px] md:w-[380px] bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-200 overflow-hidden"
-                  whileHover={{ scale: 1.02, y: -4 }}
+                  className="flex-shrink-0 w-[280px] md:w-[300px] bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 overflow-hidden"
+                  whileHover={{ y: -4 }}
                 >
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
-                    <div className="relative w-full h-[400px] md:h-[450px] bg-black overflow-hidden">
+                    <div className="relative w-full h-[360px] bg-black overflow-hidden">
                       <iframe
                         src={`https://play.gumlet.io/embed/${testimonial.videoId}?preload=true&autoplay=false&loop=false&disable_player_controls=true`}
                         className="w-full h-full"
@@ -97,25 +97,25 @@ export default function Testimonials() {
                     </div>
                   ) : (
                     /* Text Testimonial */
-                    <div className="p-6 md:p-8 flex flex-col h-[400px] md:h-[450px] justify-between">
+                    <div className="p-5 flex flex-col h-[360px] justify-between">
                       {/* Quote */}
                       <div className="flex-1 flex flex-col justify-center">
-                        <p className="text-base md:text-lg text-black leading-relaxed">
+                        <p className="text-sm md:text-base text-black leading-relaxed line-clamp-5">
                           {testimonial.quote}
                         </p>
                       </div>
 
                       {/* Author Info at Bottom */}
-                      <div className="mt-6 pt-6 border-t border-gray-200">
+                      <div className="mt-4 pt-4 border-t border-gray-200">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-base flex-shrink-0">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-deep-green to-highlight-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                             {testimonial.author.charAt(0)}
                           </div>
                           <div>
-                            <p className="text-base font-bold text-deep-green">
+                            <p className="text-sm font-bold text-deep-green">
                               {testimonial.author}
                             </p>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-xs text-gray-600">
                               {testimonial.designation}
                             </p>
                           </div>
