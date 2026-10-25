@@ -7,8 +7,8 @@ export default function TrustedByProfessionals() {
   const [stats, setStats] = useState({
     professionals: 0,
     experts: 0,
-    templates: 0,
-    prompts: 0,
+    queries: 0,
+    cities: 0,
   });
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -35,8 +35,8 @@ export default function TrustedByProfessionals() {
 
           animateCount('professionals', 25000, 1500);
           animateCount('experts', 250, 1200);
-          animateCount('templates', 10000, 1800);
-          animateCount('prompts', 5000, 1600);
+          animateCount('queries', 104283, 1800);
+          animateCount('cities', 170, 1600);
         }
       },
       { threshold: 0.3 }
@@ -50,28 +50,15 @@ export default function TrustedByProfessionals() {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-soft-neutral">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-6 md:mb-8"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green">
-            Trusted by tax & corporate professionals
-          </h2>
-        </motion.div>
-
+    <section ref={sectionRef} className="py-12 md:py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Statistics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
             { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
-            { value: stats.experts, label: 'Experts and publishers', suffix: '+' },
-            { value: stats.templates, label: 'AI templates', suffix: '+' },
-            { value: stats.prompts, label: 'Prompts to get you started', suffix: '+' }
+            { value: stats.experts, label: 'Experts and commentaries', suffix: '+' },
+            { value: stats.queries, label: 'Query solved', suffix: '+' },
+            { value: stats.cities, label: 'Live in cities', suffix: '+' }
           ].map((stat, index) => (
             <motion.div
               key={index}
@@ -79,12 +66,12 @@ export default function TrustedByProfessionals() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-soft-neutral rounded-xl p-4 md:p-6 text-center"
+              className="text-center"
             >
-              <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-deep-green mb-1 md:mb-2">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-1 md:mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
-              <div className="text-xs md:text-sm font-medium text-deep-green/70">
+              <div className="text-xs md:text-sm font-medium text-black">
                 {stat.label}
               </div>
             </motion.div>
