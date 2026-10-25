@@ -85,51 +85,51 @@ export default function TrustedKnowledge() {
   ];
 
   return (
-    <section id="knowledge" className="py-24 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-8">
+    <section id="knowledge" className="py-16 md:py-20 bg-white overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16 md:mb-20 text-center"
+          className="mb-12 text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep-green mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-4">
             Trusted Knowledge & Sources
           </h2>
-          <p className="text-lg md:text-xl text-black max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-black max-w-3xl mx-auto">
             Built on verified professional knowledge from India's most trusted resources
           </p>
         </motion.div>
 
         {/* Continuous Scrolling Carousel */}
         <div className="relative">
-          <div className="overflow-hidden py-8">
-            <div className="flex gap-8 animate-book-scroll">
+          <div className="overflow-hidden py-4">
+            <div className="flex gap-6 animate-book-scroll">
               {/* Duplicate sources for seamless loop */}
               {[...sources, ...sources, ...sources, ...sources].map((source, index) => (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-[320px] md:w-[380px] bg-white rounded-3xl p-8 md:p-10 border border-gray-200/80 flex flex-col shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer"
-                  whileHover={{ scale: 1.03, y: -10 }}
+                  className="flex-shrink-0 w-[260px] md:w-[300px] bg-white rounded-2xl p-6 border border-gray-200/80 flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  whileHover={{ scale: 1.02, y: -6 }}
                 >
                   {/* Book Cover */}
-                  <div className="flex-1 flex items-center justify-center mb-8">
-                    <div className={`w-56 h-72 md:w-64 md:h-80 ${source.bookStyle} rounded-xl shadow-2xl relative overflow-hidden transform transition-transform duration-300 group-hover:scale-105`}>
+                  <div className="flex-1 flex items-center justify-center mb-6">
+                    <div className={`w-44 h-56 md:w-48 md:h-60 ${source.bookStyle} rounded-lg shadow-xl relative overflow-hidden transform transition-transform duration-300 group-hover:scale-105`}>
                       {source.bookContent}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="text-center">
-                    <div className="text-sm text-deep-green/60 font-semibold mb-2 uppercase tracking-wide">
+                    <div className="text-xs text-deep-green/60 font-semibold mb-1 uppercase tracking-wide">
                       {source.label}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-deep-green mb-3 group-hover:text-highlight-green transition-colors leading-tight">
+                    <h3 className="text-base md:text-lg font-bold text-deep-green mb-2 group-hover:text-highlight-green transition-colors leading-tight">
                       {source.title}
                     </h3>
-                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                       {source.description}
                     </p>
                   </div>
@@ -139,8 +139,8 @@ export default function TrustedKnowledge() {
           </div>
 
           {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
         </div>
 
         {/* Trust Badge */}
@@ -149,13 +149,13 @@ export default function TrustedKnowledge() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 text-center"
+          className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-4 bg-white rounded-full px-8 md:px-10 py-4 md:py-5 border-2 border-deep-green/20 shadow-lg">
-            <svg className="w-6 h-6 md:w-7 md:h-7 text-highlight-green flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center gap-3 bg-white rounded-full px-6 md:px-8 py-3 md:py-4 border border-deep-green/20 shadow-md">
+            <svg className="w-5 h-5 md:w-6 md:h-6 text-highlight-green flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <p className="text-base md:text-lg text-deep-green font-semibold">
+            <p className="text-sm md:text-base text-deep-green font-semibold">
               Verified and continuously updated by experts
             </p>
           </div>

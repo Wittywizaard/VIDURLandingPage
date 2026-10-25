@@ -7,7 +7,6 @@ import EnterpriseCTA from '@/components/EnterpriseCTA';
 import TrustedByProfessionals from '@/components/TrustedByProfessionals';
 import CoreJobs from '@/components/CoreJobs';
 import TrustedKnowledge from '@/components/TrustedKnowledge';
-import ProfessionalCommunity from '@/components/ProfessionalCommunity';
 import ChallengesSolutions from '@/components/ChallengesSolutions';
 import BookDemo from '@/components/BookDemo';
 import Testimonials from '@/components/Testimonials';
@@ -31,7 +30,6 @@ export default function Home() {
         <TrustedByProfessionals />
         <CoreJobs />
         <TrustedKnowledge />
-        <ProfessionalCommunity />
         <ChallengesSolutions />
         <BookDemo />
         <Testimonials />
