@@ -72,16 +72,16 @@ export default function CoreJobs() {
             Discover What VIDUR Can Do
           </h2>
 
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+          {/* Tabs - Sliding Segmented Control */}
+          <div className="inline-flex bg-gray-100 rounded-full p-1.5 gap-1">
             {jobs.map((job, index) => (
               <button
                 key={job.id}
                 onClick={() => setActiveTab(index)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   activeTab === index
-                    ? 'bg-deep-green text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-deep-green text-white shadow-md'
+                    : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 {job.icon}
