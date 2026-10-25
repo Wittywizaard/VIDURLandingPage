@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-gradient-to-b from-[#0a4a3a] via-[#0f6e5c] to-white relative overflow-hidden">
+    <section className="py-20 md:py-24 lg:py-28 bg-gradient-to-b from-[#0a4a3a] via-[#0f6e5c] to-white relative overflow-hidden">
       {/* Subtle decorative blur elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-40 right-40 w-[600px] h-[600px] bg-emerald-300 rounded-full blur-[120px]"></div>
@@ -25,7 +25,7 @@ export default function FinalCTA() {
           </p>
 
           {/* Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight max-w-4xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 leading-tight max-w-4xl">
             Bring VIDUR Into Your Practice
           </h2>
 
