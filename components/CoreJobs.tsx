@@ -153,23 +153,6 @@ export default function CoreJobs() {
                       </div>
                     ))}
                   </div>
-
-                  {/* Question Input */}
-                  <div className="mt-6 pt-4 border-t border-gray-200">
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        placeholder="What are the key issues across these documents?"
-                        className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-deep-green/50 focus:border-deep-green"
-                        disabled
-                      />
-                      <button className="px-4 py-2.5 bg-deep-green text-white rounded-lg hover:bg-deep-green/90 transition-colors flex-shrink-0">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
                 </div>
               ) : (
                 // Placeholder for other tabs
