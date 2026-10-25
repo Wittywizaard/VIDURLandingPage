@@ -39,7 +39,7 @@ export default function NewsTicker() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 z-50 w-full bg-deep-green border-b border-deep-green/20"
+      className="fixed top-20 left-0 right-0 z-40 w-full bg-deep-green border-b border-deep-green/20"
       initial={{ opacity: 1, y: 0 }}
       animate={{
         opacity: isVisible ? 1 : 0,
@@ -77,7 +77,7 @@ export default function NewsTicker() {
               }}
               transition={{
                 x: {
-                  duration: 50,
+                  duration: 30,
                   repeat: Infinity,
                   ease: "linear",
                   repeatType: "loop"

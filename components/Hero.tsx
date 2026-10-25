@@ -224,7 +224,7 @@ export default function Hero() {
                       }}
                       transition={{
                         x: {
-                          duration: 40,
+                          duration: 25,
                           repeat: Infinity,
                           ease: "linear",
                           repeatType: "loop"
