@@ -1,20 +1,26 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Testimonials() {
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
+
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm'
+      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm',
+      thumbnail: '/vidur-logo.png' // You can add proper thumbnails
     },
     {
       type: 'video',
-      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t'
+      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t',
+      thumbnail: '/vidur-logo.png'
     },
     {
       type: 'video',
-      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm'
+      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm',
+      thumbnail: '/vidur-logo.png'
     }
   ];
 
@@ -83,13 +89,26 @@ export default function Testimonials() {
                 >
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
-                    <div className="w-full h-full">
+                    <div className="relative w-full h-full bg-black">
                       <iframe
-                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview?autoplay=1&loop=1&mute=1`}
+                        key={playingVideo === `${index}-${testimonial.videoId}` ? 'playing' : 'paused'}
+                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview${playingVideo === `${index}-${testimonial.videoId}` ? '' : '?t=1'}`}
                         className="w-full h-[400px] md:h-[450px]"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
+                        allow="encrypted-media"
+                        style={{ pointerEvents: 'auto' }}
                       ></iframe>
+                      {playingVideo !== `${index}-${testimonial.videoId}` && (
+                        <button
+                          onClick={() => setPlayingVideo(`${index}-${testimonial.videoId}`)}
+                          className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-all group"
+                        >
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <svg className="w-8 h-8 md:w-10 md:h-10 text-deep-green ml-1" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z"/>
+                            </svg>
+                          </div>
+                        </button>
+                      )}
                     </div>
                   ) : (
                     /* Text Testimonial */
@@ -107,8 +126,8 @@ export default function Testimonials() {
                       </h3>
 
                       {/* Quote */}
-                      <p className="text-xs md:text-sm text-deep-green/70 leading-relaxed mb-4 line-clamp-3">
-                        "{testimonial.quote}"
+                      <p className="text-xs md:text-sm text-black leading-relaxed mb-4 line-clamp-3">
+                        {testimonial.quote}
                       </p>
 
                       {/* Author Info with Avatar */}

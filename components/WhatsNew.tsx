@@ -32,9 +32,6 @@ export default function WhatsNew() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-sm font-bold text-highlight-green uppercase tracking-wider mb-4">
-            LATEST UPDATES
-          </p>
           <h2 className="text-4xl md:text-5xl lg:text-section-lg font-bold text-deep-green mb-4">
             What's New in VIDUR
           </h2>
