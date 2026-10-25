@@ -63,7 +63,7 @@ export default function Pricing() {
               viewport={{ once: true }}
               className={`rounded-2xl p-8 border-2 transition-all duration-300 ${
                 plan.highlight
-                  ? 'bg-gradient-to-br from-deep-green/95 to-dark-accent/95 backdrop-blur-xl text-white border-highlight-green shadow-2xl scale-105 relative overflow-hidden before:absolute before:inset-0 before:bg-white/5 before:backdrop-blur-sm'
+                  ? 'bg-gradient-to-br from-deep-green to-dark-accent text-white border-highlight-green shadow-2xl scale-105'
                   : 'bg-soft-neutral border-deep-green/20 hover:border-highlight-green/50 hover:shadow-lg'
               }`}
             >
