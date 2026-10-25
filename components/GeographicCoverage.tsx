@@ -69,7 +69,7 @@ export default function GeographicCoverage() {
             className="text-center lg:text-left"
           >
             <p className="text-xs md:text-sm font-bold text-deep-green uppercase tracking-wider mb-3 md:mb-4">
-              A GROWING PROFESSIONAL COMMUNITY
+              EXPANDING OUR PRESENCE ACROSS INDIA
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6">
               <span className="text-deep-green">Live in</span>
@@ -80,7 +80,7 @@ export default function GeographicCoverage() {
               <span className="text-deep-green text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold ml-2 md:ml-4">Cities</span>
             </h2>
             <p className="text-sm md:text-base lg:text-lg text-deep-green/70 max-w-lg mx-auto lg:mx-0">
-              From metro firms to independent practices, VIDUR is part of the professional workday across India.
+              Empowering professionals across India, from leading metropolitan firms to independent practices, with smarter research, seamless drafting, and AI-powered solutions.
             </p>
           </motion.div>
 
