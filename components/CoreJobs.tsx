@@ -71,7 +71,10 @@ export default function CoreJobs() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-deep-green mb-8">
             Discover What VIDUR Can Do
           </h2>
+        </motion.div>
 
+        {/* Sticky Tabs Container */}
+        <div className="sticky top-20 z-30 flex justify-center pb-8">
           {/* Tabs - Sliding Segmented Control */}
           <div className="inline-flex bg-white rounded-full p-1.5 gap-1 shadow-2xl border border-gray-100">
             {jobs.map((job, index) => (
@@ -89,7 +92,7 @@ export default function CoreJobs() {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Area */}
         <motion.div
