@@ -4,7 +4,7 @@
   "private": true,
   "description": "Premium enterprise legal-tech landing page for VIDUR AI",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4731",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

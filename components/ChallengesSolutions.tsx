@@ -3,32 +3,57 @@
 import { motion } from 'framer-motion';
 
 export default function ChallengesSolutions() {
-  const comparisons = [
+  const features = [
     {
-      challenge: 'Generic AI responses without legal authority',
-      solution: 'Verified source citations from authoritative legal and tax publications'
+      title: 'Verified Legal Authority',
+      description: 'Every response includes source citations from authoritative Indian tax and legal publications',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
     },
     {
-      challenge: 'Outdated information from general AI models',
-      solution: 'Real-time access to current Indian tax laws and regulations'
+      title: 'Always Current',
+      description: 'Real-time access to the latest Indian tax laws, regulations, and professional guidance',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
     },
     {
-      challenge: 'No understanding of Indian practice context',
-      solution: 'Purpose-built for Indian CA, CS, and legal professional workflows'
+      title: 'Built for Indian Practice',
+      description: 'Purpose-built for CA, CS, and legal professional workflows and requirements',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      )
     },
     {
-      challenge: 'Security concerns with sensitive client data',
-      solution: 'Enterprise-grade security with role-based access control'
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with role-based access and confidential data handling',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      )
     },
     {
-      challenge: 'Complex tools requiring extensive training',
-      solution: 'Intuitive interface designed for professional tax and legal work'
+      title: 'Simple & Intuitive',
+      description: 'Easy-to-use interface designed specifically for professional tax and legal work',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+        </svg>
+      )
     }
   ];
 
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-6 sm:px-8">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,44 +70,26 @@ export default function ChallengesSolutions() {
           </p>
         </motion.div>
 
-        {/* Comparison Cards */}
-        <div className="space-y-6">
-          {comparisons.map((item, index) => (
+        {/* Feature Cards Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-4 md:gap-6"
+              className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-deep-green/30 hover:shadow-lg transition-all duration-300"
             >
-              {/* Challenge */}
-              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gray-300 mt-0.5 flex items-center justify-center">
-                    <svg className="w-3.5 h-3.5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </div>
-                  <p className="text-sm md:text-base text-gray-700 font-medium leading-relaxed">
-                    {item.challenge}
-                  </p>
-                </div>
+              <div className="text-deep-green mb-4">
+                {feature.icon}
               </div>
-
-              {/* Solution */}
-              <div className="bg-deep-green rounded-2xl p-6 border border-deep-green">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-highlight-green mt-0.5 flex items-center justify-center shadow-sm">
-                    <svg className="w-3.5 h-3.5 text-deep-green" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="text-sm md:text-base text-white font-medium leading-relaxed">
-                    {item.solution}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-lg font-bold text-deep-green mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>
