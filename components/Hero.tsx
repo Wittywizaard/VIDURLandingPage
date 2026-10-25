@@ -222,13 +222,18 @@ export default function Hero() {
             className="mt-12 md:mt-16 w-full"
           >
             <div className="flex flex-col gap-6">
-              {/* Investors & Marquee Clients - Synthesia Style */}
+              {/* Client Logos - Synthesia Style */}
               <div className="w-full pt-8 border-t border-gray-100">
                 <div className="flex items-center gap-8">
-                  {/* Label on the left */}
-                  <span className="text-sm font-semibold text-deep-green whitespace-nowrap flex-shrink-0">
-                    Investors & Marquee Clients:
-                  </span>
+                  {/* Label on the left - Two lines */}
+                  <div className="flex flex-col gap-1 flex-shrink-0">
+                    <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
+                      Live in 170+ Cities
+                    </span>
+                    <span className="text-sm font-semibold text-deep-green whitespace-nowrap">
+                      Trusted by 25000+ Professionals
+                    </span>
+                  </div>
                   
                   {/* Sliding Logos on the right */}
                   <div className="flex-1 overflow-hidden">
