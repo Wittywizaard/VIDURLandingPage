@@ -1,26 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
 export default function Testimonials() {
-  const [playingVideo, setPlayingVideo] = useState<string | null>(null);
-
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm',
-      thumbnail: '/vidur-logo.png' // You can add proper thumbnails
+      videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm'
     },
     {
       type: 'video',
-      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t',
-      thumbnail: '/vidur-logo.png'
+      videoId: '1mHeQATw__g4nB9j-rygCN_2DoKFDVx1t'
     },
     {
       type: 'video',
-      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm',
-      thumbnail: '/vidur-logo.png'
+      videoId: '1ZIkzpDsy53-Pe8YT_lE0qH8844uE60Dm'
     }
   ];
 
@@ -90,43 +84,12 @@ export default function Testimonials() {
                   {testimonial.type === 'video' ? (
                     /* Video Testimonial */
                     <div className="relative w-full h-[400px] md:h-[450px] bg-black flex items-center justify-center">
-                      <div className="relative w-full h-full">
-                        <iframe
-                          key={playingVideo === `${index}-${testimonial.videoId}` ? 'playing' : 'paused'}
-                          src={`https://drive.google.com/file/d/${testimonial.videoId}/preview${playingVideo === `${index}-${testimonial.videoId}` ? '?autoplay=1' : ''}`}
-                          className="absolute inset-0 w-full h-full object-contain"
-                          allow="autoplay; encrypted-media"
-                          style={{ border: 'none', pointerEvents: 'none' }}
-                        ></iframe>
-                        
-                        {/* Custom Play/Pause Button */}
-                        <button
-                          onClick={() => setPlayingVideo(
-                            playingVideo === `${index}-${testimonial.videoId}` 
-                              ? null 
-                              : `${index}-${testimonial.videoId}`
-                          )}
-                          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10"
-                        >
-                          <div className="bg-[#1a1d29] hover:bg-[#252938] text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition-all whitespace-nowrap">
-                            {playingVideo === `${index}-${testimonial.videoId}` ? (
-                              <>
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-                                </svg>
-                                <span className="text-sm font-medium">Pause</span>
-                              </>
-                            ) : (
-                              <>
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <span className="text-sm font-medium">Play story</span>
-                              </>
-                            )}
-                          </div>
-                        </button>
-                      </div>
+                      <iframe
+                        src={`https://drive.google.com/file/d/${testimonial.videoId}/preview`}
+                        className="w-full h-full"
+                        allow="encrypted-media"
+                        style={{ border: 'none' }}
+                      ></iframe>
                     </div>
                   ) : (
                     /* Text Testimonial */
