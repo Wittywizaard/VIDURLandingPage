@@ -3,6 +3,7 @@ import NewsTicker from '@/components/NewsTicker';
 import Hero from '@/components/Hero';
 import VideoSection from '@/components/VideoSection';
 import GeographicCoverage from '@/components/GeographicCoverage';
+import EnterpriseCTA from '@/components/EnterpriseCTA';
 import TrustedByProfessionals from '@/components/TrustedByProfessionals';
 import CoreJobs from '@/components/CoreJobs';
 import TrustedKnowledge from '@/components/TrustedKnowledge';
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         <VideoSection />
         <GeographicCoverage />
+        <EnterpriseCTA />
         <TrustedByProfessionals />
         <CoreJobs />
         <TrustedKnowledge />
