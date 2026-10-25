@@ -51,9 +51,9 @@ export default function TrustedByProfessionals() {
 
   return (
     <section ref={sectionRef} className="py-8 md:py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Statistics Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start justify-items-center">
           {[
             { value: stats.experts, label: 'Experts and commentaries', suffix: '+' },
             { value: stats.professionals, label: 'CAs and lawyers using VIDUR', suffix: '+' },
@@ -66,12 +66,12 @@ export default function TrustedByProfessionals() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center w-full"
             >
-              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-1 md:mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-black mb-1">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
-              <div className="text-xs md:text-sm font-medium text-black">
+              <div className="text-xs md:text-sm font-medium text-black whitespace-nowrap">
                 {stat.label}
               </div>
             </motion.div>
