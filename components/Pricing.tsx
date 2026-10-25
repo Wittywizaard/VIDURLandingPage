@@ -72,11 +72,20 @@ export default function Pricing() {
               {/* Badge for highlighted plan - or placeholder for alignment */}
               <div className="mb-3" style={{ minHeight: '28px' }}>
                 {plan.highlight && (
-                  <div className="inline-block">
-                    <span className="text-xs font-bold bg-highlight-green text-dark-accent px-3 py-1 rounded-full">
+                  <motion.div 
+                    className="inline-block"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <span className="relative inline-flex items-center gap-1.5 text-xs font-bold bg-highlight-green text-dark-accent px-4 py-1.5 rounded-full shadow-lg">
+                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
                       RECOMMENDED
+                      <span className="absolute inset-0 rounded-full bg-highlight-green animate-ping opacity-20"></span>
                     </span>
-                  </div>
+                  </motion.div>
                 )}
               </div>
 
