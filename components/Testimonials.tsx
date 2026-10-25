@@ -6,15 +6,15 @@ export default function Testimonials() {
   const videoTestimonials = [
     {
       type: 'video',
-      videoId: '6ade5732eebf69da71ee1221'
+      videoId: 'bvsion3esc2bab1'
     },
     {
       type: 'video',
-      videoId: '6ade5749e655cfbd812761b8'
+      videoId: 'jpnl036ocolzzi2'
     },
     {
       type: 'video',
-      videoId: '6ade5767e655cfbd812761c6'
+      videoId: 'jnb42g8fb7gpdoh'
     }
   ];
 
@@ -85,13 +85,12 @@ export default function Testimonials() {
                     /* Video Testimonial */
                     <div className="relative w-full h-[360px] bg-black overflow-hidden">
                       <iframe
-                        src={`https://play.gumlet.io/embed/${testimonial.videoId}?preload=true&autoplay=false&loop=false&disable_player_controls=true`}
+                        src={`https://fast.wistia.net/embed/iframe/${testimonial.videoId}?videoFoam=true&playerColor=0a3d32`}
                         className="w-full h-full"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                         allowFullScreen
                         style={{ 
-                          border: 'none',
-                          pointerEvents: 'none'
+                          border: 'none'
                         }}
                       ></iframe>
                     </div>
@@ -152,17 +151,6 @@ export default function Testimonials() {
         
         .animate-testimonial-scroll:hover {
           animation-play-state: paused;
-        }
-
-        /* Hide Gumlet video controls */
-        :global(iframe) {
-          position: relative;
-        }
-        
-        :global(.gumlet-player-controls),
-        :global(.vjs-control-bar),
-        :global(.plyr__controls) {
-          display: none !important;
         }
       `}</style>
     </section>
