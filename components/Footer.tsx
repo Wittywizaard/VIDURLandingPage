@@ -29,15 +29,13 @@ export default function Footer() {
           {/* Column 1: Brand & Description - Spans 2 columns on large screens */}
           <div className="col-span-2 lg:col-span-2">
             <div className="mb-6">
-              <div className="inline-block bg-white/10 p-3 rounded-lg backdrop-blur-sm">
-                <img 
-                  src="/vidur-logo.png" 
-                  alt="VIDUR" 
-                  className="h-12 w-auto object-contain mix-blend-lighten"
-                  style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }}
-                />
-              </div>
-              <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-md mt-4">
+              <img 
+                src="/vidur-logo.png" 
+                alt="VIDUR" 
+                className="h-12 w-auto object-contain mix-blend-lighten mb-4"
+                style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }}
+              />
+              <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-md">
                 VIDUR is the #1 AI Platform for Tax & Corporate Law Professionals. Our AI-powered research, drafting, and advisory tools empower CAs and lawyers across India.
               </p>
               <p className="text-xs text-white/60 italic">
