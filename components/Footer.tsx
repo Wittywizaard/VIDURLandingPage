@@ -38,9 +38,6 @@ export default function Footer() {
               <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-md">
                 VIDUR is the #1 AI Platform for Tax & Corporate Law Professionals. Our AI-powered research, drafting, and advisory tools empower CAs and lawyers across India.
               </p>
-              <p className="text-xs text-white/60 italic">
-                AI. Vision. Intellect.
-              </p>
             </div>
 
             {/* Social Media Icons */}
