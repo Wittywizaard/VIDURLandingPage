@@ -106,7 +106,7 @@ export default function TrustedKnowledge() {
         {/* Continuous Scrolling Carousel */}
         <div className="relative">
           <div className="overflow-hidden py-4">
-            <div className="flex gap-4 animate-book-scroll">
+            <div className="flex gap-3 animate-book-scroll">
               {/* Duplicate sources for seamless loop */}
               {[...sources, ...sources, ...sources, ...sources].map((source, index) => (
                 <motion.div
