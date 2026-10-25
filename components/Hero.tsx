@@ -16,9 +16,9 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-soft-neutral/30 to-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Premium background patterns */}
-      <div className="absolute inset-0 opacity-40">
+      <div className="absolute inset-0 opacity-20">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
 
       {/* Subtle grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.02]">
+      <div className="absolute inset-0 opacity-[0.01]">
         <svg width="100%" height="100%">
           <defs>
             <pattern id="premium-grid" width="40" height="40" patternUnits="userSpaceOnUse">
