@@ -3,6 +3,24 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+type NavItem = {
+  name: string;
+  href: string;
+  description?: string;
+};
+
+type NavSection = {
+  title: string;
+  items: NavItem[];
+};
+
+type NavItemWithDropdown = {
+  name: string;
+  hasDropdown: boolean;
+  href: string;
+  sections?: NavSection[];
+};
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -17,7 +35,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  const navItems: NavItemWithDropdown[] = [
     {
       name: 'Platform',
       hasDropdown: true,

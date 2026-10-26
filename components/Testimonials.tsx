@@ -2,8 +2,23 @@
 
 import { motion } from 'framer-motion';
 
+type VideoTestimonial = {
+  type: 'video';
+  videoId: string;
+};
+
+type TextTestimonial = {
+  type: 'text';
+  quote: string;
+  author: string;
+  designation: string;
+  title: string;
+};
+
+type Testimonial = VideoTestimonial | TextTestimonial;
+
 export default function Testimonials() {
-  const videoTestimonials = [
+  const videoTestimonials: VideoTestimonial[] = [
     {
       type: 'video',
       videoId: '1DX-TItGvuAtj_JvwrcU1DapWNvW3HmHm'
@@ -18,7 +33,7 @@ export default function Testimonials() {
     }
   ];
 
-  const textTestimonials = [
+  const textTestimonials: TextTestimonial[] = [
     {
       type: 'text',
       quote: 'VIDUR has transformed how we handle complex tax research. The source-backed responses give us confidence in our advisory work.',
@@ -43,7 +58,7 @@ export default function Testimonials() {
   ];
 
   // Interleave videos and text testimonials
-  const allTestimonials = [];
+  const allTestimonials: Testimonial[] = [];
   const maxLength = Math.max(videoTestimonials.length, textTestimonials.length);
   
   for (let i = 0; i < maxLength; i++) {
