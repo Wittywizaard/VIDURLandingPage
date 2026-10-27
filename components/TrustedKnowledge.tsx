@@ -206,30 +206,24 @@ export default function TrustedKnowledge() {
       </div>
 
       {/* Full-bleed sliding shelf */}
-      <div className="relative">
-        {/* Shelf line */}
-        <div className="pointer-events-none absolute left-0 right-0 bottom-[52px] md:bottom-[56px] h-px bg-gradient-to-r from-transparent via-deep-green/15 to-transparent" />
-        <div className="pointer-events-none absolute left-0 right-0 bottom-[48px] md:bottom-[52px] h-3 bg-gradient-to-b from-black/[0.04] to-transparent" />
-
-        <div className="overflow-hidden py-6 md:py-8">
-          <div className="flex w-max animate-book-scroll gap-5 md:gap-7 px-4">
-            {track.map((source, index) => (
-              <div
-                key={`${source.publisher}-${source.title}-${index}`}
-                className="group flex flex-col items-center gap-3 w-[118px] md:w-[132px]"
-              >
-                <BookCover source={source} />
-                <div className="text-center min-h-[36px]">
-                  <div className="text-[10px] md:text-[11px] font-semibold text-deep-green/55 uppercase tracking-[0.14em]">
-                    {source.publisher}
-                  </div>
-                  <div className="text-[11px] md:text-xs font-semibold text-deep-green leading-snug mt-0.5">
-                    {source.title}
-                  </div>
+      <div className="relative overflow-hidden py-6 md:py-8">
+        <div className="flex w-max animate-book-scroll gap-5 md:gap-7 px-4">
+          {track.map((source, index) => (
+            <div
+              key={`${source.publisher}-${source.title}-${index}`}
+              className="group flex flex-col items-center gap-3 w-[118px] md:w-[132px]"
+            >
+              <BookCover source={source} />
+              <div className="text-center min-h-[36px]">
+                <div className="text-[10px] md:text-[11px] font-semibold text-deep-green/55 uppercase tracking-[0.14em]">
+                  {source.publisher}
+                </div>
+                <div className="text-[11px] md:text-xs font-semibold text-deep-green leading-snug mt-0.5">
+                  {source.title}
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
