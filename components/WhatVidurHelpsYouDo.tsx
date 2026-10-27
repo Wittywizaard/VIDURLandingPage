@@ -53,11 +53,13 @@ export default function WhatVidurHelpsYouDo() {
               viewport={{ once: true }}
               className="flex flex-col items-center text-center"
             >
-              <img
-                src={feature.image}
-                alt=""
-                className="w-20 h-20 md:w-24 md:h-24 object-contain mb-4"
-              />
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-deep-green flex items-center justify-center mb-4 shadow-sm">
+                <img
+                  src={feature.image}
+                  alt=""
+                  className="w-[55%] h-[55%] object-contain"
+                />
+              </div>
               <p className="text-sm md:text-base font-semibold text-black leading-snug max-w-[200px]">
                 {feature.title}
               </p>
