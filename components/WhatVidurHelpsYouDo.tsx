@@ -6,61 +6,130 @@ const features = [
   {
     title: 'Research Faster',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <circle cx="10" cy="10" r="6" />
-        <path strokeLinecap="round" d="M15 15l5 5" />
-        <circle cx="10" cy="10" r="2" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 8.5v3M8.5 10h3" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {/* Small gear */}
+        <circle cx="16.5" cy="17" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+        <path
+          d="M16.5 10.2v2.2M16.5 21.6v2.2M10 17h2.2M20.8 17H23M11.8 12.3l1.6 1.6M19.6 20.1l1.6 1.6M11.8 21.7l1.6-1.6M19.6 13.9l1.6-1.6"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+        {/* Magnifying glass */}
+        <circle cx="29" cy="28" r="9" stroke="currentColor" strokeWidth="2.3" />
+        <path d="M35.5 34.5L42.5 41.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: 'Draft Smarter',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7 3.5h7.5L18 7v13.5H7V3.5z" />
-        <path strokeLinecap="round" d="M9.5 10h6M9.5 13h6M9.5 16h3.5" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M14.5 16.5l3.2 1.2-.9 2.5-3.8-3.8 1.5.1z" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {/* Document */}
+        <path
+          d="M12 6.5h16.5L37 15v26.5H12V6.5z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path d="M28.5 6.5V15H37" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M17 20h12M17 25.5h12M17 31h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        {/* Pencil */}
+        <path
+          d="M27 33.5l9.5-9.5 3.2 3.2-9.5 9.5-3.8.6.6-3.8z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path d="M34.2 26.3l3.2 3.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: 'Upload & Analysis Multiple Documents',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 3.5h6.5L18 7v13.5H8V3.5z" />
-        <path strokeLinecap="round" d="M10.5 9h4M10.5 15h4" />
-        <path strokeLinecap="round" strokeWidth={2} d="M6.5 12h11" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {/* Scan corner brackets */}
+        <path d="M8 16V10h6M40 16V10h-6M8 32v6h6M40 32v6h-6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+        {/* Document */}
+        <path
+          d="M16 12h11l7 7v17H16V12z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path d="M27 12v7h7" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+        <path d="M20.5 24h9M20.5 28.5h7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        {/* Scan line */}
+        <path d="M10 24h28" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     title: 'No Fake Citations',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3l7.5 3.2v5.3c0 4.7-3.1 8.1-7.5 9.5-4.4-1.4-7.5-4.8-7.5-9.5V6.2L12 3z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.2l2.1 2.1 4-4" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path
+          d="M24 5l14 5.5v11c0 9.2-6.1 15.8-14 18.5C16.1 37.3 10 30.7 10 21.5v-11L24 5z"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M17.5 23.5l4.2 4.2 9-9"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
   },
   {
     title: 'Case Brief & Timeline',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 19.5h7.5" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 19.5l2-6h4.5l2.5 4" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12.5 4.5v5.5h5.5" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12.5 10L18 4.5" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {/* Gavel head (angled) */}
+        <path
+          d="M8.5 18.5l12-8.5 4.2 6-12 8.5-4.2-6z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        {/* Handle */}
+        <path d="M22 19L37.5 34.5" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" />
+        {/* Sounding block */}
+        <path d="M9 39h20" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+        <path d="M12 34.5h14V39H12z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
     title: 'Source Backed Knowledge',
     icon: (
-      <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.2a2.8 2.8 0 012.8 2.8c0 1.1-.6 2-1.6 2.5V10h2V11.4H8.8V10h2V8.5A2.8 2.8 0 019.2 6 2.8 2.8 0 0112 3.2z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5 16c1.9-1.4 4.1-2.1 7-2.1s5.1.7 7 2.1V20.5H5V16z" />
-        <path strokeLinecap="round" d="M12 15.5V20" />
+      <svg className="w-8 h-8 text-white" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {/* Lightbulb */}
+        <path
+          d="M24 5.5a7.5 7.5 0 015.3 12.8c-.9.9-1.5 2-1.8 3.2h-7c-.3-1.2-.9-2.3-1.8-3.2A7.5 7.5 0 0124 5.5z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path d="M19.8 24.5h8.4M20.5 27.5h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        {/* Open book */}
+        <path
+          d="M8 40.5V31c3.5-2 7.2-3 10.8-3 1.8 0 3.6.3 5.2.8V40c-1.7-.6-3.5-.9-5.2-.9-3.6 0-7.3 1-10.8 3z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M40 40.5V31c-3.5-2-7.2-3-10.8-3-1.8 0-3.6.3-5.2.8V40c1.7-.6 3.5-.9 5.2-.9 3.6 0 7.3 1 10.8 3z"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path d="M24 28.8V40" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -88,12 +157,12 @@ export default function WhatVidurHelpsYouDo() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center text-center px-4 py-6 rounded-xl border border-[#d4c4a8]/70 bg-white hover:border-deep-green/30 hover:shadow-md transition-all duration-300"
+              className="flex flex-col items-center text-center px-5 py-7 rounded-xl border border-gray-200 bg-[#fafafa] hover:border-deep-green/25 hover:shadow-md transition-all duration-300"
             >
-              <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full bg-deep-green flex items-center justify-center mb-4 shadow-sm">
+              <div className="w-[72px] h-[72px] md:w-20 md:h-20 rounded-full bg-deep-green flex items-center justify-center mb-4 shadow-sm">
                 {feature.icon}
               </div>
-              <p className="text-sm md:text-base font-semibold text-black leading-snug max-w-[200px]">
+              <p className="text-sm md:text-base font-semibold text-black leading-snug max-w-[210px]">
                 {feature.title}
               </p>
             </motion.div>
