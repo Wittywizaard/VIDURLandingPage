@@ -5,15 +5,15 @@ import { motion } from 'framer-motion';
 const features = [
   {
     title: 'Research Faster',
-    image: '/icon-research-faster.png',
+    image: '/icon-research-faster.svg',
   },
   {
     title: 'Draft Smarter',
-    image: '/icon-draft-smarter.png',
+    image: '/icon-draft-smarter.svg',
   },
   {
     title: 'Upload & Analysis Multiple Documents',
-    image: '/icon-upload-analysis.png',
+    image: '/icon-upload-analysis.svg',
   },
   {
     title: 'No Fake Citations',
@@ -57,7 +57,10 @@ export default function WhatVidurHelpsYouDo() {
                 <img
                   src={feature.image}
                   alt=""
-                  className="w-[55%] h-[55%] object-contain"
+                  width={64}
+                  height={64}
+                  className="w-[58%] h-[58%] object-contain"
+                  decoding="async"
                 />
               </div>
               <p className="text-sm md:text-base font-semibold text-black leading-snug max-w-[200px]">
