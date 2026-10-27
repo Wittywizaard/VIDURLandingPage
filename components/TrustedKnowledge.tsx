@@ -207,10 +207,6 @@ export default function TrustedKnowledge() {
 
       {/* Full-bleed sliding shelf */}
       <div className="relative">
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 md:w-24 bg-gradient-to-r from-[#F4F7F6] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 md:w-24 bg-gradient-to-l from-[#F4F7F6] to-transparent" />
-
         {/* Shelf line */}
         <div className="pointer-events-none absolute left-0 right-0 bottom-[52px] md:bottom-[56px] h-px bg-gradient-to-r from-transparent via-deep-green/15 to-transparent" />
         <div className="pointer-events-none absolute left-0 right-0 bottom-[48px] md:bottom-[52px] h-3 bg-gradient-to-b from-black/[0.04] to-transparent" />
