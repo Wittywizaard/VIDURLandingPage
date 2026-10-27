@@ -43,7 +43,7 @@ export default function WhatVidurHelpsYouDo() {
           What VIDUR helps you do
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -51,13 +51,16 @@ export default function WhatVidurHelpsYouDo() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center justify-center text-center px-4 py-4 rounded-xl border border-gray-200 bg-[#fafafa] hover:border-deep-green/25 hover:shadow-md transition-all duration-300"
+              className="flex flex-col items-center text-center"
             >
               <img
                 src={feature.image}
-                alt={feature.title}
-                className="w-full max-w-[220px] h-auto object-contain"
+                alt=""
+                className="w-20 h-20 md:w-24 md:h-24 object-contain mb-4"
               />
+              <p className="text-sm md:text-base font-semibold text-black leading-snug max-w-[200px]">
+                {feature.title}
+              </p>
             </motion.div>
           ))}
         </div>
