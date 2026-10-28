@@ -155,7 +155,7 @@ export default function Hero() {
                       }}
                       transition={{
                         x: {
-                          duration: 25,
+                          duration: 14,
                           repeat: Infinity,
                           ease: "linear",
                           repeatType: "loop"
@@ -170,7 +170,7 @@ export default function Hero() {
                         { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-14 md:h-16' },
                         { src: '/logos/one36-new.png', alt: 'One36', height: 'h-14 md:h-16' },
                         { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-16 md:h-20' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-18 md:h-24' },
+                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-20 md:h-24' },
                         { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-14 md:h-16' },
                         { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-14 md:h-16' },
                         { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-14 md:h-16' },
@@ -189,7 +189,7 @@ export default function Hero() {
                         { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-14 md:h-16' },
                         { src: '/logos/one36-new.png', alt: 'One36', height: 'h-14 md:h-16' },
                         { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-16 md:h-20' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-18 md:h-24' },
+                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-20 md:h-24' },
                         { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-14 md:h-16' },
                         { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-14 md:h-16' },
                         { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-14 md:h-16' },
