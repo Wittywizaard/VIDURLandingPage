@@ -128,93 +128,61 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Trusted Professionals & Marquee Clients - Under Trust Points */}
+          {/* Trusted Professionals & Marquee Clients */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1 }}
-            className="mt-8 md:mt-10 w-full"
+            className="mt-10 md:mt-12 w-full"
           >
-            <div className="flex flex-col gap-6">
-              {/* Client Logos - Horizontal Layout with Left Label */}
-              <div className="w-full pt-4">
-                <div className="flex items-center gap-6">
-                  {/* Label on the left */}
-                  <div className="flex-shrink-0">
-                    <span className="text-sm md:text-base font-bold text-black whitespace-nowrap">
-                      Trusted by 25000+ professionals
-                    </span>
-                  </div>
-                  
-                  {/* Sliding Logos on the right */}
-                  <div className="flex-1 overflow-hidden">
-                    <motion.div
-                      className="flex items-center gap-6"
-                      animate={{
-                        x: [0, '-50%']
-                      }}
-                      transition={{
-                        x: {
-                          duration: 25,
-                          repeat: Infinity,
-                          ease: "linear",
-                          repeatType: "loop"
-                        }
-                      }}
-                    >
-                      {/* First set of logos */}
-                      {[
-                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-12' },
-                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-12' },
-                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-12' },
-                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-10' },
-                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-10' },
-                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-10' },
-                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-12' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-14' },
-                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
-                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-10' },
-                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
-                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-10' },
-                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-10' },
-                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-12' },
-                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
-                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-10' },
-                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-12' },
-                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-10' }
-                      ].concat([
-                        { src: '/logos/icai-new.png', alt: 'ICAI', height: 'h-12' },
-                        { src: '/logos/aditya-birla-new.png', alt: 'Aditya Birla Group', height: 'h-12' },
-                        { src: '/logos/kotak-new.png', alt: 'Kotak', height: 'h-12' },
-                        { src: '/logos/bharat-new.png', alt: 'Bharat', height: 'h-10' },
-                        { src: '/logos/nexedge-new.png', alt: 'Nexedge', height: 'h-10' },
-                        { src: '/logos/one36-new.png', alt: 'One36', height: 'h-10' },
-                        { src: '/logos/icsi-new.png', alt: 'ICSI', height: 'h-12' },
-                        { src: '/logos/balakrishna-new.png', alt: 'Balakrishna and Co', height: 'h-14' },
-                        { src: '/logos/baveja-gupta-new.png', alt: 'Baveja Gupta & Co', height: 'h-10' },
-                        { src: '/logos/beetaone-new.png', alt: 'Beetaone Fintax', height: 'h-10' },
-                        { src: '/logos/chhawchharia-new.png', alt: 'B Chhawchharia & Co', height: 'h-10' },
-                        { src: '/logos/aanand-new.png', alt: 'Aanand & Co', height: 'h-10' },
-                        { src: '/logos/agh-new.png', alt: 'AGH & Associates', height: 'h-10' },
-                        { src: '/logos/ats-new.png', alt: 'ATS & Co', height: 'h-12' },
-                        { src: '/logos/sreenivasa-rao-new.png', alt: 'A. Sreenivasa Rao & Associates', height: 'h-10' },
-                        { src: '/logos/aabk-new.png', alt: 'AABK & Associates', height: 'h-10' },
-                        { src: '/logos/alam-new.png', alt: 'Alam & Associates', height: 'h-12' },
-                        { src: '/logos/alpha-academy-new.png', alt: 'Alpha Academy', height: 'h-10' }
-                      ]).map((logo, index) => (
+            <div className="w-full pt-2">
+              <div className="flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+                <div className="flex-shrink-0 text-center md:text-left">
+                  <span className="text-sm md:text-base font-bold text-black whitespace-nowrap">
+                    Trusted by 25000+ professionals
+                  </span>
+                </div>
+
+                <div className="flex-1 overflow-hidden min-w-0">
+                  <motion.div
+                    className="flex items-center gap-10 md:gap-14 w-max"
+                    animate={{ x: [0, '-50%'] }}
+                    transition={{
+                      x: {
+                        duration: 28,
+                        repeat: Infinity,
+                        ease: 'linear',
+                        repeatType: 'loop',
+                      },
+                    }}
+                  >
+                    {[
+                      { src: '/logos/kbs-taxkeeping.png', alt: 'KBS Taxkeeping' },
+                      { src: '/logos/mountain-west-accounting.png', alt: 'Mountain West Accounting' },
+                      { src: '/logos/ascent-tax-advisers.png', alt: 'Ascent Tax Advisers' },
+                      { src: '/logos/br-tax-group.png', alt: 'BR Tax Group' },
+                      { src: '/logos/mitchell-black-cpa.png', alt: 'Mitchell Black CPA' },
+                    ]
+                      .concat([
+                        { src: '/logos/kbs-taxkeeping.png', alt: 'KBS Taxkeeping' },
+                        { src: '/logos/mountain-west-accounting.png', alt: 'Mountain West Accounting' },
+                        { src: '/logos/ascent-tax-advisers.png', alt: 'Ascent Tax Advisers' },
+                        { src: '/logos/br-tax-group.png', alt: 'BR Tax Group' },
+                        { src: '/logos/mitchell-black-cpa.png', alt: 'Mitchell Black CPA' },
+                      ])
+                      .map((logo, index) => (
                         <div
-                          key={index}
-                          className="flex-shrink-0 flex items-center justify-center transition-opacity duration-300 opacity-60 hover:opacity-100"
+                          key={`${logo.alt}-${index}`}
+                          className="flex-shrink-0 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
                         >
                           <img
                             src={logo.src}
                             alt={logo.alt}
-                            className={`${logo.height} w-auto object-contain grayscale hover:grayscale-0 transition-all`}
+                            className="h-14 md:h-[72px] w-auto max-w-[220px] md:max-w-[280px] object-contain"
                           />
                         </div>
                       ))}
-                    </motion.div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
