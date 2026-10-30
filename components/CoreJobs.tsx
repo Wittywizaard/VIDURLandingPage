@@ -119,35 +119,26 @@ export default function CoreJobs() {
             </div>
 
             {/* Right Side - Demo Interface */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200/50">
+            <div className="bg-white rounded-2xl p-4 md:p-5 shadow-lg border border-gray-200/50">
               {activeTab === 0 ? (
                 // Document Analysis Demo
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-4">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between border-b border-gray-200 pb-3">
                     <span className="text-xs text-gray-500 uppercase tracking-wide">Illustrative Demo UI</span>
                   </div>
 
-                  {/* Uploaded Files */}
-                  <div className="space-y-2">
-                    {activeJob.demoFiles.map((file, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200 hover:border-deep-green/30 transition-colors"
-                      >
-                        <div className="flex-shrink-0 w-10 h-10 bg-deep-green/10 rounded flex items-center justify-center">
-                          <svg className="w-5 h-5 text-deep-green" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                          </svg>
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 truncate">{file.name}</p>
-                          <p className="text-xs text-gray-500">{file.type}</p>
-                        </div>
-                        <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    ))}
+                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-black shadow-inner">
+                    <video
+                      className="w-full h-full object-contain"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      controls={false}
+                    >
+                      <source src="/analyse-document-demo.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
               ) : (
