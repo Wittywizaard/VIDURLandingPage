@@ -222,7 +222,7 @@ export default function Hero() {
       </div>
 
       {/* Premium bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#F4F7F6] to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }
