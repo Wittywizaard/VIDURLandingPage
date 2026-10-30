@@ -119,31 +119,25 @@ export default function CoreJobs() {
             </div>
 
             {/* Right Side - Demo Interface */}
-            <div className="bg-white rounded-2xl p-4 md:p-5 shadow-lg border border-gray-200/50">
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-white/10 bg-black">
               {activeTab === 0 ? (
-                // Document Analysis Demo
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between border-b border-gray-200 pb-3">
-                    <span className="text-xs text-gray-500 uppercase tracking-wide">Illustrative Demo UI</span>
-                  </div>
-
-                  <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden bg-black shadow-inner">
-                    <video
-                      className="w-full h-full object-contain"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      controls={false}
-                    >
-                      <source src="/analyse-document-demo.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                // Document Analysis Demo — full-bleed video
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-black">
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover scale-[1.12]"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls={false}
+                  >
+                    <source src="/analyse-document-demo.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               ) : (
                 // Placeholder for other tabs
-                <div className="h-full flex items-center justify-center py-12">
+                <div className="h-full flex items-center justify-center py-12 bg-white">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-deep-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       {activeJob.icon}
